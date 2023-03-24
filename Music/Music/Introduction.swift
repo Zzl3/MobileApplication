@@ -16,9 +16,11 @@ struct Introduction: View {
             Intro_Nav()
             Spacer(minLength: 30)
             CardsScrollView()
+            
         }
         .foregroundColor(/*@START_MENU_TOKEN@*/Color(red: 0.945, green: 0.949, blue: 0.949)/*@END_MENU_TOKEN@*/)
     }
+    
     
     @ViewBuilder
     func CardsScrollView()->some View{
@@ -28,8 +30,12 @@ struct Introduction: View {
                     .scaleEffect(0.95)
                 Spacer(minLength: 25)
                 RotateCard(TypeInstru: "Sheng")
+                    .scaleEffect(0.95)
                 Spacer(minLength: 25)
                 RotateCard(TypeInstru: "Sheng")
+                .scaleEffect(0.95)
+                Spacer(minLength: 25)
+                
             }
             .foregroundColor(Color(red: 0.949, green: 0.949, blue: 0.949))
             .padding(.leading,20)
@@ -38,7 +44,10 @@ struct Introduction: View {
 }
 
 struct Introduction_Previews: PreviewProvider {
+    
     static var previews: some View {
         Introduction()
+        
     }
 }
+    
