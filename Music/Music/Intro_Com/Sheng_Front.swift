@@ -17,10 +17,11 @@ struct Sheng_Front: View {
                 .position(x:175,y:140)
             
             Image("ShengT")
+                .scaleEffect(0.6)
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 350)
                 .position(x:190,y:335)
-                .scaleEffect(0.6)
+                
             
             Image(systemName: "play.circle")
                 .foregroundColor(/*@START_MENU_TOKEN@*/Color(hue: 1.0, saturation: 0.034, brightness: 0.782)/*@END_MENU_TOKEN@*/)
@@ -35,3 +36,8 @@ struct Sheng_Front_Previews: PreviewProvider {
         Sheng_Front()
     }
 }
+
+
+
+
+

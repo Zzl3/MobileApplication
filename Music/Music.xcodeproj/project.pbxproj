@@ -16,6 +16,7 @@
 		A0DA23E629C307FC0047AFCE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0DA23E529C307FC0047AFCE /* Preview Assets.xcassets */; };
 		A0DA23ED29C308F30047AFCE /* StyleTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DA23EC29C308F30047AFCE /* StyleTransfer.swift */; };
 		A0DA23EF29C3092D0047AFCE /* MySetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DA23EE29C3092D0047AFCE /* MySetting.swift */; };
+		BC20E60729CD499D0093D675 /* Sheng_Intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC20E60629CD499D0093D675 /* Sheng_Intro.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A0DA23E529C307FC0047AFCE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A0DA23EC29C308F30047AFCE /* StyleTransfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleTransfer.swift; sourceTree = "<group>"; };
 		A0DA23EE29C3092D0047AFCE /* MySetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySetting.swift; sourceTree = "<group>"; };
+		BC20E60629CD499D0093D675 /* Sheng_Intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheng_Intro.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 				A0998B5129C752C800A6561C /* RotateCard.swift */,
 				A0998B5329C7542B00A6561C /* Sheng_Front.swift */,
 				A01998F129C8048600D024B8 /* Intro_Nav.swift */,
+				BC20E60629CD499D0093D675 /* Sheng_Intro.swift */,
 			);
 			path = Intro_Com;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				A0998B5429C7542B00A6561C /* Sheng_Front.swift in Sources */,
 				A01998F229C8048600D024B8 /* Intro_Nav.swift in Sources */,
 				A0998B5229C752C800A6561C /* RotateCard.swift in Sources */,
+				BC20E60729CD499D0093D675 /* Sheng_Intro.swift in Sources */,
 				A0DA23E029C307F90047AFCE /* Introduction.swift in Sources */,
 				A0DA23EF29C3092D0047AFCE /* MySetting.swift in Sources */,
 				A0DA23DE29C307F90047AFCE /* MusicApp.swift in Sources */,
@@ -293,7 +297,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Music/Preview Content\"";
-				DEVELOPMENT_TEAM = 265677327X;
+				DEVELOPMENT_TEAM = H7MDV4BRH2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -331,7 +335,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Music/Preview Content\"";
-				DEVELOPMENT_TEAM = 265677327X;
+				DEVELOPMENT_TEAM = H7MDV4BRH2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
