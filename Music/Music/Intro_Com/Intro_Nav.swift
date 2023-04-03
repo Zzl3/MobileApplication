@@ -15,6 +15,9 @@ struct Intro_Nav: View {
         .foregroundColor(/*@START_MENU_TOKEN@*/Color(red: 0.945, green: 0.949, blue: 0.949)/*@END_MENU_TOKEN@*/)
     }
     
+    @State var pickerValue = 0
+    var pickerOptions = ["吹管类", "打击类", "弹拨类","拉弦类"]
+    
     @ViewBuilder
     func HeaderView()->some View{
         VStack{
@@ -34,17 +37,11 @@ struct Intro_Nav: View {
                         .opacity(0.15)
                 }
             }
-            HStack(spacing:100){
-                CustomButton(symbolImage: "rectangle.and.pencil.and.ellipsis", title: "吹奏类"){
-                    
-                }
-                CustomButton(symbolImage: "rectangle.and.pencil.and.ellipsis", title: "弹拨类"){
-                    
-                }
-                CustomButton(symbolImage: "rectangle.portrait.and.arrow.forward", title: "打击类"){
-                    
-                }
-            }
+            Picker("Picker", selection: $pickerValue) {
+                    ForEach(0..<pickerOptions.count) { index in
+                        Text(pickerOptions[index]).tag(index)
+                    }
+                }.pickerStyle(SegmentedPickerStyle())
         }
         .padding(.all,15)
         .background{

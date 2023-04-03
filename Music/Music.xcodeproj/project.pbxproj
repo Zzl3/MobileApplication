@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		A01998F229C8048600D024B8 /* Intro_Nav.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01998F129C8048600D024B8 /* Intro_Nav.swift */; };
+		A0680DF429DA8B2800F508E1 /* TranChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0680DF329DA8B2800F508E1 /* TranChoice.swift */; };
+		A0680DF629DA951D00F508E1 /* InstruChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0680DF529DA951D00F508E1 /* InstruChoice.swift */; };
+		A0680DF829DA996E00F508E1 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0680DF729DA996D00F508E1 /* Album.swift */; };
+		A0680DFA29DAAFA300F508E1 /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0680DF929DAAFA300F508E1 /* CustomCorners.swift */; };
+		A0680DFC29DB18F800F508E1 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0680DFB29DB18F700F508E1 /* BaseView.swift */; };
+		A0680DFE29DB1C5400F508E1 /* CustomTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0680DFD29DB1C5400F508E1 /* CustomTab.swift */; };
 		A0998B5229C752C800A6561C /* RotateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0998B5129C752C800A6561C /* RotateCard.swift */; };
 		A0998B5429C7542B00A6561C /* Sheng_Front.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0998B5329C7542B00A6561C /* Sheng_Front.swift */; };
 		A0DA23DE29C307F90047AFCE /* MusicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DA23DD29C307F90047AFCE /* MusicApp.swift */; };
@@ -21,6 +27,12 @@
 
 /* Begin PBXFileReference section */
 		A01998F129C8048600D024B8 /* Intro_Nav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro_Nav.swift; sourceTree = "<group>"; };
+		A0680DF329DA8B2800F508E1 /* TranChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranChoice.swift; sourceTree = "<group>"; };
+		A0680DF529DA951D00F508E1 /* InstruChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstruChoice.swift; sourceTree = "<group>"; };
+		A0680DF729DA996D00F508E1 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		A0680DF929DAAFA300F508E1 /* CustomCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
+		A0680DFB29DB18F700F508E1 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		A0680DFD29DB1C5400F508E1 /* CustomTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTab.swift; sourceTree = "<group>"; };
 		A0998B5129C752C800A6561C /* RotateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotateCard.swift; sourceTree = "<group>"; };
 		A0998B5329C7542B00A6561C /* Sheng_Front.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheng_Front.swift; sourceTree = "<group>"; };
 		A0DA23DA29C307F90047AFCE /* Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Music.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +57,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A0680DF229DA8B0600F508E1 /* Style_Com */ = {
+			isa = PBXGroup;
+			children = (
+				A0680DF329DA8B2800F508E1 /* TranChoice.swift */,
+				A0680DF529DA951D00F508E1 /* InstruChoice.swift */,
+				A0680DF729DA996D00F508E1 /* Album.swift */,
+				A0680DF929DAAFA300F508E1 /* CustomCorners.swift */,
+			);
+			path = Style_Com;
+			sourceTree = "<group>";
+		};
 		A0998B5029C7529200A6561C /* Intro_Com */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +98,7 @@
 		A0DA23DC29C307F90047AFCE /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				A0680DF229DA8B0600F508E1 /* Style_Com */,
 				A0998B5029C7529200A6561C /* Intro_Com */,
 				A0DA23DD29C307F90047AFCE /* MusicApp.swift */,
 				A0DA23DF29C307F90047AFCE /* Introduction.swift */,
@@ -83,6 +107,8 @@
 				A0DA23E429C307FC0047AFCE /* Preview Content */,
 				A0DA23EC29C308F30047AFCE /* StyleTransfer.swift */,
 				A0DA23EE29C3092D0047AFCE /* MySetting.swift */,
+				A0680DFB29DB18F700F508E1 /* BaseView.swift */,
+				A0680DFD29DB1C5400F508E1 /* CustomTab.swift */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -166,11 +192,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0DA23ED29C308F30047AFCE /* StyleTransfer.swift in Sources */,
+				A0680DFC29DB18F800F508E1 /* BaseView.swift in Sources */,
+				A0680DFA29DAAFA300F508E1 /* CustomCorners.swift in Sources */,
 				A0998B5429C7542B00A6561C /* Sheng_Front.swift in Sources */,
+				A0680DF429DA8B2800F508E1 /* TranChoice.swift in Sources */,
 				A01998F229C8048600D024B8 /* Intro_Nav.swift in Sources */,
 				A0998B5229C752C800A6561C /* RotateCard.swift in Sources */,
+				A0680DF629DA951D00F508E1 /* InstruChoice.swift in Sources */,
+				A0680DFE29DB1C5400F508E1 /* CustomTab.swift in Sources */,
 				BC20E60729CD499D0093D675 /* Sheng_Intro.swift in Sources */,
 				A0DA23E029C307F90047AFCE /* Introduction.swift in Sources */,
+				A0680DF829DA996E00F508E1 /* Album.swift in Sources */,
 				A0DA23EF29C3092D0047AFCE /* MySetting.swift in Sources */,
 				A0DA23DE29C307F90047AFCE /* MusicApp.swift in Sources */,
 			);

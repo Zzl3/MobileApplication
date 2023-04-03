@@ -9,7 +9,13 @@ import SwiftUI
 
 struct StyleTransfer: View {
     var body: some View {
-        Text("Here is StyleTransfer")
+        NavigationView{
+            NavigationLink(destination:
+               TranChoice()){Text("跳转")
+                    .foregroundColor(.black)
+            }
+                .navigationTitle("歌曲列表")
+        }
     }
 }
 
