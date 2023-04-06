@@ -18,7 +18,7 @@ struct SongChoose: View {
     var body: some View {
         VStack{
             HeaderView(song: song, ifPause: false) //示例，传给他一首曲子
-                .padding(.top,100)
+                .padding(.top,80)
             
             GeometryReader{proxy in
                 let size = proxy.size
@@ -29,7 +29,7 @@ struct SongChoose: View {
         .frame(maxWidth: .infinity,maxHeight: .infinity)
         .overlay(content:{
             if let selectedInstru,showDetail{
-                DetailView(animation: animation, album: selectedInstru, show: $showDetail)
+                DetailView(animation: animation, album: selectedInstru, song: song, show: $showDetail)
             }
         })
         .background(Color("DeepGreen"))

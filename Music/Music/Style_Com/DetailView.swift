@@ -10,6 +10,7 @@ import SwiftUI
 struct DetailView:View{
     var animation:Namespace.ID
     var album:Album
+    var song:Song
     @Binding var show:Bool
     @State var ifPause:Bool=false
     @State var ifLove:Bool=false
