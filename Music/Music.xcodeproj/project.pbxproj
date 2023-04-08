@@ -30,7 +30,7 @@
 		A0DA23ED29C308F30047AFCE /* StyleTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DA23EC29C308F30047AFCE /* StyleTransfer.swift */; };
 		A0DA23EF29C3092D0047AFCE /* MySetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DA23EE29C3092D0047AFCE /* MySetting.swift */; };
 		BC20E60729CD499D0093D675 /* Sheng_Intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC20E60629CD499D0093D675 /* Sheng_Intro.swift */; };
-		BC4213D029E0F42500ABB2AF /* test2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC4213CF29E0F42500ABB2AF /* test2.mp3 */; };
+		BC8D657629E194D700966B66 /* test2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC8D657529E194D700966B66 /* test2.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +59,7 @@
 		A0DA23EC29C308F30047AFCE /* StyleTransfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleTransfer.swift; sourceTree = "<group>"; };
 		A0DA23EE29C3092D0047AFCE /* MySetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySetting.swift; sourceTree = "<group>"; };
 		BC20E60629CD499D0093D675 /* Sheng_Intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheng_Intro.swift; sourceTree = "<group>"; };
-		BC4213CF29E0F42500ABB2AF /* test2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = test2.mp3; path = "../../../../../../../Music/网易云音乐/test2.mp3"; sourceTree = "<group>"; };
+		BC8D657529E194D700966B66 /* test2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test2.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +76,7 @@
 		A0032E7E29DC263A0095F847 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				BC4213CF29E0F42500ABB2AF /* test2.mp3 */,
+				BC8D657529E194D700966B66 /* test2.mp3 */,
 				A0032E8429DC4F490095F847 /* musictest.mp3 */,
 			);
 			path = Sources;
@@ -244,7 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0032E8529DC4F490095F847 /* musictest.mp3 in Resources */,
-				BC4213D029E0F42500ABB2AF /* test2.mp3 in Resources */,
+				BC8D657629E194D700966B66 /* test2.mp3 in Resources */,
 				A0DA23E629C307FC0047AFCE /* Preview Assets.xcassets in Resources */,
 				A0DA23E229C307FC0047AFCE /* Assets.xcassets in Resources */,
 			);
