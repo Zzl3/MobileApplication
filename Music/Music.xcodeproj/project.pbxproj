@@ -30,7 +30,6 @@
 		A0DA23ED29C308F30047AFCE /* StyleTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DA23EC29C308F30047AFCE /* StyleTransfer.swift */; };
 		A0DA23EF29C3092D0047AFCE /* MySetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DA23EE29C3092D0047AFCE /* MySetting.swift */; };
 		BC20E60729CD499D0093D675 /* Sheng_Intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC20E60629CD499D0093D675 /* Sheng_Intro.swift */; };
-		BC4213CE29DFBE4F00ABB2AF /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4213CD29DFBE4F00ABB2AF /* test.swift */; };
 		BC4213D029E0F42500ABB2AF /* test2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC4213CF29E0F42500ABB2AF /* test2.mp3 */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +59,6 @@
 		A0DA23EC29C308F30047AFCE /* StyleTransfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleTransfer.swift; sourceTree = "<group>"; };
 		A0DA23EE29C3092D0047AFCE /* MySetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySetting.swift; sourceTree = "<group>"; };
 		BC20E60629CD499D0093D675 /* Sheng_Intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheng_Intro.swift; sourceTree = "<group>"; };
-		BC4213CD29DFBE4F00ABB2AF /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		BC4213CF29E0F42500ABB2AF /* test2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = test2.mp3; path = "../../../../../../../Music/网易云音乐/test2.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,7 +130,6 @@
 				A088AAA329DB353400447088 /* InstruTab.swift */,
 				A088AAA929DC10D500447088 /* HeaderView.swift */,
 				A088AAAB29DC139900447088 /* DetailView.swift */,
-				BC4213CD29DFBE4F00ABB2AF /* test.swift */,
 			);
 			path = Style_Com;
 			sourceTree = "<group>";
@@ -273,7 +270,6 @@
 				A0998B5229C752C800A6561C /* RotateCard.swift in Sources */,
 				A033E2BD29DB32F3006FD53D /* SongChoose.swift in Sources */,
 				A088AAA829DC05A400447088 /* CustomArcShape.swift in Sources */,
-				BC4213CE29DFBE4F00ABB2AF /* test.swift in Sources */,
 				A088AAAC29DC139900447088 /* DetailView.swift in Sources */,
 				A0680DFE29DB1C5400F508E1 /* CustomTab.swift in Sources */,
 				BC20E60729CD499D0093D675 /* Sheng_Intro.swift in Sources */,
