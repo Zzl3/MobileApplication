@@ -85,9 +85,9 @@ struct DetailView:View{
                             .shadow(radius: 10)
                     }
                     
-                    Text(song.songName)
+                    Text(song.name)
                         .font(Font.system(.title).bold())
-                    Text(song.author)
+                    Text(song.artist)
                         .font(.system(.headline))
                 }
                 .padding()

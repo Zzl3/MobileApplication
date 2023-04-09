@@ -77,6 +77,6 @@ struct Intro_Nav: View {
 
 struct Intro_Nav_Previews: PreviewProvider {
     static var previews: some View {
-        Intro_Nav()
+        Introduction()
     }
 }

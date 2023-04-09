@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct SongGroup:Identifiable{  //歌曲按乐器分类
     var id=UUID().uuidString
     var instru:String
@@ -29,10 +30,10 @@ struct SongCell:View{
                     .alignmentGuide(.leading){ _ in 0 }
                     .frame(width: 50,height:50)
                 VStack{
-                    Text(instru.songName)
+                    Text(instru.name)
                         .foregroundColor(.black)
                     
-                    Text(instru.author)
+                    Text(instru.artist)
                         .font(.footnote)
                         .foregroundColor(.gray)
                 }
@@ -45,6 +46,7 @@ struct InstruCell:View{
     @EnvironmentObject private var viewmodel:Viewmodel
     var instru:SongGroup
     @State var height:CGFloat=0
+    //@StateObject var mydata=MyData()
     
     var body:some View{
        content
@@ -56,11 +58,9 @@ struct InstruCell:View{
     
     private var content:some View{
         VStack(alignment: .leading, spacing:8){
-            
             sectionHeader
             if instru.expanded{
                 ScrollView{
-                  
                     LazyVStack(alignment: .leading){
                         ForEach(0..<instru.songList.count,id:\.self){ index in
                             NavigationLink(destination:SongChoose(song:sampleSong[index])){
@@ -85,7 +85,6 @@ struct InstruCell:View{
     }
     
     private var sectionHeader:some View{
-        
             VStack(spacing:0){
                 HStack{
                     Text(instru.instru)
@@ -109,28 +108,17 @@ struct InstruCell:View{
 
 struct ContentView:View{
     @StateObject private var viewmodel=Viewmodel()
-        
     var body:some View{
-        
         NavigationView{
-            
             VStack(alignment:.leading){
-                   
                         Image("testpic")
-                
                     ForEach(viewmodel.instrus){instru in
                     InstruCell(instru: instru)
                         .animation(.default, value: 0)
                         .environmentObject(viewmodel)
                 }
-                
-                
-                    
             }
-            
             .navigationTitle("每日推荐")
-            
-            
         }
     }
     
@@ -138,7 +126,7 @@ struct ContentView:View{
 
 class Viewmodel:ObservableObject{
     @Published var instrus:[SongGroup]=[
-        SongGroup(instru: "笙", songList: sampleSong),
+        SongGroup(instru: "笙", songList:sampleSong),
         SongGroup(instru: "古筝", songList: sampleSong),
         SongGroup(instru: "钢琴", songList: sampleSong),
         SongGroup(instru: "扬琴", songList: sampleSong),
@@ -146,7 +134,6 @@ class Viewmodel:ObservableObject{
     
     func expand(_ instru:SongGroup){
         var instrus=self.instrus
-        
         instrus=instrus.map{
             var tempVar=$0
             tempVar.expanded=($0.id==instru.id) ? !tempVar.expanded : tempVar.expanded
@@ -160,12 +147,9 @@ class Viewmodel:ObservableObject{
 
 struct StyleTransfer: View {
     var body: some View {
-        
         NavigationView{
             ContentView()  //显示歌曲列表
             NavigationLink(destination:SongChoose(song:sampleSong[0])){
-                
-                
             }
             .navigationTitle("歌曲列表")
         }
@@ -177,3 +161,5 @@ struct StyleTransfer_Previews: PreviewProvider {
         StyleTransfer()
     }
 }
+
+

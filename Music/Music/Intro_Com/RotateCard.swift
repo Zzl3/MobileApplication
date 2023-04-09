@@ -27,45 +27,39 @@ struct FlipEffect: GeometryEffect {
     
 }
 
-
 struct RotateCard: View,Identifiable {
     var id: UUID = UUID()
-    var TypeInstru:String
-    
     @State var flipped: Bool = false
     @State var trigger: Bool = false
-    
+    var instrument:Instrument
     
     var body: some View {
         VStack {
             if (flipped) {
-                
-                //反面
-                    Sheng_Intro()
-                    .scaleEffect(0.8)
-                              .rotation3DEffect(.degrees(flipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
+                Pic_Intro(instrument:(instrument))
+                .scaleEffect(0.8)
+                .rotation3DEffect(.degrees(flipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
             }
             else {
-              
-                Sheng_Front()
-                    .scaleEffect(0.7)//根据不同的乐器展示不同的画面
+                Pic_Front(instrument:(instrument))
+                .scaleEffect(0.8)
             }
         }
-        
         .background()
         .cornerRadius(16)
         .shadow(color: Color(.displayP3, red: 0, green: 0, blue: 0, opacity: 0.2), radius: 16, x: 0, y: 16)
-        .modifier(FlipEffect(flipped: $flipped ,angle: trigger ? 180: 0))        .onTapGesture  {
+        .modifier(FlipEffect(flipped: $flipped ,angle: trigger ? 180: 0))
+        .onTapGesture  {
             withAnimation(.spring(response: 0.5, dampingFraction: 0.5, blendDuration: 0.5)) {
                 self.trigger.toggle()
             }
         }
-        
     }
+
 }
 
 struct RotateCard_Previews: PreviewProvider {
     static var previews: some View {
-        RotateCard(TypeInstru: "Sheng") //传递是什么类型的乐器
+        RotateCard(instrument:sampleInstrument[0] )
     }
 }

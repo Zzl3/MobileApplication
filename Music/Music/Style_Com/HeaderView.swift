@@ -21,9 +21,9 @@ struct HeaderView: View {
                         .cornerRadius(20)
                         .shadow(radius: 10)
                     VStack(spacing:0){
-                        Text(song.songName)
+                        Text(song.name)
                             .font(Font.system(.title).bold())
-                        Text(song.author)
+                        Text(song.artist)
                             .font(.system(.headline))
                     }
                 }
