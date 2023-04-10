@@ -12,8 +12,9 @@
 		A01998F229C8048600D024B8 /* Intro_Nav.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01998F129C8048600D024B8 /* Intro_Nav.swift */; };
 		A0286C6A29E2959800B3EF01 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0286C6929E2959800B3EF01 /* Instrument.swift */; };
 		A0286C7529E2EBA100B3EF01 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0286C7429E2EBA100B3EF01 /* test.swift */; };
-		A0286C7729E320BB00B3EF01 /* Intro_tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0286C7629E320BB00B3EF01 /* Intro_tool.swift */; };
+		A0286C7729E320BB00B3EF01 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0286C7629E320BB00B3EF01 /* Tools.swift */; };
 		A033E2BD29DB32F3006FD53D /* SongChoose.swift in Sources */ = {isa = PBXBuildFile; fileRef = A033E2BC29DB32F3006FD53D /* SongChoose.swift */; };
+		A066730F29E3E7DC009DCE75 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A066730E29E3E7DC009DCE75 /* CustomButtonStyle.swift */; };
 		A0680DF829DA996E00F508E1 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0680DF729DA996D00F508E1 /* Album.swift */; };
 		A0680DFA29DAAFA300F508E1 /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0680DF929DAAFA300F508E1 /* CustomCorners.swift */; };
 		A0680DFC29DB18F800F508E1 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0680DFB29DB18F700F508E1 /* BaseView.swift */; };
@@ -42,8 +43,9 @@
 		A01998F129C8048600D024B8 /* Intro_Nav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro_Nav.swift; sourceTree = "<group>"; };
 		A0286C6929E2959800B3EF01 /* Instrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
 		A0286C7429E2EBA100B3EF01 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
-		A0286C7629E320BB00B3EF01 /* Intro_tool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro_tool.swift; sourceTree = "<group>"; };
+		A0286C7629E320BB00B3EF01 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		A033E2BC29DB32F3006FD53D /* SongChoose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongChoose.swift; sourceTree = "<group>"; };
+		A066730E29E3E7DC009DCE75 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
 		A0680DF729DA996D00F508E1 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		A0680DF929DAAFA300F508E1 /* CustomCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
 		A0680DFB29DB18F700F508E1 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				A088AAAF29DC1EC700447088 /* CustomShape.swift */,
 				A088AAA529DB3ECD00447088 /* CustomCarousel.swift */,
 				A088AAA729DC05A400447088 /* CustomArcShape.swift */,
+				A066730E29E3E7DC009DCE75 /* CustomButtonStyle.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -111,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				A0286C6929E2959800B3EF01 /* Instrument.swift */,
-				A0286C7629E320BB00B3EF01 /* Intro_tool.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,6 +132,7 @@
 		A033E2BF29DB334E006FD53D /* Base_Com */ = {
 			isa = PBXGroup;
 			children = (
+				A0286C7629E320BB00B3EF01 /* Tools.swift */,
 				A0680DFD29DB1C5400F508E1 /* CustomTab.swift */,
 				A0680DF929DAAFA300F508E1 /* CustomCorners.swift */,
 			);
@@ -281,7 +284,7 @@
 				A0998B5429C7542B00A6561C /* Pic_Front.swift in Sources */,
 				A0286C6A29E2959800B3EF01 /* Instrument.swift in Sources */,
 				A0032E8329DC27E70095F847 /* Song.swift in Sources */,
-				A0286C7729E320BB00B3EF01 /* Intro_tool.swift in Sources */,
+				A0286C7729E320BB00B3EF01 /* Tools.swift in Sources */,
 				A088AAA629DB3ECD00447088 /* CustomCarousel.swift in Sources */,
 				A088AAAA29DC10D500447088 /* HeaderView.swift in Sources */,
 				A01998F229C8048600D024B8 /* Intro_Nav.swift in Sources */,
@@ -292,6 +295,7 @@
 				A088AAA829DC05A400447088 /* CustomArcShape.swift in Sources */,
 				A088AAAC29DC139900447088 /* DetailView.swift in Sources */,
 				A0680DFE29DB1C5400F508E1 /* CustomTab.swift in Sources */,
+				A066730F29E3E7DC009DCE75 /* CustomButtonStyle.swift in Sources */,
 				BC20E60729CD499D0093D675 /* Pic_Intro.swift in Sources */,
 				A0DA23E029C307F90047AFCE /* Introduction.swift in Sources */,
 				A0680DF829DA996E00F508E1 /* Album.swift in Sources */,

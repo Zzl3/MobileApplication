@@ -150,7 +150,7 @@ struct SongChoose: View {
 
 struct SongChoose_Previews: PreviewProvider {
     static var previews: some View {
-        SongChoose(song:sampleSong[0])
+        StyleTransfer()
     }
 }
 

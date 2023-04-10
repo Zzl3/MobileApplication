@@ -14,7 +14,7 @@ struct HeaderView: View {
     var body: some View {
         HStack(spacing:50){
                 VStack(spacing:0){
-                    Image(song.songImage)
+                    Image(uiImage: UIImage.fetchImage(from: song.image))
                         .resizable()
                         .padding(.trailing, 7.0)
                         .frame(width: 200,height: 120)
@@ -90,6 +90,6 @@ struct HeaderView: View {
 
 struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        SongChoose(song:sampleSong[0])
+        StyleTransfer()
     }
 }

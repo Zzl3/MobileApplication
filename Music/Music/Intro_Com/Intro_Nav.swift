@@ -38,10 +38,10 @@ struct Intro_Nav: View {
                 }
             }
             Picker("Picker", selection: $pickerValue) {
-                    ForEach(0..<pickerOptions.count) { index in
-                        Text(pickerOptions[index]).tag(index)
-                    }
-                }.pickerStyle(SegmentedPickerStyle())
+                ForEach(0..<pickerOptions.count) { index in
+                    Text(pickerOptions[index]).tag(index)
+                }
+            }.pickerStyle(SegmentedPickerStyle())
         }
         .padding(.all,15)
         .background{

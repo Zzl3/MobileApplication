@@ -24,17 +24,14 @@ struct Pic_Intro : View{
                 .frame(height: 100)
                 .position(x :110,y : 110)
             
-            Image("ShengIntroText")
-                .scaleEffect(1)
-                .aspectRatio(contentMode: .fit)
-                .frame(width:350)
-                .position(x:182,y:135)
+            Text(instrument.description)
+                .foregroundColor(.black)
             
-            Image("SystemReturn")
-                .scaleEffect(1.1)
-                .aspectRatio(contentMode: .fit)
-                .frame(width:350)
-                .position(x:180, y:140)
+//            Image("ShengIntroText")
+//                .scaleEffect(1)
+//                .aspectRatio(contentMode: .fit)
+//                .frame(width:350)
+//                .position(x:182,y:135)
         }
         
     }

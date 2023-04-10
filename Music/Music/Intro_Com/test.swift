@@ -29,22 +29,28 @@ struct ContenttView: View {
             }
         }
         .onAppear {
-            fetchData()
+            fetchData(for: "拉弦")
         }
     }
         
-    func fetchData() {
-        let url = URL(string: "http://123.60.156.14:5000/instrument")!
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            if let data = data {
-                let decoder = JSONDecoder()
-                if let instrumentList = try? decoder.decode(InstrumentList.self, from: data) {
-                    DispatchQueue.main.async {
-                        self.instrumentList = instrumentList
+    func fetchData(for type: String) {
+        if let encodedString = type.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
+            let urlString = "http://123.60.156.14:5000/instrument?category=\(encodedString)"
+            guard let url = URL(string: urlString) else {
+                print("Invalid URL")
+                return
+            }
+            URLSession.shared.dataTask(with: url) { data, response, error in
+                if let data = data {
+                    let decoder = JSONDecoder()
+                    if let instrumentList = try? decoder.decode(InstrumentList.self, from: data) {
+                        DispatchQueue.main.async {
+                            self.instrumentList = instrumentList
+                        }
                     }
                 }
-            }
-        }.resume()
+            }.resume()
+        }
     }
 }
  

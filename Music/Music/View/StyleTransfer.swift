@@ -22,7 +22,7 @@ struct SongCell:View{
     var body: some View {
         VStack(spacing:0){
             HStack(alignment: .top){
-                Image(instru.songImage)
+                Image(uiImage: UIImage.fetchImage(from: instru.image))
                     .resizable()
                     .cornerRadius(25)
                     .overlay(RoundedRectangle(cornerRadius:25)
@@ -46,14 +46,12 @@ struct InstruCell:View{
     @EnvironmentObject private var viewmodel:Viewmodel
     var instru:SongGroup
     @State var height:CGFloat=0
-    //@StateObject var mydata=MyData()
     
     var body:some View{
        content
             .padding(.leading)
             .frame(maxWidth:.infinity)
             .foregroundColor(.black)
-        
     }
     
     private var content:some View{
@@ -63,7 +61,7 @@ struct InstruCell:View{
                 ScrollView{
                     LazyVStack(alignment: .leading){
                         ForEach(0..<instru.songList.count,id:\.self){ index in
-                            NavigationLink(destination:SongChoose(song:sampleSong[index])){
+                            NavigationLink(destination:SongChoose(song:instru.songList[index])){
                                 SongCell(instru:instru.songList[index])
                             }
                         }
@@ -108,30 +106,114 @@ struct InstruCell:View{
 
 struct ContentView:View{
     @StateObject private var viewmodel=Viewmodel()
+    // @State var songList: SongList?
+    // songList.data是【songlist】
+    // viewmodel中的instrus的每个songGroup.songList是【songlist】
     var body:some View{
         NavigationView{
             VStack(alignment:.leading){
-                        Image("testpic")
-                    ForEach(viewmodel.instrus){instru in
-                    InstruCell(instru: instru)
-                        .animation(.default, value: 0)
-                        .environmentObject(viewmodel)
+                Image("testpic")
+                ForEach(viewmodel.instrus){instru in
+                //instru是songGroup类型
+                InstruCell(instru: instru)
+                    .animation(.default, value: 0)
+                    .environmentObject(viewmodel)
                 }
             }
             .navigationTitle("每日推荐")
         }
     }
     
+//    func fetchData() {
+//        let url = URL(string: "http://123.60.156.14:5000/music_all")!
+//        URLSession.shared.dataTask(with: url) { data, response, error in
+//            if let data = data {
+//                let decoder = JSONDecoder()
+//                if let songList = try? decoder.decode(SongList.self, from: data) {
+//                    DispatchQueue.main.async {
+//                        self.songList = songList
+//                    }
+//                }
+//            }
+//        }.resume()
+//    }
 }
 
 class Viewmodel:ObservableObject{
     @Published var instrus:[SongGroup]=[
-        SongGroup(instru: "笙", songList:sampleSong),
-        SongGroup(instru: "古筝", songList: sampleSong),
-        SongGroup(instru: "钢琴", songList: sampleSong),
-        SongGroup(instru: "扬琴", songList: sampleSong),
+        SongGroup(instru: "打击乐器", songList: sampleSong),
+        SongGroup(instru: "吹管乐器", songList: sampleSong),
+        SongGroup(instru: "弹拨乐器", songList: sampleSong),
+        SongGroup(instru: "拉弦乐器", songList: sampleSong),
     ]
     
+    init() {
+        // fetchData()
+        fetchDataType(for: "打击乐器",index: 0)
+        fetchDataType(for: "吹管乐器",index: 1)
+        fetchDataType(for: "弹拨乐器",index: 2)
+        fetchDataType(for: "拉弦乐器",index: 3)
+    }
+    
+    // 初始化SongGroup列表
+    // 获得所有乐曲
+    func fetchData() {
+        let url = URL(string: "http://123.60.156.14:5000/music_all")!
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let data = data {
+                let decoder = JSONDecoder()
+                if let songList = try? decoder.decode(SongList.self, from: data) {
+                    DispatchQueue.main.async {
+                        for i in 0..<self.instrus.count {
+                            _ = self.instrus[i] //instru是songGroup类型
+                            self.instrus[i].songList = songList.data
+                        }
+                    }
+                }
+            }
+        }.resume()
+    }
+    
+    // 获得对应类型的乐曲
+    func fetchDataType(for type: String, index: Int) {
+        if let encodedString = type.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
+            let urlString = "http://123.60.156.14:5000/music_inst_type?type=\(encodedString)"
+            guard let url = URL(string: urlString) else {
+                print("Invalid URL")
+                return
+            }
+            URLSession.shared.dataTask(with: url) { data, response, error in
+                if let data = data {
+                    let decoder = JSONDecoder()
+                    if let songList = try? decoder.decode(SongList.self, from: data) {
+                        DispatchQueue.main.async {
+                            self.instrus[index].songList = songList.data
+                        }
+                    }
+                }
+            }.resume()
+        }
+    }
+
+//    func fetchDataType(for type: String,index: Int) {
+//        let urlString = "http://123.60.156.14:5000/music_inst_type?type=\(type)"
+//        print(urlString)
+//        guard let url = URL(string: urlString) else {
+//            print("Invalid URL")
+//            return
+//        }
+//        URLSession.shared.dataTask(with: url) { data, response, error in
+//            if let data = data {
+//                let decoder = JSONDecoder()
+//                if let songList = try? decoder.decode(SongList.self, from: data) {
+//                    DispatchQueue.main.async {
+//                            self.instrus[index].songList = songList.data
+//                    }
+//                }
+//            }
+//        }.resume()
+//    }
+
     func expand(_ instru:SongGroup){
         var instrus=self.instrus
         instrus=instrus.map{
@@ -139,7 +221,6 @@ class Viewmodel:ObservableObject{
             tempVar.expanded=($0.id==instru.id) ? !tempVar.expanded : tempVar.expanded
             return tempVar
         }
-        
         self.instrus=instrus
     }
 }
@@ -161,5 +242,4 @@ struct StyleTransfer_Previews: PreviewProvider {
         StyleTransfer()
     }
 }
-
 
