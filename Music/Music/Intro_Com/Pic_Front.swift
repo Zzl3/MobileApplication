@@ -6,9 +6,13 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct Pic_Front: View {
     var instrument:Instrument
+    @State private var isPlaying = false
+    let player = AVPlayer()
+    
     var body: some View {
         VStack{
             ZStack {
@@ -28,10 +32,26 @@ struct Pic_Front: View {
                 .scaledToFit()
                 .frame(height: 150)
                 .position(x:190,y:250)
-            Image(systemName: "play.circle")
-                .foregroundColor(/*@START_MENU_TOKEN@*/Color(hue: 1.0, saturation: 0.034, brightness: 0.782)/*@END_MENU_TOKEN@*/)
-                .scaleEffect(4)
-                .position(x:195,y:180)
+            Button(action: {
+                self.isPlaying.toggle()
+                if self.isPlaying {
+                    if let audioString = instrument.audio, let audioURL = URL(string: audioString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "") {
+                        let playerItem = AVPlayerItem(url: audioURL)
+                        self.player.replaceCurrentItem(with: playerItem)
+                        self.player.play()
+                    } else {
+                        print("Wrong")
+                        self.player.pause()
+                    }
+                } else {
+                    self.player.pause()
+                }
+            }) {
+                Image(systemName: isPlaying ? "pause.circle" : "play.circle")
+            }
+            .foregroundColor(/*@START_MENU_TOKEN@*/Color(hue: 1.0, saturation: 0.034, brightness: 0.782)/*@END_MENU_TOKEN@*/)
+            .scaleEffect(4)
+            .position(x:195,y:180)
         }
     }
 }

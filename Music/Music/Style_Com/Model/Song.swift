@@ -15,7 +15,7 @@ struct Song: Codable,Identifiable {
     var artist: String
     var genre: String
     var description: String
-    var fileURL: String
+    var fileURL: String?
     var createdAt: Date
     var image: String
     

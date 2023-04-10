@@ -17,7 +17,7 @@ struct SongChoose: View {
     @State var showDetail: Bool = false //显示详情
     var body: some View {
         VStack{
-            HeaderView(song: song, ifPause: false) //示例，传给他一首曲子
+            HeaderView(song: song) //示例，传给他一首曲子
                 .padding(.top,80)
             
             GeometryReader{proxy in
