@@ -12,8 +12,21 @@ struct FeedBack: View {
     @State private var selectedFeedbackType = "页面错误" //反馈类型
     @State private var feedbackContent = "" //反馈内容
     @State private var response = "" //回应
-
+    @Binding var showFeedback : Bool
+    
     var body: some View {
+        Button{
+            withAnimation(.easeInOut(duration: 0.35)){
+                showFeedback=false
+            }
+        } label: {
+            Label("返回",systemImage: "arrowshape.turn.up.backward")
+                .font(.title2)
+                .foregroundColor(.black)
+                .padding(15)
+        }
+        .frame(maxWidth: .infinity,alignment: .leading)
+        
         NavigationView {
             VStack {
                 Form {
@@ -79,6 +92,6 @@ struct FeedBack: View {
 
 struct FeedBack_Previews: PreviewProvider {
     static var previews: some View {
-        MySetting()
+        FeedBack(showFeedback: .constant(false))
     }
 }

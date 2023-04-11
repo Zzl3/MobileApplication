@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct History:Identifiable,Hashable{
+struct History:Identifiable{
     var id=UUID().uuidString
     var song:Song
     var time:String

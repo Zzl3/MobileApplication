@@ -13,8 +13,8 @@ struct HistoryView: View {
     @Binding var showHistory : Bool
     
     @State var sampleHistorys:[History]=[
-        History(song: Song(name: "summer", songImage: "testpic",artist:"久石让",description: "Summer",file_url: "https://musicstyle.oss-cn-shanghai.aliyuncs.com/files/777bcd949c9b412e8731e2b5836ee314/百鸟朝凤片段.MP3"), time: "2023-4-10", album: Album(albumName: "古筝", albumImage: "Instru_guzheng",introduction:"古筝简单介绍")),
-        History(song: Song(name: "test", songImage: "testpic",artist:"test",description: "test",file_url: "test2"), time: "2023-4-9", album: Album(albumName: "笙", albumImage: "Instru_sheng",introduction:"笙简单介绍"))
+        History(song: Song(id:1,name: "testName", artist: "testArtist", genre: "testGenre", description: "test", fileURL:"", createdAt: Date(), image: "testpic"), time: "2023-4-10", album: Album(albumName: "古筝", albumImage: "Instru_guzheng",introduction:"古筝简单介绍")),
+        History(song: Song(id:2,name: "testName1", artist: "testArtist1", genre: "testGenre1", description: "test1", fileURL:"", createdAt: Date(), image: "testpic"), time: "2023-4-9", album: Album(albumName: "笙", albumImage: "Instru_sheng",introduction:"笙简单介绍"))
     ]
     
     var body: some View {
@@ -62,7 +62,7 @@ struct HistoryView: View {
 //                    DetailView(animation: animation, album: selectedInstru, song: song, show: $showDetail)
                     NavigationLink(destination:TestView()){
                         HStack {
-                            Image(history.song.songImage)
+                            Image(history.song.image)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 80, height: 80)

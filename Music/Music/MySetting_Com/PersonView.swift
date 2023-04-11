@@ -14,6 +14,10 @@ struct PersonView: View {
     var body: some View {
         ScrollView {
             ZStack {
+                Image("testpic")
+                    .resizable()
+                    //.frame(width: .infinity)
+                    .opacity(0.05)
                 
                 VStack {
                     HStack(spacing: 12) {
@@ -35,11 +39,6 @@ struct PersonView: View {
             
             
         }
-        .background(Image("testpic")
-            .resizable()
-            //.frame(width: .infinity)
-            .opacity(0.05)
-        )
         
     }
 }

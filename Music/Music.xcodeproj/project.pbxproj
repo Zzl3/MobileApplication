@@ -132,14 +132,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		A031964329E4626B00050B98 /* Setting_Com */ = {
-			isa = PBXGroup;
-			children = (
-				A031964429E4628A00050B98 /* FeedBack.swift */,
-			);
-			path = Setting_Com;
-			sourceTree = "<group>";
-		};
 		A033E2BE29DB3321006FD53D /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,7 +198,6 @@
 			isa = PBXGroup;
 			children = (
 				BC8D657729E3A99900966B66 /* MySetting_Com */,
-				A031964329E4626B00050B98 /* Setting_Com */,
 				A0032E7E29DC263A0095F847 /* Sources */,
 				A033E2BF29DB334E006FD53D /* Base_Com */,
 				A033E2BE29DB3321006FD53D /* View */,
@@ -238,6 +229,7 @@
 				BCE412E329E5614D000C94B9 /* TestView.swift */,
 				BCE412E529E5675C000C94B9 /* CollectionView.swift */,
 				BCE412E729E567BE000C94B9 /* AboutUsView.swift */,
+				A031964429E4628A00050B98 /* FeedBack.swift */,
 			);
 			path = MySetting_Com;
 			sourceTree = "<group>";
@@ -333,10 +325,9 @@
 				A0286C6A29E2959800B3EF01 /* Instrument.swift in Sources */,
 				A0032E8329DC27E70095F847 /* Song.swift in Sources */,
 				BCE412E229E54C1F000C94B9 /* ReplyView.swift in Sources */,
-				A0286C7729E320BB00B3EF01 /* Intro_tool.swift in Sources */,
+				A0286C7729E320BB00B3EF01 /* Tools.swift in Sources */,
 				BC8D657E29E3AF0A00966B66 /* History.swift in Sources */,
 				A088AAA629DB3ECD00447088 /* CustomCarousel.swift in Sources */,
-				A01998F229C8048600D024B8 /* Intro_Nav.swift in Sources */,
 				BCE412E829E567BE000C94B9 /* AboutUsView.swift in Sources */,
 				A0286C7729E320BB00B3EF01 /* Tools.swift in Sources */,
 				A088AAAA29DC10D500447088 /* HeaderView.swift in Sources */,

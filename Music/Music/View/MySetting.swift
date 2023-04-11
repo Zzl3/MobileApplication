@@ -96,6 +96,9 @@ struct MenuView : View {
     
     var body: some View {
         return ZStack {
+//            Image("huawen")
+//                .resizable()
+            
             VStack(alignment: .leading, spacing:20){
                 MenuRow(image: "arrowshape.turn.up.backward",text: "返回")
                     .onTapGesture {
@@ -119,11 +122,11 @@ struct MenuView : View {
                 }
                 .foregroundColor(Color.black)
                 
-                Button(action: { self.showHistory.toggle() }) {
+                Button(action: { self.showFeedback.toggle() }) {
                     MenuRow(image: "applepencil",text: "提交反馈")
                 }
-                .sheet(isPresented: $showHistory) {
-                    HistoryView(showHistory: $showHistory)
+                .sheet(isPresented: $showFeedback) {
+                    FeedBack(showFeedback: $showFeedback)
                 }
                 .foregroundColor(Color.black)
                 
@@ -140,6 +143,12 @@ struct MenuView : View {
                 Spacer()
                     
             }
+            .background(
+                Image("huawen")
+                    .resizable()
+                    //.background(Color("LightGreen"))
+                    .opacity(0.5)
+            )
             //.padding(.top,20)
             .padding(30)
             .frame(minWidth: 0,maxWidth: .infinity)
@@ -152,6 +161,7 @@ struct MenuView : View {
             //.animation(.basic())
             .offset(x: showMenu ? 0 : -UIScreen.main.bounds.width)
         }
+        
 //        .tapAction{
 //            self.show.toggle()
 //        }
