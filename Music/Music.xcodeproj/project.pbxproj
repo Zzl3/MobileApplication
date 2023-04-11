@@ -34,6 +34,13 @@
 		A0DA23EF29C3092D0047AFCE /* MySetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DA23EE29C3092D0047AFCE /* MySetting.swift */; };
 		BC20E60729CD499D0093D675 /* Pic_Intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC20E60629CD499D0093D675 /* Pic_Intro.swift */; };
 		BC8D657629E194D700966B66 /* test2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC8D657529E194D700966B66 /* test2.mp3 */; };
+		BC8D657B29E3AA1300966B66 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D657A29E3AA1300966B66 /* HistoryView.swift */; };
+		BC8D657E29E3AF0A00966B66 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D657D29E3AF0A00966B66 /* History.swift */; };
+		BCE412DE29E5369D000C94B9 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE412DD29E5369D000C94B9 /* PersonView.swift */; };
+		BCE412E229E54C1F000C94B9 /* ReplyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE412E129E54C1F000C94B9 /* ReplyView.swift */; };
+		BCE412E429E5614D000C94B9 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE412E329E5614D000C94B9 /* TestView.swift */; };
+		BCE412E629E5675D000C94B9 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE412E529E5675C000C94B9 /* CollectionView.swift */; };
+		BCE412E829E567BE000C94B9 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE412E729E567BE000C94B9 /* AboutUsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +73,13 @@
 		A0DA23EE29C3092D0047AFCE /* MySetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySetting.swift; sourceTree = "<group>"; };
 		BC20E60629CD499D0093D675 /* Pic_Intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pic_Intro.swift; sourceTree = "<group>"; };
 		BC8D657529E194D700966B66 /* test2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test2.mp3; sourceTree = "<group>"; };
+		BC8D657A29E3AA1300966B66 /* HistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		BC8D657D29E3AF0A00966B66 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		BCE412DD29E5369D000C94B9 /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
+		BCE412E129E54C1F000C94B9 /* ReplyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyView.swift; sourceTree = "<group>"; };
+		BCE412E329E5614D000C94B9 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		BCE412E529E5675C000C94B9 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		BCE412E729E567BE000C94B9 /* AboutUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +195,7 @@
 		A0DA23DC29C307F90047AFCE /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				BC8D657729E3A99900966B66 /* MySetting_Com */,
 				A0032E7E29DC263A0095F847 /* Sources */,
 				A033E2BF29DB334E006FD53D /* Base_Com */,
 				A033E2BE29DB3321006FD53D /* View */,
@@ -200,6 +215,28 @@
 				A0DA23E529C307FC0047AFCE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BC8D657729E3A99900966B66 /* MySetting_Com */ = {
+			isa = PBXGroup;
+			children = (
+				BC8D657C29E3AEF100966B66 /* Model */,
+				BC8D657A29E3AA1300966B66 /* HistoryView.swift */,
+				BCE412DD29E5369D000C94B9 /* PersonView.swift */,
+				BCE412E129E54C1F000C94B9 /* ReplyView.swift */,
+				BCE412E329E5614D000C94B9 /* TestView.swift */,
+				BCE412E529E5675C000C94B9 /* CollectionView.swift */,
+				BCE412E729E567BE000C94B9 /* AboutUsView.swift */,
+			);
+			path = MySetting_Com;
+			sourceTree = "<group>";
+		};
+		BC8D657C29E3AEF100966B66 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC8D657D29E3AF0A00966B66 /* History.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,21 +311,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCE412E429E5614D000C94B9 /* TestView.swift in Sources */,
 				A0DA23ED29C308F30047AFCE /* StyleTransfer.swift in Sources */,
+				BC8D657B29E3AA1300966B66 /* HistoryView.swift in Sources */,
 				A0680DFC29DB18F800F508E1 /* BaseView.swift in Sources */,
 				A0680DFA29DAAFA300F508E1 /* CustomCorners.swift in Sources */,
+				BCE412E629E5675D000C94B9 /* CollectionView.swift in Sources */,
 				A0286C7529E2EBA100B3EF01 /* test.swift in Sources */,
 				A0998B5429C7542B00A6561C /* Pic_Front.swift in Sources */,
 				A0286C6A29E2959800B3EF01 /* Instrument.swift in Sources */,
 				A0032E8329DC27E70095F847 /* Song.swift in Sources */,
+				BCE412E229E54C1F000C94B9 /* ReplyView.swift in Sources */,
 				A0286C7729E320BB00B3EF01 /* Intro_tool.swift in Sources */,
+				BC8D657E29E3AF0A00966B66 /* History.swift in Sources */,
 				A088AAA629DB3ECD00447088 /* CustomCarousel.swift in Sources */,
 				A088AAAA29DC10D500447088 /* HeaderView.swift in Sources */,
 				A01998F229C8048600D024B8 /* Intro_Nav.swift in Sources */,
+				BCE412E829E567BE000C94B9 /* AboutUsView.swift in Sources */,
 				A088AAA429DB353400447088 /* InstruTab.swift in Sources */,
 				A088AAB029DC1EC700447088 /* CustomShape.swift in Sources */,
 				A0998B5229C752C800A6561C /* RotateCard.swift in Sources */,
 				A033E2BD29DB32F3006FD53D /* SongChoose.swift in Sources */,
+				BCE412DE29E5369D000C94B9 /* PersonView.swift in Sources */,
 				A088AAA829DC05A400447088 /* CustomArcShape.swift in Sources */,
 				A088AAAC29DC139900447088 /* DetailView.swift in Sources */,
 				A0680DFE29DB1C5400F508E1 /* CustomTab.swift in Sources */,
