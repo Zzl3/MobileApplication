@@ -11,13 +11,33 @@ struct Introduction: View {
     @State var instrumentList: InstrumentList?
     @State var selectedCategory: Int = 0 //保存当前索引
     @State var instrumentsByCategory: [String: [Instrument]] = [:] //字典保存值
+    @State private var searchText = "" //保存输入框的值
     
     let categories = ["拉弦", "吹管", "打击", "弹拨"]
     
     var body: some View {
         VStack{
-            // Intro_Nav()
             // Spacer(minLength: 30)
+            HStack(spacing: 0) {
+                HStack(spacing: 0) {
+                    Image(systemName: "magnifyingglass")
+                        .foregroundColor(Color(red: 0.388, green: 0.46, blue: 0.373))
+                    
+                    TextField("Search", text: $searchText,onCommit: {
+                        fetchDataType(for: searchText,other: "name")
+                    })
+                        .tint(Color(red: 0.388, green: 0.46, blue: 0.373))
+                }
+                .padding(.vertical, 10)
+                .padding(.horizontal, 15)
+                .background {
+                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        .fill(.black)
+                        .opacity(0.15)
+                }
+                .padding(.horizontal)
+            }
+            
             Picker(selection: $selectedCategory, label: Text("Category")) {
                 ForEach(0 ..< categories.count) { index in
                     Text(categories[index]).tag(index)
@@ -34,13 +54,13 @@ struct Introduction: View {
         .onChange(of: selectedCategory) { newValue in
             switch newValue {
             case 0:
-                fetchDataType(for: "拉弦乐器")
+                fetchDataType(for: "拉弦乐器",other: "category")
             case 1:
-                fetchDataType(for: "吹管乐器")
+                fetchDataType(for: "吹管乐器",other: "category")
             case 2:
-                fetchDataType(for: "打击乐器")
+                fetchDataType(for: "打击乐器",other: "category")
             case 3:
-                fetchDataType(for: "弹拨乐器")
+                fetchDataType(for: "弹拨乐器",other: "category")
             default:
                 fetchData()
             }
@@ -72,13 +92,13 @@ struct Introduction: View {
         }.resume()
     }
     
-    func fetchDataType(for type: String) {
+    func fetchDataType(for type: String,other para: String) {
         if let instruments = instrumentsByCategory[type] {// 使用缓存数据
             self.instrumentList = InstrumentList(code: 200,msg: instruments.count,data: instruments)
             print(self.instrumentList as Any)
         } else {
             if let encodedString = type.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
-                let urlString = "http://123.60.156.14:5000/instrument?category=\(encodedString)"
+                let urlString = "http://123.60.156.14:5000/instrument?\(para)=\(encodedString)"
                 guard let url = URL(string: urlString) else {
                     print("Invalid URL")
                     return
@@ -97,6 +117,7 @@ struct Introduction: View {
             }
         }
     }
+    
     
     @ViewBuilder
     func CardsScrollView()->some View{
