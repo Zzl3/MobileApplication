@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BaseView: View {
-    @State var currentTab = "house.fill"
+    @State var currentTab = "music.note.list"
     init(){
         UITabBar.appearance().isHidden=true
     }
@@ -23,7 +23,6 @@ struct BaseView: View {
                     .tag("music.note.house")
                 MySetting()
                     .tag("person.circle")
-                
             }
             .clipShape(
                 CustomTab(curveAxis: curveAxis)

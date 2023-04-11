@@ -13,18 +13,19 @@ struct Instrument: Codable, Identifiable  {
     let name: String
     let nameImage: String
     let image: String
+    let audio: String?
     let model: String
     let description: String
     let category: String
        
     enum CodingKeys: String, CodingKey {
-        case id, name, image, model, description, category
+        case id, name, image, model, description, category, audio
         case nameImage = "name_image"
     }
 }
 
 var sampleInstrument:[Instrument]=[
-    Instrument(id:0,name: "笙",nameImage:"ShengT",image:"ShengP",model: "**",description: "笙",category: "打击乐器")
+    Instrument(id:0,name: "笙",nameImage:"ShengT",image:"ShengP",audio: "123",model: "**",description: "笙",category: "打击乐器")
 ]
 
 struct InstrumentList: Codable {

@@ -14,6 +14,7 @@ struct MySetting: View {
     @State var showContent = false
     
     var body: some View {
+
         ZStack{
             PersonView()
                 .padding(.top, 44)
@@ -155,6 +156,7 @@ struct MenuView : View {
 //            self.show.toggle()
 //        }
         //.animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
+
 
     }
 }

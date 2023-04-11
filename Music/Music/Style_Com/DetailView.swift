@@ -41,28 +41,30 @@ struct DetailView:View{
     @State var newIfLove:Bool=false
     var body: some View{
         ZStack{
-            Image(song.songImage)
+            Image(song.image)
                 .resizable()
                 //.frame(width: 200,height: 100)
                 .opacity(0.05)
             
             VStack{
-                //返回键（左上角）
-                HStack{
-                    Button{
-                        withAnimation(.easeInOut(duration: 0.35)){
-                            show=false
+                //返回键（右上角）
+                ZStack(alignment: .topTrailing) {
+                    Spacer()
+                    Button {
+                        withAnimation(.easeInOut(duration: 0.35)) {
+                            show = false
                         }
                     } label: {
-                        Label("试试其他",systemImage: "arrow.left")
-                            .font(.title2)
+                        Label("试试其他", systemImage: "")
+                            .font(.title3)
                             .foregroundColor(.black)
-                            .padding(15)
+                            .padding(7)
                     }
-                    .frame(maxWidth: .infinity,alignment: .leading)
+                    .buttonStyle(CustomButtonStyle())
+                    .frame(width: 300, height: 1)
+                    .offset(x: 120, y: 55)
                 }
                 .padding()
-                
                 //歌曲信息：图片，歌名，
                 VStack{
                     ZStack{
@@ -76,7 +78,7 @@ struct DetailView:View{
                             .frame(width: 225,height:  225)
                             .shadow(radius: 10)
                         
-                        Image(song.songImage)
+                        Image(uiImage: UIImage.fetchImage(from: song.image))
                             .resizable()
                             .scaledToFit()
                             .scaleEffect(2.5)
@@ -90,11 +92,10 @@ struct DetailView:View{
                     Text(song.artist)
                         .font(.system(.headline))
                 }
-                .padding()
+                .padding(.top,100)
                 
                 //原来歌曲的版本：乐器名+波形图+三个按钮（下载，暂停/播放，收藏）+乐器背景图片
                 ZStack{
-                    
                     Image(album.albumImage)
                         .resizable()
                         .frame(width: 300,height: 200)
@@ -288,8 +289,6 @@ struct DetailView:View{
                     }
                     
                     //风格迁移后歌曲的版本：乐器名+波形图+三个按钮（下载，暂停/播放，收藏）+乐器背景图片
-                    
-                    
                 }
                 .frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .top)
             }
@@ -337,7 +336,7 @@ struct DetailView:View{
     
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        SongChoose(song:sampleSong[0])
+        SongChoose(song: sampleSong[0])
     }
 }
 
