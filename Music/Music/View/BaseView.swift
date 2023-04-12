@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct BaseView: View {
+    @EnvironmentObject var appSettings: AppSettings
+    @Namespace var namespace
+    
     @State var currentTab = "music.note.list"
     init(){
         UITabBar.appearance().isHidden=true
@@ -37,6 +40,23 @@ struct BaseView: View {
         .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.451, green: 0.511, blue: 0.388)/*@END_MENU_TOKEN@*/)
         .foregroundColor(.white)
         .ignoresSafeArea(.container,edges: .top)
+        
+        .accentColor(accentColorData[self.appSettings.accentColorSettings].color)
+        .onAppear {
+            let scenes = UIApplication.shared.connectedScenes
+            let windowScene = scenes.first as? UIWindowScene
+            let window = windowScene?.windows.first
+            switch self.appSettings.darkModeSettings {
+            case 0:
+                window?.overrideUserInterfaceStyle = .unspecified
+            case 1:
+                window?.overrideUserInterfaceStyle = .light
+            case 2:
+                window?.overrideUserInterfaceStyle = .dark
+            default:
+                window?.overrideUserInterfaceStyle = .unspecified
+            }
+        }
     }
        
     @ViewBuilder
@@ -77,6 +97,6 @@ struct BaseView: View {
 
 struct BaseView_Previews: PreviewProvider {
     static var previews: some View {
-        BaseView()
+        BaseView().environmentObject(AppSettings())
     }
 }

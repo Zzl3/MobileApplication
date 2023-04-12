@@ -10,7 +10,7 @@ import SwiftUI
 
 
 struct HistoryView: View {
-    @Binding var showHistory : Bool
+    @EnvironmentObject var appSettings: AppSettings
     
     @State var sampleHistorys:[History]=[
         History(song: Song(id:1,name: "testName", artist: "testArtist", genre: "testGenre", description: "test", fileURL:"", createdAt: Date(), image: "testpic"), time: "2023-4-10", album: Album(albumName: "古筝", albumImage: "Instru_guzheng",introduction:"古筝简单介绍")),
@@ -44,17 +44,17 @@ struct HistoryView: View {
 //        }
 //        .frame(maxWidth: .infinity,alignment: .leading)
         
-        Button{
-            withAnimation(.easeInOut(duration: 0.35)){
-                showHistory=false
-            }
-        } label: {
-            Label("返回",systemImage: "arrowshape.turn.up.backward")
-                .font(.title2)
-                .foregroundColor(.black)
-                .padding(15)
-        }
-        .frame(maxWidth: .infinity,alignment: .leading)
+//        Button{
+//            withAnimation(.easeInOut(duration: 0.35)){
+//                //showHistory=false
+//            }
+//        } label: {
+//            Label("返回",systemImage: "arrowshape.turn.up.backward")
+//                .font(.title2)
+//                .foregroundColor(.black)
+//                .padding(15)
+//        }
+//        .frame(maxWidth: .infinity,alignment: .leading)
         
         NavigationView {
             List {
@@ -117,7 +117,7 @@ struct HistoryView: View {
 
 struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
-        HistoryView(showHistory: .constant(false))
+        HistoryView().environmentObject(AppSettings())
     }
 }
 

@@ -16,6 +16,7 @@ struct SongGroup:Identifiable{  //歌曲按乐器分类
 }
 
 struct SongCell:View{
+    @EnvironmentObject var appSettings: AppSettings
     @EnvironmentObject private var viewmodel:Viewmodel
     let instru:Song
     
@@ -239,7 +240,7 @@ struct StyleTransfer: View {
 
 struct StyleTransfer_Previews: PreviewProvider {
     static var previews: some View {
-        StyleTransfer()
+        StyleTransfer().environmentObject(AppSettings())
     }
 }
 

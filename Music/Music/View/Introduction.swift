@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Introduction: View {
+    @EnvironmentObject var appSettings: AppSettings
     @State var instrumentList: InstrumentList?
     @State var selectedCategory: Int = 0 //保存当前索引
     @State var instrumentsByCategory: [String: [Instrument]] = [:] //字典保存值
@@ -142,6 +143,6 @@ struct Introduction: View {
 
 struct Introduction_Previews: PreviewProvider {
     static var previews: some View {
-        BaseView()
+        BaseView().environmentObject(AppSettings())
     }
 }

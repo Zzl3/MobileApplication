@@ -11,42 +11,20 @@ import SwiftUI
 
 struct PersonView: View {
     
+    @Environment(\.presentationMode)    var presentationMode
+    @EnvironmentObject                  var appSettings: AppSettings
+    
     var body: some View {
-        ScrollView {
-            ZStack {
-                Image("testpic")
-                    .resizable()
-                    //.frame(width: .infinity)
-                    .opacity(0.05)
-                
-                VStack {
-                    HStack(spacing: 12) {
-                        Text("个人主页")
-                            .font(.system(size: 28, weight: .bold))
-                            
-                        
-                        Spacer()
-                        
-                        
-                    }
-                    .padding(.horizontal)
-                    .padding(.leading, 14)
-                    .padding(.top, 30)
-                    
-                    Text("personal page")
-                }
-            }
-            
-            
-        }
-        
+        Text("personal page")
+        .accentColor(accentColorData[self.appSettings.accentColorSettings].color)
     }
 }
 
 
 
+
 struct PersonView_Previews: PreviewProvider {
     static var previews: some View {
-        PersonView()//.environmentObject(UserStore())
+        PersonView().environmentObject(AppSettings())
     }
 }
