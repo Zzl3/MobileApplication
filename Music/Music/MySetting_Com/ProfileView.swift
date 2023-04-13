@@ -13,45 +13,70 @@ struct ProfileView: View {
     @EnvironmentObject                  var appSettings: AppSettings
     
     var body: some View {
-        NavigationView {
-            List {
-                Section {
-                    headPortrait
-                }
-                
-                Section{
-                    NavigationLink(destination: AppearanceSetView()) {
-                        SettingItemView(iconName: "paintpalette.fill", title: "外观设置", bgColor: Color.accentColor)
-                    }
-
-                    NavigationLink(destination: HistoryView()) {
-                        SettingItemView(iconName: "record.circle", title: "历史记录", bgColor: Color.accentColor)
-                    }
-
-                    NavigationLink(destination: CollectionView()) {
-                        SettingItemView(iconName: "bookmark.circle", title: "我的收藏", bgColor: Color.accentColor)
+        VStack {
+            
+            NavigationView {
+                List {
+                    Section {
+                        headPortrait
                     }
                     
-                    NavigationLink(destination: FeedBack()) {
-                        SettingItemView(iconName: "applepencil", title: "提交反馈", bgColor: Color.accentColor)
-                    }
+                    Section{
+                        NavigationLink(destination: AppearanceSetView()) {
+                            SettingItemView(iconName: "paintpalette.fill", title: "外观设置", bgColor: Color.accentColor)
+                        }
 
-                    NavigationLink(destination: AboutUsView()) {
-                        SettingItemView(iconName: "person.bust", title: "关于我们", bgColor: Color.accentColor)
+                        NavigationLink(destination: HistoryView()) {
+                            SettingItemView(iconName: "record.circle", title: "历史记录", bgColor: Color.accentColor)
+                        }
+
+                        NavigationLink(destination: CollectionView()) {
+                            SettingItemView(iconName: "bookmark.circle", title: "我的收藏", bgColor: Color.accentColor)
+                        }
+                        
+                        NavigationLink(destination: FeedBack()) {
+                            SettingItemView(iconName: "applepencil", title: "提交反馈", bgColor: Color.accentColor)
+                        }
+
+                        NavigationLink(destination: AboutUsView()) {
+                            SettingItemView(iconName: "person.bust", title: "关于我们", bgColor: Color.accentColor)
+                        }
                     }
+                    
+                    Section {
+                        HStack{
+                            Spacer()
+                            Button(action: {}) {
+                                Text("退出登录")
+                                    .foregroundColor(Color.primary)
+                                    .font(.title2)
+                            }
+                            
+                            Spacer()
+                        }
+                        .frame(height: 40)
+                    }
+                    
+                }
+                .listRowSeparator(.hidden)
+                .navigationBarTitle("账户", displayMode: .inline)
+                .toolbar {
+                    Button("完成", action: close)
                 }
                 
             }
-            .listRowSeparator(.hidden)
-            .navigationBarTitle("账户", displayMode: .inline)
-            .toolbar {
-                Button("完成", action: close)
-            }
-            
+            .navigationViewStyle(.stack)
+            .accentColor(accentColorData[self.appSettings.accentColorSettings].color)
             
         }
-        .navigationViewStyle(.stack)
-        .accentColor(accentColorData[self.appSettings.accentColorSettings].color)
+        .background(
+            Image("huawen2")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 400,height: 900)
+                //.background(Color("LightGreen"))
+                .opacity(0.3)
+        )
     }
     
     var headPortrait: some View {

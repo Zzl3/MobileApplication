@@ -19,99 +19,77 @@ struct HistoryView: View {
     
     var body: some View {
         
-//        HStack{
-//            Button{
-//                withAnimation(.easeInOut(duration: 0.35)){
-//                    showHistory=false
-//                }
-//            } label: {
-//                Label("返回",systemImage: "arrow.left")
-//                    .font(.title2)
-//                    .foregroundColor(.black)
-//                    .padding(15)
+        
+        VStack {
+//            HStack {
+//                Text("历史记录")
+//                .font(.system(size: 35))
+//                .fontWeight(.heavy)
+//                .padding()
+//                Spacer()
 //            }
-//            .frame(maxWidth: .infinity,alignment: .leading)
-//        }
-//        .padding()
-        
-//        NavigationLink{
-//            MySetting()
-//        }label: {
-//            Label("返回",systemImage: "arrow.left")
-//                .font(.title2)
-//                .foregroundColor(.black)
-//                .padding(15)
-//        }
-//        .frame(maxWidth: .infinity,alignment: .leading)
-        
-//        Button{
-//            withAnimation(.easeInOut(duration: 0.35)){
-//                //showHistory=false
-//            }
-//        } label: {
-//            Label("返回",systemImage: "arrowshape.turn.up.backward")
-//                .font(.title2)
-//                .foregroundColor(.black)
-//                .padding(15)
-//        }
-//        .frame(maxWidth: .infinity,alignment: .leading)
-        
-        NavigationView {
-            List {
-                ForEach(sampleHistorys) { history in
-//                    DetailView(animation: animation, album: selectedInstru, song: song, show: $showDetail)
-                    NavigationLink(destination:TestView()){
-                        HStack {
-                            Image(history.song.image)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 80, height: 80)
-                                .background(Color.black)
-                                .cornerRadius(20)
-                                .padding(.trailing, 4)
-                            
-                            VStack(alignment: .leading, spacing: 8.0) {
-                                HStack{
-                                    Text(history.song.name)
-                                        .font(.system(size: 20, weight: .bold))
-                                    
-                                    Text(history.song.artist)
-                                        .font(.system(size: 20, weight: .bold))
-                                }
+//            .background(Color(""))
+                
+            
+            NavigationView {
+                List {
+                    ForEach(sampleHistorys) { history in
+    //                    DetailView(animation: animation, album: selectedInstru, song: song, show: $showDetail)
+                        NavigationLink(destination:TestView()){
+                            HStack {
+                                Image(history.song.image)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 80, height: 80)
+                                    .background(Color.black)
+                                    .cornerRadius(20)
+                                    .padding(.trailing, 4)
                                 
-                                HStack{
-                                    Image(history.album.albumImage)
-                                        .resizable()
-                                        .frame(width: 30,height: 30)
-                                        .aspectRatio(contentMode: .fit)
-                                        .rotationEffect(.init(degrees: -2))
+                                VStack(alignment: .leading, spacing: 8.0) {
+                                    HStack{
+                                        Text(history.song.name)
+                                            .font(.system(size: 20, weight: .bold))
+                                        
+                                        Text(history.song.artist)
+                                            .font(.system(size: 20, weight: .bold))
+                                    }
                                     
-                                    Text(history.album.albumName)
-                                        .lineLimit(2)
-                                        .font(.subheadline)
-                                        .foregroundColor(Color(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)))
-                                    
+                                    HStack{
+                                        Image(history.album.albumImage)
+                                            .resizable()
+                                            .frame(width: 30,height: 30)
+                                            .aspectRatio(contentMode: .fit)
+                                            .rotationEffect(.init(degrees: -2))
+                                        
+                                        Text(history.album.albumName)
+                                            .lineLimit(2)
+                                            .font(.subheadline)
+                                            .foregroundColor(Color(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)))
+                                        
+                                    }
+                                                                    
+                                    Text(history.time)
+                                        .font(.caption)
+                                        .fontWeight(.bold)
+                                        .foregroundColor(.secondary)
                                 }
-                                                                
-                                Text(history.time)
-                                    .font(.caption)
-                                    .fontWeight(.bold)
-                                    .foregroundColor(.secondary)
                             }
+                            .padding(.vertical, 8)
                         }
-                        .padding(.vertical, 8)
+                    }
+                    .onDelete { index in
+                        self.sampleHistorys.remove(at: index.first!)
+                    }
+                    .onMove { (source: IndexSet, destination: Int) in
+                        self.sampleHistorys.move(fromOffsets: source, toOffset: destination)
                     }
                 }
-                .onDelete { index in
-                    self.sampleHistorys.remove(at: index.first!)
-                }
-                .onMove { (source: IndexSet, destination: Int) in
-                    self.sampleHistorys.move(fromOffsets: source, toOffset: destination)
-                }
+                .navigationBarItems(trailing: EditButton().font(.title2).foregroundColor(Color.primary))
+                .navigationBarTitle(Text("历史记录"))
             }
-            .navigationBarTitle(Text("历史记录"))
-            .navigationBarItems(trailing: EditButton().font(.title2).foregroundColor(Color.black))
         }
+        .background(Color.white)
+        
     }
 }
 
