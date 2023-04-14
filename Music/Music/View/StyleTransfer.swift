@@ -82,27 +82,30 @@ struct InstruCell:View{
             }
         }
     }
-    
+    //
+    //
     private var sectionHeader:some View{
             VStack(spacing:0){
                 HStack{
                     Text(instru.instru)
                         .padding(.vertical,10)
-                        .foregroundColor(.black)
+                        .foregroundColor(Color("DeepGreen"))
+                        .fontWeight(.bold)
+                        .font(.system(size:20))
                     Spacer()
                     Image(systemName:"chevron.right")
                         .rotationEffect(Angle.init(degrees: instru.expanded ? 90 : 0))
                 }.padding(.trailing,10)
                 Divider()
-            }
+                }
             .contentShape(Rectangle())
             .onTapGesture {
                 withAnimation{
                     viewmodel.expand(instru)
+                    }
                 }
             }
-        }
-    
+       
 }
 
 struct ContentView:View{
@@ -110,19 +113,53 @@ struct ContentView:View{
     // @State var songList: SongList?
     // songList.data是【songlist】
     // viewmodel中的instrus的每个songGroup.songList是【songlist】
+    
     var body:some View{
+        
+        
+           
+                
         NavigationView{
-            VStack(alignment:.leading){
-                Image("testpic")
-                ForEach(viewmodel.instrus){instru in
-                //instru是songGroup类型
-                InstruCell(instru: instru)
-                    .animation(.default, value: 0)
-                    .environmentObject(viewmodel)
+            
+            ZStack{
+                Color.clear
+                    .background(Image("huawen2")
+                        .position(x:100,y:1600)
+                        .scaleEffect(0.1)
+                        .padding())
+                    
+                
+                
+                VStack(alignment:.leading){
+                    
+                    Image("testpic")
+                        .scaleEffect(0.9)
+                        .position(x:180,y:150)
+                        .frame(height:200)
+                        .padding()
+                    
+                    Text("乐器选择")
+                        .font(.system(size:30))
+                        .fontWeight(.heavy)
+                        .foregroundColor(Color("AccentColor"))
+                        .position(x:80,y:100)
+                        .frame(height:110)
+                    ScrollView{
+                        ForEach(viewmodel.instrus){instru in
+                            //instru是songGroup类型
+                            InstruCell(instru: instru)
+                                .animation(.default, value: 0)
+                                .environmentObject(viewmodel)
+                            
+                        }
+                    }
+                    
+                    
                 }
+                .navigationTitle("每日推荐")
             }
-            .navigationTitle("每日推荐")
         }
+        
     }
     
 //    func fetchData() {
