@@ -23,22 +23,18 @@ struct MySetting: View {
     @State var showFeedback = false
     @State var showAboutUs = false
 //
-
-    
     @Namespace var namespace
     
     var body: some View {
-
-        
         NavigationView {
             ScrollView(.vertical) {
-                VStack(spacing: 30) {
+                VStack {
                     PersonView()
-                }.padding(.vertical, 20.0)
+                        .frame(width: .infinity,height: 700)
+                }
             }
-            .navigationTitle("Today")
+            .navigationTitle("我的设置")
             .toolbar {
-                
                 Button(action: {
                     showingSheet.toggle()
                 }) {
@@ -55,10 +51,7 @@ struct MySetting: View {
             }
         }
         .navigationViewStyle(.stack)
-
     }
-    
-    
 }
 
 struct MenuRow: View{
