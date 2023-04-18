@@ -11,10 +11,9 @@ import SwiftUI
 
 struct HistoryView: View {
     @EnvironmentObject var appSettings: AppSettings
-    
     @State var sampleHistorys:[History]=[
-        History(song: Song(id:1,name: "testName", artist: "testArtist", genre: "testGenre", description: "test", fileURL:"", createdAt: Date(), image: "testpic"), time: "2023-4-10", album: Album(albumName: "古筝", albumImage: "Instru_guzheng",introduction:"古筝简单介绍")),
-        History(song: Song(id:2,name: "testName1", artist: "testArtist1", genre: "testGenre1", description: "test1", fileURL:"", createdAt: Date(), image: "testpic"), time: "2023-4-9", album: Album(albumName: "笙", albumImage: "Instru_sheng",introduction:"笙简单介绍"))
+        History(song: Song(id:1,name: "testName", artist: "testArtist", genre: "testGenre", description: "test", fileURL:"", createdAt: Date(), image: "testpic"), time: "2023-4-10", album: Album(id:1,albumName: "古筝", albumImage: "Instru_guzheng",introduction:"古筝简单介绍")),
+        History(song: Song(id:2,name: "testName1", artist: "testArtist1", genre: "testGenre1", description: "test1", fileURL:"", createdAt: Date(), image: "testpic"), time: "2023-4-9", album: Album(id:2,albumName: "笙", albumImage: "Instru_sheng",introduction:"笙简单介绍"))
     ]
     
     var body: some View {

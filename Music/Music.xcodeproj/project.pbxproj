@@ -35,6 +35,8 @@
 		A0DA23EF29C3092D0047AFCE /* MySetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DA23EE29C3092D0047AFCE /* MySetting.swift */; };
 		A0F48BC629ED8DE400C32B4D /* MyModel.scn in Resources */ = {isa = PBXBuildFile; fileRef = A0F48BC529ED8DE400C32B4D /* MyModel.scn */; };
 		A0F48BC829ED8E8600C32B4D /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F48BC729ED8E8600C32B4D /* CustomARView.swift */; };
+		A0F48BCA29EDA22D00C32B4D /* SongInstru.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F48BC929EDA22C00C32B4D /* SongInstru.swift */; };
+		A0F48BCC29EDB02100C32B4D /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F48BCB29EDB02100C32B4D /* Collection.swift */; };
 		A0FE3ABB29ED157400D740C4 /* BeginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FE3ABA29ED157400D740C4 /* BeginView.swift */; };
 		A0FE3ABE29ED15CE00D740C4 /* Intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FE3ABD29ED15CE00D740C4 /* Intro.swift */; };
 		A0FE3AC329ED489200D740C4 /* LoginAndRegis.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FE3AC229ED489200D740C4 /* LoginAndRegis.swift */; };
@@ -88,6 +90,8 @@
 		A0DA23EE29C3092D0047AFCE /* MySetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySetting.swift; sourceTree = "<group>"; };
 		A0F48BC529ED8DE400C32B4D /* MyModel.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = MyModel.scn; path = Music/Sources/MyModel.scn; sourceTree = "<group>"; };
 		A0F48BC729ED8E8600C32B4D /* CustomARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
+		A0F48BC929EDA22C00C32B4D /* SongInstru.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongInstru.swift; sourceTree = "<group>"; };
+		A0F48BCB29EDB02100C32B4D /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		A0FE3ABA29ED157400D740C4 /* BeginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginView.swift; sourceTree = "<group>"; };
 		A0FE3ABD29ED15CE00D740C4 /* Intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro.swift; sourceTree = "<group>"; };
 		A0FE3ABF29ED2E3C00D740C4 /* Slideqiuhong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Slideqiuhong.ttf; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 			children = (
 				A0032E8229DC27E70095F847 /* Song.swift */,
 				A0680DF729DA996D00F508E1 /* Album.swift */,
+				A0F48BC929EDA22C00C32B4D /* SongInstru.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 				BC14666029E688A800F0B4F2 /* AppSettings.swift */,
 				BC14666229E688DB00F0B4F2 /* ThemeData.swift */,
 				BC14666429E688F400F0B4F2 /* ThemeModel.swift */,
+				A0F48BCB29EDB02100C32B4D /* Collection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -401,11 +407,13 @@
 				A0286C7529E2EBA100B3EF01 /* test.swift in Sources */,
 				A0FE3ABE29ED15CE00D740C4 /* Intro.swift in Sources */,
 				A0998B5429C7542B00A6561C /* Pic_Front.swift in Sources */,
+				A0F48BCA29EDA22D00C32B4D /* SongInstru.swift in Sources */,
 				A0FE3AC629ED5DEC00D740C4 /* MyARView.swift in Sources */,
 				A0286C6A29E2959800B3EF01 /* Instrument.swift in Sources */,
 				A0032E8329DC27E70095F847 /* Song.swift in Sources */,
 				A0FE3ABB29ED157400D740C4 /* BeginView.swift in Sources */,
 				A0286C7729E320BB00B3EF01 /* Tools.swift in Sources */,
+				A0F48BCC29EDB02100C32B4D /* Collection.swift in Sources */,
 				BC8D657E29E3AF0A00966B66 /* History.swift in Sources */,
 				A088AAA629DB3ECD00447088 /* CustomCarousel.swift in Sources */,
 				BC14666529E688F400F0B4F2 /* ThemeModel.swift in Sources */,

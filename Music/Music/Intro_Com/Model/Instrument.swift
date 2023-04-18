@@ -33,3 +33,9 @@ struct InstrumentList: Codable {
     let msg: Int
     let data: [Instrument]
 }
+
+struct InstrumentDe: Codable {
+    let code: Int
+    let msg: String
+    let data: Instrument
+}

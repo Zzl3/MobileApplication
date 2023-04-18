@@ -60,12 +60,18 @@ struct SongList: Codable {
     var data: [Song]
 }
 
+struct SongDe: Codable {
+    var code: Int
+    var msg: String
+    var data: Song
+}
+
 let dateComponents = DateComponents(year: 2023, month: 4, day: 10, hour: 15, minute: 0, second: 0)
 let calendar = Calendar.current
 let sampledate = calendar.date(from: dateComponents)!
 
 var sampleSong:[Song]=[
-    Song(id: 0,
+    Song(id: 14,
          name: "百鸟朝凤",
          artist:"魏子猷",
          genre: "纯音乐，唢呐独奏",
@@ -73,4 +79,5 @@ var sampleSong:[Song]=[
          fileURL: "https://musicstyle.oss-cn-shanghai.aliyuncs.com/files/777bcd949c9b412e8731e2b5836ee314/百鸟朝凤片段.MP3",
          createdAt:sampledate,
          image:"testpic"),
+    
 ]

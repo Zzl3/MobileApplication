@@ -231,6 +231,23 @@ struct DetailView:View{
                             Button(action:{
                                 print("love")
                                 oldIfLove = !oldIfLove
+                                lovefunc(transedid: 1)
+                                // 收藏不转换
+//                                let params = ["music_id": song.id, "instrument_id": album.id] as [String : Any]
+                               
+//                                gettranid(params: params) { response in
+//                                    if let data = response.data(using: .utf8) {
+//                                        do {
+//                                            let res = try JSONDecoder().decode(MyResponse.self, from: data)
+//                                            let id = res.data.id
+//                                            //print("id = \(id)")
+//
+//
+//                                        } catch {
+//                                            print(error.localizedDescription)
+//                                        }
+//                                    }
+//                                }
                             })
                             {
                                 ZStack{
@@ -251,6 +268,7 @@ struct DetailView:View{
                                     }
                                 }
                             }
+                            
                             
                         //HStack
                         }
@@ -294,6 +312,78 @@ struct DetailView:View{
             }
         }
     }
+    
+    func gettranid(params: [String: Any], completion: @escaping (String) -> Void) {
+           let url = URL(string: "http://123.60.156.14:5000//start_trans")!
+           var request = URLRequest(url: url)
+           request.httpMethod = "POST"
+           request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
+           request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+           URLSession.shared.dataTask(with: request) { data, response, error in
+               guard let data = data, error == nil else {
+                   completion(error?.localizedDescription ?? "Unknown error")
+                   return
+               }
+               if let response = String(data: data, encoding: .utf8) {
+                   completion(response)
+               }
+           }.resume()
+       }
+    
+    func lovefunc(transedid:Int){
+        if(oldIfLove == true){
+            print("未收藏")
+            let params = ["transed_id": transedid, "user_id": 1] as [String : Any]
+            addlove(params: params) { response in
+               print(response)
+            }
+        }else{
+            print("已收藏")
+            deletelove(user: 1, tran: transedid)
+        }
+    }
+    
+    func addlove(params: [String: Any], completion: @escaping (String) -> Void) {
+        let url = URL(string: "http://123.60.156.14:5000//add_love")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                completion(error?.localizedDescription ?? "Unknown error")
+                return
+            }
+            if let response = String(data: data, encoding: .utf8) {
+                completion(response)
+            }
+        }.resume()
+    }
+    
+    func deletelove(user user_id: Int,tran transed_id: Int) {
+        let urlString = "http://123.60.156.14:5000/delete_love?transed_id=\(transed_id)&user_id=\(user_id)"
+        guard let url = URL(string: urlString) else {
+            print("Invalid URL")
+            return
+        }
+        var request = URLRequest(url: url)
+        request.httpMethod = "DELETE"
+        request.addValue("*/*", forHTTPHeaderField: "Accept")
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            guard let httpResponse = response as? HTTPURLResponse else {
+                print("Invalid response")
+                return
+            }
+            print("Status Code: \(httpResponse.statusCode)")
+            // print("Response Headers: \(httpResponse.allHeaderFields)")
+            // Handle the response data here
+        }.resume()
+    }
+    
     func getData(){
         let asset = AVAsset(url: self.player.url!)
         
