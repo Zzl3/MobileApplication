@@ -261,7 +261,7 @@ struct BeginView_Previews: PreviewProvider {
 struct Home: View {
     var body: some View {
         NavigationStack {
-            LoginAndRegis()
+            GuideView()
         }
     }
 }

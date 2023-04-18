@@ -86,9 +86,11 @@ struct CollectionView: View {
                                     HStack{
                                         Text(collect.origin.name)
                                             .font(.system(size: 20, weight: .bold))
+                                            .foregroundColor(.black)
 
                                         Text(collect.origin.artist)
                                             .font(.system(size: 20, weight: .bold))
+                                            .foregroundColor(.black)
                                     }
                                     HStack{
                                         Image(uiImage: UIImage.fetchImage(from: collect.instrument.image))
