@@ -46,7 +46,7 @@ struct GuideView: View {
                     }
                 }
             }
-            .padding(.top,70)
+            .padding(.top,100)
         }
         .background(Color("DeepGreen").edgesIgnoringSafeArea(.all))
         

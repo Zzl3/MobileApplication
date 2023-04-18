@@ -2,14 +2,14 @@
 //  LoginAndRegis.swift
 //  Music
 //
-//  Created by 周紫蕾 on 2023/4/17.
+//  Created by sihhd on 2023/4/18.
 //
 
 import SwiftUI
 
 struct LoginAndRegis: View {
     var body: some View {
-        Text("这里是登录注册")
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 

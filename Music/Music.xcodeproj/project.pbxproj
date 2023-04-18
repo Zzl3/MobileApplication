@@ -39,7 +39,6 @@
 		A0F48BCC29EDB02100C32B4D /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F48BCB29EDB02100C32B4D /* Collection.swift */; };
 		A0FE3ABB29ED157400D740C4 /* BeginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FE3ABA29ED157400D740C4 /* BeginView.swift */; };
 		A0FE3ABE29ED15CE00D740C4 /* Intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FE3ABD29ED15CE00D740C4 /* Intro.swift */; };
-		A0FE3AC329ED489200D740C4 /* LoginAndRegis.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FE3AC229ED489200D740C4 /* LoginAndRegis.swift */; };
 		A0FE3AC629ED5DEC00D740C4 /* MyARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FE3AC529ED5DEC00D740C4 /* MyARView.swift */; };
 		A0FE3ACC29ED676700D740C4 /* MyScene.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A0FE3ACB29ED676700D740C4 /* MyScene.rcproject */; };
 		BC14665F29E6886300F0B4F2 /* AppearanceSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC14665E29E6886300F0B4F2 /* AppearanceSetView.swift */; };
@@ -53,6 +52,7 @@
 		BC2546FD29EE1A0800496C66 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2546FC29EE1A0800496C66 /* GuideView.swift */; };
 		BC2546FF29EE1A2100496C66 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2546FE29EE1A2100496C66 /* LoginView.swift */; };
 		BC25470129EE1A3200496C66 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC25470029EE1A3200496C66 /* RegisterView.swift */; };
+		BC25470429EE461D00496C66 /* LoginAndRegis.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC25470329EE461D00496C66 /* LoginAndRegis.swift */; };
 		BC8D657629E194D700966B66 /* test2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC8D657529E194D700966B66 /* test2.mp3 */; };
 		BC8D657B29E3AA1300966B66 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D657A29E3AA1300966B66 /* HistoryView.swift */; };
 		BC8D657E29E3AF0A00966B66 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D657D29E3AF0A00966B66 /* History.swift */; };
@@ -98,7 +98,6 @@
 		A0FE3ABA29ED157400D740C4 /* BeginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginView.swift; sourceTree = "<group>"; };
 		A0FE3ABD29ED15CE00D740C4 /* Intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro.swift; sourceTree = "<group>"; };
 		A0FE3ABF29ED2E3C00D740C4 /* Slideqiuhong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Slideqiuhong.ttf; sourceTree = "<group>"; };
-		A0FE3AC229ED489200D740C4 /* LoginAndRegis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAndRegis.swift; sourceTree = "<group>"; };
 		A0FE3AC529ED5DEC00D740C4 /* MyARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyARView.swift; sourceTree = "<group>"; };
 		A0FE3ACB29ED676700D740C4 /* MyScene.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = MyScene.rcproject; sourceTree = "<group>"; };
 		BC14665E29E6886300F0B4F2 /* AppearanceSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSetView.swift; sourceTree = "<group>"; };
@@ -112,6 +111,7 @@
 		BC2546FC29EE1A0800496C66 /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
 		BC2546FE29EE1A2100496C66 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BC25470029EE1A3200496C66 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		BC25470329EE461D00496C66 /* LoginAndRegis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAndRegis.swift; sourceTree = "<group>"; };
 		BC8D657529E194D700966B66 /* test2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test2.mp3; sourceTree = "<group>"; };
 		BC8D657A29E3AA1300966B66 /* HistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		BC8D657D29E3AF0A00966B66 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
@@ -225,6 +225,7 @@
 				A0F48BC529ED8DE400C32B4D /* MyModel.scn */,
 				A0DA23DC29C307F90047AFCE /* Music */,
 				A0DA23DB29C307F90047AFCE /* Products */,
+				BC25470229EE455C00496C66 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -270,14 +271,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		A0FE3AC129ED487900D740C4 /* Login_Com */ = {
-			isa = PBXGroup;
-			children = (
-				A0FE3AC229ED489200D740C4 /* LoginAndRegis.swift */,
-			);
-			path = Login_Com;
-			sourceTree = "<group>";
-		};
 		A0FE3AC429ED5DD800D740C4 /* ARView */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,8 +296,16 @@
 				BC2546FC29EE1A0800496C66 /* GuideView.swift */,
 				BC2546FE29EE1A2100496C66 /* LoginView.swift */,
 				BC25470029EE1A3200496C66 /* RegisterView.swift */,
+				BC25470329EE461D00496C66 /* LoginAndRegis.swift */,
 			);
 			path = Login_Com;
+			sourceTree = "<group>";
+		};
+		BC25470229EE455C00496C66 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		BC8D657729E3A99900966B66 /* MySetting_Com */ = {
@@ -418,7 +419,6 @@
 				BC8D657B29E3AA1300966B66 /* HistoryView.swift in Sources */,
 				A0680DFC29DB18F800F508E1 /* BaseView.swift in Sources */,
 				A0680DFA29DAAFA300F508E1 /* CustomCorners.swift in Sources */,
-				A0FE3AC329ED489200D740C4 /* LoginAndRegis.swift in Sources */,
 				BCE412E629E5675D000C94B9 /* CollectionView.swift in Sources */,
 				A0286C7529E2EBA100B3EF01 /* test.swift in Sources */,
 				A0FE3ABE29ED15CE00D740C4 /* Intro.swift in Sources */,
@@ -456,6 +456,7 @@
 				A0680DF829DA996E00F508E1 /* Album.swift in Sources */,
 				A0DA23EF29C3092D0047AFCE /* MySetting.swift in Sources */,
 				BC25470129EE1A3200496C66 /* RegisterView.swift in Sources */,
+				BC25470429EE461D00496C66 /* LoginAndRegis.swift in Sources */,
 				BC2546FF29EE1A2100496C66 /* LoginView.swift in Sources */,
 				A0F48BC829ED8E8600C32B4D /* CustomARView.swift in Sources */,
 				A0DA23DE29C307F90047AFCE /* MusicApp.swift in Sources */,
