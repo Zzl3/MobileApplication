@@ -19,8 +19,8 @@ struct FeedBack: View {
         NavigationView {
             VStack {
                 Form {
-                    Section(header: Text("Feedback Type").foregroundColor(.blue)) {
-                        Picker(selection: $selectedFeedbackType, label: Text("Type")) {
+                    Section(header: Text("反馈类型").foregroundColor(.blue)) {
+                        Picker(selection: $selectedFeedbackType, label: Text("类型")) {
                             ForEach(feedbackTypes, id: \.self) { type in
                                 Text(type).tag(type)
                             }
@@ -28,7 +28,7 @@ struct FeedBack: View {
                         .pickerStyle(MenuPickerStyle())
                     }
 
-                    Section(header: Text("Feedback Content").foregroundColor(.blue)) {
+                    Section(header: Text("反馈内容").foregroundColor(.blue)) {
                         TextEditor(text: $feedbackContent)
                             .frame(height: 150)
                             .cornerRadius(10)
@@ -43,7 +43,7 @@ struct FeedBack: View {
                         print(self.response)
                     }
                 }) {
-                    Text("Submit Feedback")
+                    Text("提交反馈")
                         .font(.title)
                         .foregroundColor(.white)
                         .padding()

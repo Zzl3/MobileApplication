@@ -12,8 +12,10 @@ import SwiftUI
 struct TestView: View {
     
     var body: some View {
-        Text("detail page")
-        
+        ZStack{
+            Image("Background")
+                .opacity(0.3)
+        }
     }
 }
 

@@ -33,6 +33,15 @@
 		A0DA23E629C307FC0047AFCE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0DA23E529C307FC0047AFCE /* Preview Assets.xcassets */; };
 		A0DA23ED29C308F30047AFCE /* StyleTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DA23EC29C308F30047AFCE /* StyleTransfer.swift */; };
 		A0DA23EF29C3092D0047AFCE /* MySetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DA23EE29C3092D0047AFCE /* MySetting.swift */; };
+		A0F48BC629ED8DE400C32B4D /* MyModel.scn in Resources */ = {isa = PBXBuildFile; fileRef = A0F48BC529ED8DE400C32B4D /* MyModel.scn */; };
+		A0F48BC829ED8E8600C32B4D /* CustomARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F48BC729ED8E8600C32B4D /* CustomARView.swift */; };
+		A0F48BCA29EDA22D00C32B4D /* SongInstru.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F48BC929EDA22C00C32B4D /* SongInstru.swift */; };
+		A0F48BCC29EDB02100C32B4D /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F48BCB29EDB02100C32B4D /* Collection.swift */; };
+		A0FE3ABB29ED157400D740C4 /* BeginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FE3ABA29ED157400D740C4 /* BeginView.swift */; };
+		A0FE3ABE29ED15CE00D740C4 /* Intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FE3ABD29ED15CE00D740C4 /* Intro.swift */; };
+		A0FE3AC329ED489200D740C4 /* LoginAndRegis.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FE3AC229ED489200D740C4 /* LoginAndRegis.swift */; };
+		A0FE3AC629ED5DEC00D740C4 /* MyARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FE3AC529ED5DEC00D740C4 /* MyARView.swift */; };
+		A0FE3ACC29ED676700D740C4 /* MyScene.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A0FE3ACB29ED676700D740C4 /* MyScene.rcproject */; };
 		BC14665F29E6886300F0B4F2 /* AppearanceSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC14665E29E6886300F0B4F2 /* AppearanceSetView.swift */; };
 		BC14666129E688A800F0B4F2 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC14666029E688A800F0B4F2 /* AppSettings.swift */; };
 		BC14666329E688DB00F0B4F2 /* ThemeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC14666229E688DB00F0B4F2 /* ThemeData.swift */; };
@@ -82,6 +91,16 @@
 		A0DA23E529C307FC0047AFCE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A0DA23EC29C308F30047AFCE /* StyleTransfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleTransfer.swift; sourceTree = "<group>"; };
 		A0DA23EE29C3092D0047AFCE /* MySetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySetting.swift; sourceTree = "<group>"; };
+		A0F48BC529ED8DE400C32B4D /* MyModel.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = MyModel.scn; path = Music/Sources/MyModel.scn; sourceTree = "<group>"; };
+		A0F48BC729ED8E8600C32B4D /* CustomARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomARView.swift; sourceTree = "<group>"; };
+		A0F48BC929EDA22C00C32B4D /* SongInstru.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongInstru.swift; sourceTree = "<group>"; };
+		A0F48BCB29EDB02100C32B4D /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		A0FE3ABA29ED157400D740C4 /* BeginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginView.swift; sourceTree = "<group>"; };
+		A0FE3ABD29ED15CE00D740C4 /* Intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro.swift; sourceTree = "<group>"; };
+		A0FE3ABF29ED2E3C00D740C4 /* Slideqiuhong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Slideqiuhong.ttf; sourceTree = "<group>"; };
+		A0FE3AC229ED489200D740C4 /* LoginAndRegis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAndRegis.swift; sourceTree = "<group>"; };
+		A0FE3AC529ED5DEC00D740C4 /* MyARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyARView.swift; sourceTree = "<group>"; };
+		A0FE3ACB29ED676700D740C4 /* MyScene.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = MyScene.rcproject; sourceTree = "<group>"; };
 		BC14665E29E6886300F0B4F2 /* AppearanceSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSetView.swift; sourceTree = "<group>"; };
 		BC14666029E688A800F0B4F2 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		BC14666229E688DB00F0B4F2 /* ThemeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeData.swift; sourceTree = "<group>"; };
@@ -116,6 +135,7 @@
 		A0032E7E29DC263A0095F847 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A0FE3ABF29ED2E3C00D740C4 /* Slideqiuhong.ttf */,
 				BC8D657529E194D700966B66 /* test2.mp3 */,
 				A0032E8429DC4F490095F847 /* musictest.mp3 */,
 			);
@@ -127,6 +147,7 @@
 			children = (
 				A0032E8229DC27E70095F847 /* Song.swift */,
 				A0680DF729DA996D00F508E1 /* Album.swift */,
+				A0F48BC929EDA22C00C32B4D /* SongInstru.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -153,10 +174,12 @@
 		A033E2BE29DB3321006FD53D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A0FE3ABC29ED15B900D740C4 /* Model */,
 				A0DA23DF29C307F90047AFCE /* Introduction.swift */,
 				A0DA23EC29C308F30047AFCE /* StyleTransfer.swift */,
 				A0DA23EE29C3092D0047AFCE /* MySetting.swift */,
 				A0680DFB29DB18F700F508E1 /* BaseView.swift */,
+				A0FE3ABA29ED157400D740C4 /* BeginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -199,6 +222,7 @@
 		A0DA23D129C307F90047AFCE = {
 			isa = PBXGroup;
 			children = (
+				A0F48BC529ED8DE400C32B4D /* MyModel.scn */,
 				A0DA23DC29C307F90047AFCE /* Music */,
 				A0DA23DB29C307F90047AFCE /* Products */,
 			);
@@ -238,6 +262,32 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		A0FE3ABC29ED15B900D740C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A0FE3ABD29ED15CE00D740C4 /* Intro.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A0FE3AC129ED487900D740C4 /* Login_Com */ = {
+			isa = PBXGroup;
+			children = (
+				A0FE3AC229ED489200D740C4 /* LoginAndRegis.swift */,
+			);
+			path = Login_Com;
+			sourceTree = "<group>";
+		};
+		A0FE3AC429ED5DD800D740C4 /* ARView */ = {
+			isa = PBXGroup;
+			children = (
+				A0FE3AC529ED5DEC00D740C4 /* MyARView.swift */,
+				A0FE3ACB29ED676700D740C4 /* MyScene.rcproject */,
+				A0F48BC729ED8E8600C32B4D /* CustomARView.swift */,
+			);
+			path = ARView;
+			sourceTree = "<group>";
+		};
 		BC14666629E68A6C00F0B4F2 /* Styles */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +310,7 @@
 		BC8D657729E3A99900966B66 /* MySetting_Com */ = {
 			isa = PBXGroup;
 			children = (
+				A0FE3AC429ED5DD800D740C4 /* ARView */,
 				BC14666629E68A6C00F0B4F2 /* Styles */,
 				BC8D657C29E3AEF100966B66 /* Model */,
 				BC8D657A29E3AA1300966B66 /* HistoryView.swift */,
@@ -281,6 +332,7 @@
 				BC14666029E688A800F0B4F2 /* AppSettings.swift */,
 				BC14666229E688DB00F0B4F2 /* ThemeData.swift */,
 				BC14666429E688F400F0B4F2 /* ThemeModel.swift */,
+				A0F48BCB29EDB02100C32B4D /* Collection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -343,6 +395,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0F48BC629ED8DE400C32B4D /* MyModel.scn in Resources */,
 				A0032E8529DC4F490095F847 /* musictest.mp3 in Resources */,
 				BC8D657629E194D700966B66 /* test2.mp3 in Resources */,
 				A0DA23E629C307FC0047AFCE /* Preview Assets.xcassets in Resources */,
@@ -365,12 +418,18 @@
 				BC8D657B29E3AA1300966B66 /* HistoryView.swift in Sources */,
 				A0680DFC29DB18F800F508E1 /* BaseView.swift in Sources */,
 				A0680DFA29DAAFA300F508E1 /* CustomCorners.swift in Sources */,
+				A0FE3AC329ED489200D740C4 /* LoginAndRegis.swift in Sources */,
 				BCE412E629E5675D000C94B9 /* CollectionView.swift in Sources */,
 				A0286C7529E2EBA100B3EF01 /* test.swift in Sources */,
+				A0FE3ABE29ED15CE00D740C4 /* Intro.swift in Sources */,
 				A0998B5429C7542B00A6561C /* Pic_Front.swift in Sources */,
+				A0F48BCA29EDA22D00C32B4D /* SongInstru.swift in Sources */,
+				A0FE3AC629ED5DEC00D740C4 /* MyARView.swift in Sources */,
 				A0286C6A29E2959800B3EF01 /* Instrument.swift in Sources */,
 				A0032E8329DC27E70095F847 /* Song.swift in Sources */,
+				A0FE3ABB29ED157400D740C4 /* BeginView.swift in Sources */,
 				A0286C7729E320BB00B3EF01 /* Tools.swift in Sources */,
+				A0F48BCC29EDB02100C32B4D /* Collection.swift in Sources */,
 				BC8D657E29E3AF0A00966B66 /* History.swift in Sources */,
 				A088AAA629DB3ECD00447088 /* CustomCarousel.swift in Sources */,
 				BC14666529E688F400F0B4F2 /* ThemeModel.swift in Sources */,
@@ -393,10 +452,12 @@
 				BC14666A29E68A9800F0B4F2 /* Animations.swift in Sources */,
 				BC20E60729CD499D0093D675 /* Pic_Intro.swift in Sources */,
 				A0DA23E029C307F90047AFCE /* Introduction.swift in Sources */,
+				A0FE3ACC29ED676700D740C4 /* MyScene.rcproject in Sources */,
 				A0680DF829DA996E00F508E1 /* Album.swift in Sources */,
 				A0DA23EF29C3092D0047AFCE /* MySetting.swift in Sources */,
 				BC25470129EE1A3200496C66 /* RegisterView.swift in Sources */,
 				BC2546FF29EE1A2100496C66 /* LoginView.swift in Sources */,
+				A0F48BC829ED8E8600C32B4D /* CustomARView.swift in Sources */,
 				A0DA23DE29C307F90047AFCE /* MusicApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,6 +587,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Music/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Our app needs access to your camera to enabled the augment";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -564,6 +627,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Music/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Our app needs access to your camera to enabled the augment";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
