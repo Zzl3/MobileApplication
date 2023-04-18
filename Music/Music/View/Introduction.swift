@@ -50,7 +50,7 @@ struct Introduction: View {
             CardsScrollView()
         }
         .padding(.bottom, 90)
-        .onAppear {fetchData()}
+        //.onAppear {fetchData()}
         .foregroundColor(Color(red: 0.945, green: 0.949, blue: 0.949))
         .onChange(of: selectedCategory) { newValue in
             switch newValue {
@@ -124,18 +124,27 @@ struct Introduction: View {
     func CardsScrollView()->some View{
         ScrollView(.horizontal,showsIndicators: false){
             HStack(spacing:15){
-                if let instrumentList = instrumentList {
-                    ForEach(instrumentList.data, id: \.id){ instrument in
-                        VStack{
-                            RotateCard(instrument: instrument)
-                            .frame(width: 350, height: 550)
-                        }
+//                if let instrumentList = sampleInstrument {
+//                    ForEach(instrumentList, id: \.id){ instrument in
+//                        VStack{
+//                            RotateCard(instrument: instrument)
+//                            .frame(width: 350, height: 550)
+//                        }
+//                    }
+//                    .foregroundColor(Color(red: 0.949, green: 0.949, blue: 0.949))
+//                    .padding(.leading,20)
+//                } else {
+//                    Text("Loading...")
+//                }
+                
+                ForEach(sampleInstrument, id: \.id){ instrument in
+                    VStack{
+                        RotateCard(instrument: instrument)
+                        .frame(width: 350, height: 550)
                     }
-                    .foregroundColor(Color(red: 0.949, green: 0.949, blue: 0.949))
-                    .padding(.leading,20)
-                } else {
-                    Text("Loading...")
                 }
+                .foregroundColor(Color(red: 0.949, green: 0.949, blue: 0.949))
+                .padding(.leading,20)
             }
         }
     }

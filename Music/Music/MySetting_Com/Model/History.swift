@@ -12,8 +12,6 @@ struct History:Identifiable{
     var song:Song
     var time:String
     var album:Album
-    
-    
 }
 
 //var sampleHistorys:[History]=[
