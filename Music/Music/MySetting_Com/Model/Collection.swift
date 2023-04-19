@@ -9,50 +9,95 @@ import SwiftUI
 import Foundation
 
 struct Collection: Codable,Identifiable {
-    var id: Int
-    var originId: Int
-    var instrumentId: Int
-    var transedUrl: String
-    var created: Date
     
-    enum CodingKeys: String, CodingKey {
-        case id, created
+    let id: Int
+    let originId: Int
+    let instrumentId: Int
+    let transedUrl: String
+    let created: Date
+    let origin: Origin
+    let instrument: InstrumentCollect
+
+    private enum CodingKeys: String, CodingKey {
+        case id
         case originId = "origin_id"
         case instrumentId = "instrument_id"
         case transedUrl = "transed_url"
+        case created
+        case origin
+        case instrument
     }
     
-    // 手动实现一个init
-    init(id: Int, originId: Int, instrumentId: Int, transedUrl: String,created: Date) {
-        self.id = id
-        self.originId=originId
-        self.instrumentId=instrumentId
-        self.transedUrl=transedUrl
-        self.created=created
+    struct Origin: Codable {
+        let id: Int
+        let name: String
+        let artist: String
+        let genre: String
+        let description: String
+        let fileUrl: String
+        let createdAt: Date
+        let image: String
+
+        private enum CodingKeys: String, CodingKey {
+            case id
+            case name
+            case artist
+            case genre
+            case description
+            case fileUrl = "file_url"
+            case createdAt = "created_at"
+            case image
+        }
     }
     
-    // 解码实现一个init
-    init(from decoder: Decoder) throws {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-            
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        id = try container.decode(Int.self, forKey: .id)
-        originId = try container.decode(Int.self, forKey: .originId)
-        instrumentId = try container.decode(Int.self, forKey: .instrumentId)
-        transedUrl = try container.decode(String.self, forKey: .transedUrl)
-        let createdAtString = try container.decode(String.self, forKey: .created)
-        created = dateFormatter.date(from: createdAtString) ?? Date()
+    struct InstrumentCollect: Codable {
+        let id: Int
+        let name: String
+        let nameImage: String
+        let image: String
+        let audio: String
+        let model: String
+        let description: String
+        let category: String
+
+        private enum CodingKeys: String, CodingKey {
+            case id
+            case name
+            case nameImage = "name_image"
+            case image
+            case audio
+            case model
+            case description
+            case category
+        }
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(id, forKey: .id)
+        try container.encode(originId, forKey: .originId)
+        try container.encode(instrumentId, forKey: .instrumentId)
+        try container.encode(transedUrl, forKey: .transedUrl)
+        try container.encode(created, forKey: .created)
+        try container.encode(origin, forKey: .origin)
+        try container.encode(instrument, forKey: .instrument)
     }
 }
 
 struct CollectionList: Codable {
     var code: Int
     var data: [Collection]
-    var msg:String
+    var msg: String
 }
 
 
-var sampleCollection:[Collection]=[
-    Collection(id: 1, originId: 14, instrumentId: 1, transedUrl: "", created: sampledate)
-]
+struct Collection2:Identifiable{
+    var id=UUID().uuidString
+    var originId: Int
+    var instrumentId: Int
+    var transedUrl: String
+    var created: String
+    let origin: Song
+    let instrument: Instrument
+}
+
