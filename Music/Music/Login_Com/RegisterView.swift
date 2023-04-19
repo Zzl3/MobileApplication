@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct RegisterView: View {
-    @State var email=""
+    @State var phone=""
     @State var pass=""
     @State var Repass=""
+    @State var verify=""
+    @State var verify_com : Verify?
+    
+    @State var showAlert = false
+    
     @Binding var index : Int
     
     var body: some View {
@@ -20,7 +25,7 @@ struct RegisterView: View {
                     Spacer(minLength: 0)
                     
                     VStack(spacing: 10){
-                        Text("SignUp")
+                        Text("Register")
                             .foregroundColor(self.index == 1 ? .white : .gray)
                             .font(.title)
                             .fontWeight(.bold)
@@ -35,10 +40,10 @@ struct RegisterView: View {
                 
                 VStack{
                     HStack(spacing:15){
-                        Image(systemName: "envelope.fill")
+                        Image(systemName: "phone")
                             .foregroundColor(.white)
                         
-                        TextField("Email Address",text: self.$email)
+                        TextField("Phone Number",text: self.$phone)
                     }
                     
                     Divider().background(Color.white.opacity(0.5))
@@ -61,10 +66,14 @@ struct RegisterView: View {
                 
                 VStack{
                     HStack(spacing:15){
-                        Image(systemName: "eye.slash.fill")
+                        Image(systemName: "light.min")
                             .foregroundColor(.white)
                         
-                        TextField("RePassword",text: self.$pass)
+                        TextField("Verify",text: self.$pass)
+                        
+                        Button("GET") {
+                            /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                        }
                     }
                     
                     Divider().background(Color.white.opacity(0.5))
@@ -100,7 +109,8 @@ struct RegisterView: View {
             .padding(.horizontal,20)
             
             Button(action: {
-                
+                self.showAlert=true
+                self.index = 0
             }){
                 Text("SIGN UP")
                     .foregroundColor(.white)
@@ -113,8 +123,28 @@ struct RegisterView: View {
             }
             .offset(y:25)
             .opacity(self.index == 1 ? 1 : 0)
+            .alert(isPresented: $showAlert){ // 这里 isPresented 绑定 showAlert变量
+                Alert(title: Text("提示"), message: Text("注册成功"))
+            }
             
         }
+    }
+    
+    func getVerify() {
+        let url = URL(string: "http://123.60.156.14:5000/send_verify_code")!
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let data = data {
+                let decoder = JSONDecoder()
+                if let verify_com = try? decoder.decode(Verify.self, from: data) {
+                    DispatchQueue.main.async {
+                        self.verify_com = verify_com
+                        // 将所有乐器按照类别进行分类
+                        
+                        print(verify_com)
+                    }
+                }
+            }
+        }.resume()
     }
 }
 

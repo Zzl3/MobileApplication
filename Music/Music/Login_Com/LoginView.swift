@@ -33,10 +33,10 @@ struct LoginView: View {
                 
                 VStack{
                     HStack(spacing:15){
-                        Image(systemName: "envelope.fill")
+                        Image(systemName: "phone")
                             .foregroundColor(.white)
                         
-                        TextField("Email Address",text: self.$email)
+                        TextField("Phone Number",text: self.$email)
                     }
                     
                     Divider().background(Color.white.opacity(0.5))
@@ -74,14 +74,14 @@ struct LoginView: View {
                     Spacer(minLength: 0)
                     
                     Button(action:{
-                        
+                        self.index=2
                     }){
                         Text("Forget Password?")
-                            .foregroundColor(Color.white.opacity(0.6))
+                            .foregroundColor(Color("DeepGreen"))
                     }
                 }
                 .padding(.horizontal)
-                .padding(.top,30)
+                .padding(.top,40)
             }
             .padding()
             .padding(.bottom,65)

@@ -16,34 +16,40 @@ struct GuideView: View {
                 
                 Image("ShengT")
                     .resizable()
-                    .frame(width: 60,height: 60)
+                    .frame(width: 80,height: 80)
                 
                 ZStack{
+                    
                     RegisterView(index: self.$index)
                         .zIndex(Double(self.index))
+                    
+                    
                     LoginView(index: self.$index)
+                    
+                    ForgetView(index: self.$index)
+                        .opacity(self.index == 2 ? 1 : 0)
+                        .zIndex(Double(self.index))
+                    
                 }
                 
-                HStack(spacing : 15){
-                    Rectangle()
-                        .fill(Color("LightGreen"))
-                        .frame(height: 1)
+                ZStack {
+                    Image("huawen")
+                        //.resizable()
+                        .frame(width: 300,height: 300)
                     
-                    Text("OR")
-                    
-                    Rectangle()
-                        .fill(Color("LightGreen"))
-                        .frame(height: 1)
-                }
-                .padding(.horizontal,20)
-                .padding(.top,50)
-                
-                HStack(spacing:25){
-                    Button(action: {
+                    HStack(spacing : 15){
+                        Rectangle()
+                            .fill(Color("LightGreen"))
+                            .frame(height: 1)
                         
-                    }){
-                        Image("huawen")
+                        Text("END")
+                        
+                        Rectangle()
+                            .fill(Color("LightGreen"))
+                            .frame(height: 1)
                     }
+                    .padding(.horizontal,20)
+                .padding(.top,50)
                 }
             }
             .padding(.top,100)
