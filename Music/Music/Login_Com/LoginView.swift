@@ -10,7 +10,13 @@ import SwiftUI
 struct LoginView: View {
     @State var email=""
     @State var pass=""
+    @State var msg=""
+    @State var show=false
+    @State var userInfo : UserInfo?
+    @State var showPass=false
     @Binding var index : Int
+    @Binding var showPerson : Bool
+    
     var body: some View {
         ZStack (alignment: .bottom){
             VStack{
@@ -33,10 +39,10 @@ struct LoginView: View {
                 
                 VStack{
                     HStack(spacing:15){
-                        Image(systemName: "phone")
+                        Image(systemName: "envelope.fill")
                             .foregroundColor(.white)
                         
-                        TextField("Phone Number",text: self.$email)
+                        TextField("Email Address",text: self.$email)
                     }
                     
                     Divider().background(Color.white.opacity(0.5))
@@ -46,10 +52,25 @@ struct LoginView: View {
                 
                 VStack{
                     HStack(spacing:15){
-                        Image(systemName: "eye.slash.fill")
-                            .foregroundColor(.white)
+                        Button(action: {
+                            showPass = !showPass
+                        }){
+                            if(showPass){
+                                Image(systemName: "eye.fill")
+                                    .foregroundColor(.white)
+                            }else{
+                                Image(systemName: "eye.slash.fill")
+                                    .foregroundColor(.white)
+                            }
+                            
+                        }
                         
-                        TextField("Password",text: self.$pass)
+                        if(showPass){
+                            TextField("Password",text: self.$pass)
+                        }else{
+                            SecureField("Password",text: self.$pass)
+                        }
+                        
                     }
                     
                     Divider().background(Color.white.opacity(0.5))
@@ -96,6 +117,28 @@ struct LoginView: View {
             .padding(.horizontal,20)
             
             Button(action: {
+                if(email==""||pass==""){
+                    show=true
+                    msg="邮箱或密码不能为空"
+                }else{
+                    let params = ["mail": email,"password": pass]
+                    login(params: params) {userInfo in
+                        self.userInfo = userInfo
+                        print(self.userInfo)
+                        if(userInfo.code==200){
+                            let userDefault = UserDefaults.standard
+                            userDefault.set(userInfo.data?.id, forKey: "userid")
+                                    let userid = userDefault.integer(forKey: "userid")
+                            self.showPerson=true
+                            print(userid)
+                        }else{
+                            self.msg="邮箱或密码错误"
+                            self.show=true
+                        }
+                    }
+                    
+                }
+                
                 
             }){
                 Text("LOGIN")
@@ -109,13 +152,41 @@ struct LoginView: View {
             }
             .offset(y:25)
             .opacity(self.index == 0 ? 1 : 0)
+            .alert(isPresented: $show){ // 这里 isPresented 绑定 showAlert变量
+                Alert(title: Text("提示"), message: Text(self.msg))
+            }
             
         }
+    }
+    
+//    func login(email:String,password:String){
+//        let params = ["mail": email,"password": password]
+//        
+//        
+//    }
+    
+    func login(params: [String: Any], completion: @escaping (UserInfo) -> Void) {
+        let url = URL(string: "http://123.60.156.14:5000//login_mail")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let data = data {
+                let decoder = JSONDecoder()
+                if let userInfo = try? decoder.decode(UserInfo.self, from: data) {
+                    DispatchQueue.main.async {
+                        completion(userInfo)
+                        print(userInfo)
+                    }
+                }
+            }
+        }.resume()
     }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(index: .constant(0))
+        LoginView(index: .constant(0),showPerson: .constant(false))
     }
 }

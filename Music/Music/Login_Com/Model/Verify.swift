@@ -10,5 +10,9 @@ import Foundation
 struct Verify: Codable {
     let code: Int
     let msg: String
-    let data: String
+    let data: Code
+}
+
+struct Code : Codable{
+    let code:Int
 }

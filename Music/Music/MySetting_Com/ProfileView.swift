@@ -62,6 +62,7 @@ struct ProfileView: View {
                 .navigationBarTitle("账户", displayMode: .inline)
                 .toolbar {
                     Button("完成", action: close)
+                        .foregroundColor(Color.primary)
                 }
                 
             }
@@ -87,6 +88,7 @@ struct ProfileView: View {
             VStack(alignment: .leading, spacing: 4.0) {
                 Text("法外狂徒")
                     .font(.title3)
+                    .foregroundColor(Color.primary)
                 Text(verbatim: "zhangsan@qq.com")
                     .foregroundColor(Color.secondary)
             }

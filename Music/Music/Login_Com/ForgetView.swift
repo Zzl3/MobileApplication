@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct ForgetView: View {
-    @State var phone=""
+    @State var mail=""
     @State var pass=""
     @State var verify=""
+    @State var verify_com=""
+    @State var msg=""
     
-    @State var showAlert:Bool = false;
+    @State var showPass = false
+    @State var showAlert = false
+    @State var showGetAlert = false
 
     @Binding var index : Int
     var body: some View {
@@ -36,10 +40,10 @@ struct ForgetView: View {
                 
                 VStack{
                     HStack(spacing:15){
-                        Image(systemName: "phone")
+                        Image(systemName: "envelope.fill")
                             .foregroundColor(.white)
                         
-                        TextField("Phone Number",text: self.$phone)
+                        TextField("Email Address",text: self.$mail)
                     }
                     
                     Divider().background(Color.white.opacity(0.5))
@@ -49,10 +53,24 @@ struct ForgetView: View {
                 
                 VStack{
                     HStack(spacing:15){
-                        Image(systemName: "eye.slash.fill")
-                            .foregroundColor(.white)
+                        Button(action: {
+                            showPass = !showPass
+                        }){
+                            if(showPass){
+                                Image(systemName: "eye.fill")
+                                    .foregroundColor(.white)
+                            }else{
+                                Image(systemName: "eye.slash.fill")
+                                    .foregroundColor(.white)
+                            }
+                            
+                        }
                         
-                        TextField("Password",text: self.$pass)
+                        if(showPass){
+                            TextField("Password",text: self.$pass)
+                        }else{
+                            SecureField("Password",text: self.$pass)
+                        }
                     }
                     
                     Divider().background(Color.white.opacity(0.5))
@@ -67,8 +85,20 @@ struct ForgetView: View {
 
                         TextField("Verify",text: self.$verify)
                         
-                        Button("GET") {
-                            /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                        Button(action: {
+                            if(mail==""){
+                               showGetAlert=true
+                            }else{
+                                let params = ["mail": self.mail]
+                                print(params)
+                                getVerify(params: params)
+                            }
+                            
+                        },label: {
+                            Text("GET")
+                        })
+                        .alert(isPresented: $showGetAlert){ // 这里 isPresented 绑定 showAlert变量
+                            Alert(title: Text("提示"), message: Text("邮箱不能为空"))
                         }
                         
                     }
@@ -93,8 +123,36 @@ struct ForgetView: View {
             
             HStack {
                 Button(action: {
-                    self.showAlert=true
-                    self.index=0
+                    if(verify==""){
+                        showAlert=true
+                        msg="验证码不能为空"
+                    }
+                    else if(mail==""||pass==""){
+                        showAlert=true
+                        msg="邮箱或密码不能为空"
+                    }else if(!(verify==verify_com)){
+                        showAlert=true
+                        msg="验证码错误"
+                    }
+                    else{
+                        let params = ["mail": mail,"verify_code":verify,"password": pass]
+                        modify(params: params) {modify in
+                            print(modify)
+                            if(modify.code==200){
+                                self.showAlert=true
+                                self.index = 0
+                                self.msg="密码修改成功"
+                            }else{
+                                self.msg=modify.msg
+                                self.showAlert=true
+                            }
+                        }
+                        
+                        mail=""
+                        pass=""
+                        verify=""
+                        verify_com=""
+                    }
                 }){
                     Text("确认")
                         .foregroundColor(.white)
@@ -108,11 +166,15 @@ struct ForgetView: View {
                 .offset(y:25)
                 .opacity(self.index == 2 ? 1 : 0)
                 .alert(isPresented: $showAlert){ // 这里 isPresented 绑定 showAlert变量
-                    Alert(title: Text("提示"), message: Text("找回密码成功"))
+                    Alert(title: Text("提示"), message: Text(self.msg))
                 }
                 
                 Button(action: {
                     self.index=0
+                    mail=""
+                    pass=""
+                    verify=""
+                    verify_com=""
                 }){
                     Text("取消")
                         .foregroundColor(.white)
@@ -128,6 +190,49 @@ struct ForgetView: View {
             }
             
         }
+    }
+    
+    func getVerify(params: [String: Any]){
+        let url = URL(string: "http://123.60.156.14:5000//send_verify_code")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let data = data {
+                let decoder = JSONDecoder()
+                if let verify_com = try? decoder.decode(Verify.self, from: data) {
+                    DispatchQueue.main.async {
+                        self.verify_com = String(verify_com.data.code)
+//                        if(verify_com.code==200){
+//                            self.result=1
+//                        }else{
+//                            self.result=2
+//                        }
+                        print(verify_com)
+                    }
+                }
+            }
+        }.resume()
+
+    }
+    func modify(params: [String: Any], completion: @escaping (Modify) -> Void) {
+        let url = URL(string: "http://123.60.156.14:5000//modify_passwd")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let data = data {
+                let decoder = JSONDecoder()
+                if let modify = try? decoder.decode(Modify.self, from: data) {
+                    DispatchQueue.main.async {
+                        completion(modify)
+                        print(modify)
+                    }
+                }
+            }
+        }.resume()
     }
 }
 

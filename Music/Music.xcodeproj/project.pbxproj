@@ -58,6 +58,9 @@
 		BC8D657629E194D700966B66 /* test2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC8D657529E194D700966B66 /* test2.mp3 */; };
 		BC8D657B29E3AA1300966B66 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D657A29E3AA1300966B66 /* HistoryView.swift */; };
 		BC8D657E29E3AF0A00966B66 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D657D29E3AF0A00966B66 /* History.swift */; };
+		BCAFB98229F0E1CD00838CB4 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAFB98129F0E1CD00838CB4 /* UserInfo.swift */; };
+		BCAFB98629F11F0B00838CB4 /* Modify.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAFB98529F11F0B00838CB4 /* Modify.swift */; };
+		BCAFB98729F2101900838CB4 /* Slideqiuhong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0FE3ABF29ED2E3C00D740C4 /* Slideqiuhong.ttf */; };
 		BCE412DE29E5369D000C94B9 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE412DD29E5369D000C94B9 /* PersonView.swift */; };
 		BCE412E429E5614D000C94B9 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE412E329E5614D000C94B9 /* TestView.swift */; };
 		BCE412E629E5675D000C94B9 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE412E529E5675C000C94B9 /* CollectionView.swift */; };
@@ -119,6 +122,8 @@
 		BC8D657529E194D700966B66 /* test2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test2.mp3; sourceTree = "<group>"; };
 		BC8D657A29E3AA1300966B66 /* HistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		BC8D657D29E3AF0A00966B66 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		BCAFB98129F0E1CD00838CB4 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		BCAFB98529F11F0B00838CB4 /* Modify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modify.swift; sourceTree = "<group>"; };
 		BCE412DD29E5369D000C94B9 /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
 		BCE412E329E5614D000C94B9 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		BCE412E529E5675C000C94B9 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
@@ -318,6 +323,8 @@
 			isa = PBXGroup;
 			children = (
 				BC25470829EFCA8400496C66 /* Verify.swift */,
+				BCAFB98129F0E1CD00838CB4 /* UserInfo.swift */,
+				BCAFB98529F11F0B00838CB4 /* Modify.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -410,6 +417,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCAFB98729F2101900838CB4 /* Slideqiuhong.ttf in Resources */,
 				A0F48BC629ED8DE400C32B4D /* MyModel.scn in Resources */,
 				A0032E8529DC4F490095F847 /* musictest.mp3 in Resources */,
 				BC8D657629E194D700966B66 /* test2.mp3 in Resources */,
@@ -433,6 +441,7 @@
 				BC8D657B29E3AA1300966B66 /* HistoryView.swift in Sources */,
 				A0680DFC29DB18F800F508E1 /* BaseView.swift in Sources */,
 				A0680DFA29DAAFA300F508E1 /* CustomCorners.swift in Sources */,
+				BCAFB98229F0E1CD00838CB4 /* UserInfo.swift in Sources */,
 				BCE412E629E5675D000C94B9 /* CollectionView.swift in Sources */,
 				A0286C7529E2EBA100B3EF01 /* test.swift in Sources */,
 				A0FE3ABE29ED15CE00D740C4 /* Intro.swift in Sources */,
@@ -469,6 +478,7 @@
 				BC20E60729CD499D0093D675 /* Pic_Intro.swift in Sources */,
 				A0DA23E029C307F90047AFCE /* Introduction.swift in Sources */,
 				A0FE3ACC29ED676700D740C4 /* MyScene.rcproject in Sources */,
+				BCAFB98629F11F0B00838CB4 /* Modify.swift in Sources */,
 				A0680DF829DA996E00F508E1 /* Album.swift in Sources */,
 				A0DA23EF29C3092D0047AFCE /* MySetting.swift in Sources */,
 				BC25470129EE1A3200496C66 /* RegisterView.swift in Sources */,

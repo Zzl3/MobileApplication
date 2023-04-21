@@ -119,7 +119,6 @@ struct Introduction: View {
         }
     }
     
-    
     @ViewBuilder
     func CardsScrollView()->some View{
         ScrollView(.horizontal,showsIndicators: false){

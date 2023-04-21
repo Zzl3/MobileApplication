@@ -9,52 +9,56 @@ import SwiftUI
 
 struct GuideView: View {
     @State var index = 0
+    @State var showPerson = false
     
     var body: some View {
-        GeometryReader{_ in
-            VStack{
-                
-                Image("ShengT")
-                    .resizable()
-                    .frame(width: 80,height: 80)
-                
-                ZStack{
+        if showPerson {
+            PersonView()
+        }else{
+            GeometryReader{_ in
+                VStack{
                     
-                    RegisterView(index: self.$index)
-                        .zIndex(Double(self.index))
+                    Image("ShengT")
+                        .resizable()
+                        .frame(width: 80,height: 80)
                     
-                    
-                    LoginView(index: self.$index)
-                    
-                    ForgetView(index: self.$index)
-                        .opacity(self.index == 2 ? 1 : 0)
-                        .zIndex(Double(self.index))
-                    
-                }
-                
-                ZStack {
-                    Image("huawen")
-                        //.resizable()
-                        .frame(width: 300,height: 300)
-                    
-                    HStack(spacing : 15){
-                        Rectangle()
-                            .fill(Color("LightGreen"))
-                            .frame(height: 1)
+                    ZStack{
                         
-                        Text("END")
+                        RegisterView(index: self.$index)
+                            .zIndex(Double(self.index))
                         
-                        Rectangle()
-                            .fill(Color("LightGreen"))
-                            .frame(height: 1)
+                        
+                        LoginView(index: self.$index,showPerson: self.$showPerson)
+                        
+                        ForgetView(index: self.$index)
+                            .opacity(self.index == 2 ? 1 : 0)
+                            .zIndex(Double(self.index))
+                        
                     }
-                    .padding(.horizontal,20)
-                .padding(.top,50)
+                    
+    //                ZStack {
+    //                    Image("huawen")
+    //                        .frame(width: 300,height: 300)
+    //
+    //                    HStack(spacing : 15){
+    //                        Rectangle()
+    //                            .fill(Color("LightGreen"))
+    //                            .frame(height: 1)
+    //
+    //                        Text("END")
+    //
+    //                        Rectangle()
+    //                            .fill(Color("LightGreen"))
+    //                            .frame(height: 1)
+    //                    }
+    //                    .padding(.horizontal,20)
+    //                    .padding(.top,50)
+    //                }
                 }
+                .padding(.top,100)
             }
-            .padding(.top,100)
+            .background(Color("DeepGreen").edgesIgnoringSafeArea(.all))
         }
-        .background(Color("DeepGreen").edgesIgnoringSafeArea(.all))
         
     }
 }
