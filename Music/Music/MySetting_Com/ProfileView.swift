@@ -89,7 +89,7 @@ struct ProfileView: View {
                 Text("法外狂徒")
                     .font(.title3)
                     .foregroundColor(Color.primary)
-                Text(verbatim: "zhangsan@qq.com")
+                Text(verbatim: "2083978036@qq.com")
                     .foregroundColor(Color.secondary)
             }
             .padding(.leading, 8.0)

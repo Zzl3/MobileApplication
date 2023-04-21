@@ -13,7 +13,7 @@ struct GuideView: View {
     
     var body: some View {
         if showPerson {
-            PersonView()
+            BaseView().environmentObject(AppSettings())
         }else{
             GeometryReader{_ in
                 VStack{
