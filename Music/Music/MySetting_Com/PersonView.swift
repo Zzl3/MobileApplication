@@ -15,7 +15,7 @@ struct PersonView: View {
     
     @Environment(\.presentationMode)   var presentationMode
     @EnvironmentObject  var appSettings: AppSettings
-    @State var scene: SCNScene? = .init(named:"MyModel.scn")
+    @State var scene: SCNScene? = .init(named:"1.scn")
     @GestureState var offset:CGFloat = 0
     var body: some View {
         NavigationView {
@@ -26,7 +26,7 @@ struct PersonView: View {
                     NavigationLink(destination:  SceneKitView(), isActive: $isShowingDetailView) { EmptyView()}
                     
                     CustomARView(scene: $scene)
-                        .frame(height: 350)
+                        .frame(height: 400)
                         .padding(.bottom,30)
                     
                     CustomSeeker()

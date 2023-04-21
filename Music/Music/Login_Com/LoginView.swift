@@ -128,7 +128,7 @@ struct LoginView: View {
                         if(userInfo.code==200){
                             let userDefault = UserDefaults.standard
                             userDefault.set(userInfo.data?.id, forKey: "userid")
-                                    let userid = userDefault.integer(forKey: "userid")
+                            let userid = userDefault.integer(forKey: "userid")
                             self.showPerson=true
                             print(userid)
                         }else{

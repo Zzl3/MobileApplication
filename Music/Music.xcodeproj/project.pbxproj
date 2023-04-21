@@ -14,6 +14,7 @@
 		A0286C7729E320BB00B3EF01 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0286C7629E320BB00B3EF01 /* Tools.swift */; };
 		A031964529E4628A00050B98 /* FeedBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A031964429E4628A00050B98 /* FeedBack.swift */; };
 		A033E2BD29DB32F3006FD53D /* SongChoose.swift in Sources */ = {isa = PBXBuildFile; fileRef = A033E2BC29DB32F3006FD53D /* SongChoose.swift */; };
+		A03B0CE929F2C72900187DEF /* 1.scn in Resources */ = {isa = PBXBuildFile; fileRef = A03B0CE829F2C72800187DEF /* 1.scn */; };
 		A066730F29E3E7DC009DCE75 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A066730E29E3E7DC009DCE75 /* CustomButtonStyle.swift */; };
 		A0680DF829DA996E00F508E1 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0680DF729DA996D00F508E1 /* Album.swift */; };
 		A0680DFA29DAAFA300F508E1 /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0680DF929DAAFA300F508E1 /* CustomCorners.swift */; };
@@ -75,6 +76,7 @@
 		A0286C7629E320BB00B3EF01 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		A031964429E4628A00050B98 /* FeedBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBack.swift; sourceTree = "<group>"; };
 		A033E2BC29DB32F3006FD53D /* SongChoose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongChoose.swift; sourceTree = "<group>"; };
+		A03B0CE829F2C72800187DEF /* 1.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = 1.scn; sourceTree = "<group>"; };
 		A066730E29E3E7DC009DCE75 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
 		A0680DF729DA996D00F508E1 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		A0680DF929DAAFA300F508E1 /* CustomCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 		A0DA23D129C307F90047AFCE = {
 			isa = PBXGroup;
 			children = (
+				A03B0CE829F2C72800187DEF /* 1.scn */,
 				A0F48BC529ED8DE400C32B4D /* MyModel.scn */,
 				A0DA23DC29C307F90047AFCE /* Music */,
 				A0DA23DB29C307F90047AFCE /* Products */,
@@ -417,6 +420,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A03B0CE929F2C72900187DEF /* 1.scn in Resources */,
 				BCAFB98729F2101900838CB4 /* Slideqiuhong.ttf in Resources */,
 				A0F48BC629ED8DE400C32B4D /* MyModel.scn in Resources */,
 				A0032E8529DC4F490095F847 /* musictest.mp3 in Resources */,

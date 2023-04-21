@@ -37,7 +37,10 @@ struct FeedBack: View {
                     }
                 }
                 Button(action: {
-                    let params = ["user_id": "1", "type": "乐器种类", "content": "希望能添加更多的乐器类型，涵盖更广泛的中国古典音乐"]
+                    let userDefault = UserDefaults.standard
+                    let userid = userDefault.integer(forKey: "userid")
+                    print(userid)
+                    let params = ["user_id": userid, "type": feedbackTypes, "content": feedbackContent] as [String : Any]
                     submitFeedback(params: params) { response in
                         self.response = response
                         print(self.response)
