@@ -5,7 +5,113 @@
 //  Created by 周紫蕾 on 2023/3/16.
 //
 
+
+
+//推荐轮播图
 import SwiftUI
+    //轮播图Model
+
+struct CarouselCard: Identifiable,Codable{
+    var id:     Int
+    var name:   String = ""
+        //安全初始化
+    fileprivate init(name: String, id: Int) {
+        self.name = name
+        self.id = id
+    }
+}
+
+    //轮播图ViewModel
+class CarouselViewModel: ObservableObject{
+        //轮播内容
+    var items = [CarouselCard]()
+    
+    private func addItems(named name: String){
+        let item = CarouselCard(name: name, id: items.count)
+        items.insert(item, at: item.id)
+    }
+    init() {
+        if items.isEmpty {
+            for item in (0...5) {
+                addItems(named: "第(item)个")
+            }
+        }
+    }
+}
+
+struct Carousel: View {
+    @StateObject var carousels = CarouselViewModel()
+    @State var screenDrag:CGFloat = 1 //拖放时偏移
+    @State var activeCard = 0 //当前展示项
+    var numberOfItems:CGFloat{ CGFloat(carousels.items.count) } //轮播项总数
+    var cardWidth:CGFloat{ UIScreen.main.bounds.width - (CarouselConstants.widthOfHiddenCards * 2) - (CarouselConstants.spacing * 2 ) }
+    
+    var body: some View {
+        let totalCanvasWidth: CGFloat = (cardWidth * numberOfItems) + (numberOfItems - 1) * CarouselConstants.spacing //容器总宽度=卡片*宽度 + 总间距
+        let xOffsetToShift = (totalCanvasWidth - UIScreen.main.bounds.width) / 2
+        let leftPadding = CarouselConstants.widthOfHiddenCards + CarouselConstants.spacing
+        let totalMovement = cardWidth + CarouselConstants.spacing
+            //当前正确位置
+        let activeOffset = xOffsetToShift + (leftPadding) - (totalMovement * CGFloat(activeCard))
+            //下一个位置
+        let nextOffset = xOffsetToShift + (leftPadding) - (totalMovement * CGFloat(activeCard) + 1)
+            //最终确定偏移位置
+        let calcOffset = (activeOffset != nextOffset) ? activeOffset + screenDrag : activeOffset
+        
+        return HStack(spacing: CarouselConstants.spacing) {
+            ForEach(carousels.items) { item in
+                Image("testpic")    //推荐图片
+                    .frame(width: UIScreen.main.bounds.width - (CarouselConstants.widthOfHiddenCards * 2) - (CarouselConstants.spacing * 2),
+                           height: (item.id == activeCard) ? CarouselConstants.cardHeight : CarouselConstants.cardHeight - 30)                    .foregroundColor(.white)
+                    .background(.black)
+                    .cornerRadius(8)
+                    .shadow(color: Color.gray, radius:4, x:0, y:4)
+                    .onAppear{
+                        activeCard = Int(numberOfItems / 2)//跳转到中间位置
+                    }
+            }
+        }
+        .background(Color.white.edgesIgnoringSafeArea(.all))
+        .offset(x:calcOffset)
+        .gesture(panGesture())//拖动手势
+        .frame(maxWidth: .infinity)
+        .animation(.spring(),value:activeCard)//监听动画iOS 15
+    }
+    
+    @GestureState private var gesturePanOffset:CGFloat = .zero //手势结束会恢复初值
+    //手势定义
+    private func panGesture() -> some Gesture{
+        DragGesture()
+            .updating($gesturePanOffset){ lastestGestureValue, _, _ in
+                screenDrag =  lastestGestureValue.translation.width
+            }
+            .onEnded{ value in
+                screenDrag = 0
+                let moveOffset = UIScreen.main.bounds.width / 4 //超过屏幕宽度（计算后的值）才发生偏移
+                let lastIndex = carousels.items.endIndex - 1//数组最后一个索引值
+                    //向右拖动
+                if value.translation.width > moveOffset{
+                    activeCard = (activeCard <= 0) ? lastIndex : activeCard - 1
+                }
+                    //向左拖动
+                if -value.translation.width > moveOffset{
+                    activeCard = activeCard >= lastIndex ? 0 : activeCard + 1
+                }
+                let impactMed = UIImpactFeedbackGenerator(style: .medium)
+                impactMed.impactOccurred()
+            }
+    }
+        //参数控制器
+    private struct CarouselConstants{
+        static let spacing:            CGFloat = 8 //与隐藏卡片的左右间距
+        static let widthOfHiddenCards: CGFloat = 1 //被隐藏卡片的宽度(左、右)
+        static let cardHeight:         CGFloat = 240 //卡片高度
+    }
+}
+
+
+
+
 
 
 struct SongGroup:Identifiable{  //歌曲按乐器分类
@@ -89,7 +195,7 @@ struct InstruCell:View{
                 HStack{
                     Text(instru.instru)
                         .padding(.vertical,10)
-                        .foregroundColor(Color("DeepGreen"))
+                        
                         .fontWeight(.bold)
                         .font(.system(size:20))
                     Spacer()
@@ -132,16 +238,14 @@ struct ContentView:View{
                 
                 VStack(alignment:.leading){
                     
-                    Image("testpic")
-                        .scaleEffect(0.9)
-                        .position(x:180,y:150)
+                    Carousel()
                         .frame(height:200)
-                        .padding()
-                    
+                        .position(x:195,y:150)
+                        .scaleEffect(0.9)
                     Text("乐器选择")
                         .font(.system(size:30))
                         .fontWeight(.heavy)
-                        .foregroundColor(Color("AccentColor"))
+                        
                         .position(x:80,y:100)
                         .frame(height:110)
                     ScrollView{
