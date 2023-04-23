@@ -30,15 +30,11 @@ struct DetailView:View{
     let url=URL(fileURLWithPath:Bundle.main.path(forResource: "musictest", ofType: "mp3")!)
     @State var audioPlayer: AVAudioPlayer?
    
-//    @State var width:CGFloat = UIScene.main.bounds.height < 750 ? 130 : 230
     
     @State var oldSliderValue = 0.0
     @State var newSliderValue = 0.0
     @Binding var show:Bool
-    @State var oldIfPause:Bool=true
-    @State var newIfPause:Bool=false
-    @State var oldIfLove:Bool=false
-    @State var newIfLove:Bool=false
+    @State var ifLove = false
     var body: some View{
         ZStack{
             Image(song.image)
@@ -183,6 +179,10 @@ struct DetailView:View{
                                         
                                     self.player.play()
                                     self.playing = true
+                                    
+//                                    StorageHistory(album: self.album, song: self.song)
+                                    
+                                
                                 }
                                 
                             })
@@ -230,8 +230,8 @@ struct DetailView:View{
                             //收藏
                             Button(action:{
                                 print("love")
-                                oldIfLove = !oldIfLove
-                                lovefunc(transedid: 1)
+                                //self.ifLove = !self.ifLove
+                                //lovefunc(transedid: 1)
                                 // 收藏不转换
 //                                let params = ["music_id": song.id, "instrument_id": album.id] as [String : Any]
                                
@@ -255,17 +255,17 @@ struct DetailView:View{
                                         .frame(width: 50,height: 50)
                                         .accentColor(Color("LightGreen"))
                                         .shadow(radius: 10)
-                                    if oldIfLove == false{
-                                        Image(systemName: "heart")
-                                            .foregroundColor(Color("DeepGreen"))
-                                            .font(.system(.title2))
-                                            .rotationEffect(.degrees(0))
-                                    }else{
-                                        Image(systemName: "heart.fill")
-                                            .foregroundColor(Color("DeepGreen"))
-                                            .font(.system(.title2))
-                                            .rotationEffect(.degrees(0))
-                                    }
+//                                    if self.ifLove == false{
+//                                        Image(systemName: "heart")
+//                                            .foregroundColor(Color("DeepGreen"))
+//                                            .font(.system(.title2))
+//                                            .rotationEffect(.degrees(0))
+//                                    }else{
+//                                        Image(systemName: "heart.fill")
+//                                            .foregroundColor(Color("DeepGreen"))
+//                                            .font(.system(.title2))
+//                                            .rotationEffect(.degrees(0))
+//                                    }
                                 }
                             }
                             
@@ -311,6 +311,7 @@ struct DetailView:View{
                 .frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .top)
             }
         }
+        
     }
     
     func gettranid(params: [String: Any], completion: @escaping (String) -> Void) {
@@ -331,7 +332,7 @@ struct DetailView:View{
        }
     
     func lovefunc(transedid:Int){
-        if(oldIfLove == true){
+        if(self.ifLove == true){
             print("未收藏")
             let params = ["transed_id": transedid, "user_id": 1] as [String : Any]
             addlove(params: params) { response in
@@ -421,6 +422,25 @@ struct DetailView:View{
         // 切换之后 直接播放歌曲
         self.player.play()
     }
+    
+//    func StorageHistory(album:Album,song:Song){
+//        let date = Date()
+//        let timeFormatter = DateFormatter()
+//        timeFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
+//        let strNowTime = timeFormatter.string(from:date) as String
+//        print("nowTime:"+strNowTime)
+//
+//        let defaults = UserDefaults.standard
+//        //var history = defaults.object(forKey: "history")
+//        if var historys = defaults.object(forKey: "history") as? [History]{
+//            //var historys:[History]
+//            historys.append(History(song: song, time:strNowTime, album: album))
+//        }else{
+//            var history:[History]=[]
+//            history.append(History(song: song, time:strNowTime, album: album))
+//            defaults.set(history, forKey: "history")
+//        }
+//    }
 }
 
     

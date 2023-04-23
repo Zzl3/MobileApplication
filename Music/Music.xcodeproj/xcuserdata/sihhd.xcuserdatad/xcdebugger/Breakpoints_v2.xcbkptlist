@@ -14,13 +14,13 @@
             filePath = "Music/Style_Com/DetailView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "06981757-CC98-4B7D-AE40-BBB523B8C44D - 5b56712031652c3a"
+                  uuid = "06981757-CC98-4B7D-AE40-BBB523B8C44D - 5b56712031652cbe"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -30,12 +30,12 @@
                   urlString = "file:///Users/sihhd/project/Xcode/sitp(%E9%A3%8E%E6%A0%BC%E8%BF%81%E7%A7%BB)/MobileApplication/Music/Music/Style_Com/DetailView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
                   offsetFromSymbolStart = "244">
                </Location>
                <Location
-                  uuid = "06981757-CC98-4B7D-AE40-BBB523B8C44D - 7e4f033c1cf8af0b"
+                  uuid = "06981757-CC98-4B7D-AE40-BBB523B8C44D - 7e4f033c1cf8ae87"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -45,8 +45,8 @@
                   urlString = "file:///Users/sihhd/project/Xcode/sitp(%E9%A3%8E%E6%A0%BC%E8%BF%81%E7%A7%BB)/MobileApplication/Music/Music/Style_Com/DetailView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
                   offsetFromSymbolStart = "412">
                </Location>
             </Locations>
@@ -62,8 +62,8 @@
             filePath = "Music/Style_Com/DetailView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -110,99 +110,99 @@
             filePath = "Music/Style_Com/DetailView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "DetailView"
             landmarkType = "14">
             <Locations>
                <Location
-                  uuid = "34446971-F15F-4682-946E-55613F021A57 - ede948b44651cb8f"
+                  uuid = "34446971-F15F-4682-946E-55613F021A57 - f83592b1c06b4f4c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "property wrapper backing initializer of Music.DetailView.oldIfLove : Swift.Bool"
+                  symbolName = "property wrapper backing initializer of Music.DetailView.ifLove : Swift.Bool"
                   moduleName = "Music"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sihhd/project/Xcode/sitp(%E9%A3%8E%E6%A0%BC%E8%BF%81%E7%A7%BB)/MobileApplication/Music/Music/Style_Com/DetailView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
                   offsetFromSymbolStart = "32">
                </Location>
                <Location
-                  uuid = "34446971-F15F-4682-946E-55613F021A57 - 822409acc592a5b5"
+                  uuid = "34446971-F15F-4682-946E-55613F021A57 - d805b85c46e73a32"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Music.DetailView.oldIfLove.getter : Swift.Bool"
+                  symbolName = "Music.DetailView.ifLove.getter : Swift.Bool"
                   moduleName = "Music"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sihhd/project/Xcode/sitp(%E9%A3%8E%E6%A0%BC%E8%BF%81%E7%A7%BB)/MobileApplication/Music/Music/Style_Com/DetailView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
                   offsetFromSymbolStart = "140">
                </Location>
                <Location
-                  uuid = "34446971-F15F-4682-946E-55613F021A57 - 49ad289f42e24c41"
+                  uuid = "34446971-F15F-4682-946E-55613F021A57 - 4dd58208f4fa0206"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Music.DetailView.oldIfLove.setter : Swift.Bool"
+                  symbolName = "Music.DetailView.ifLove.setter : Swift.Bool"
                   moduleName = "Music"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sihhd/project/Xcode/sitp(%E9%A3%8E%E6%A0%BC%E8%BF%81%E7%A7%BB)/MobileApplication/Music/Music/Style_Com/DetailView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
                   offsetFromSymbolStart = "168">
                </Location>
                <Location
-                  uuid = "34446971-F15F-4682-946E-55613F021A57 - c6362b4f2cb38bb6"
+                  uuid = "34446971-F15F-4682-946E-55613F021A57 - 95f3ec60a638f835"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Music.DetailView.oldIfLove.modify : Swift.Bool"
+                  symbolName = "Music.DetailView.ifLove.modify : Swift.Bool"
                   moduleName = "Music"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sihhd/project/Xcode/sitp(%E9%A3%8E%E6%A0%BC%E8%BF%81%E7%A7%BB)/MobileApplication/Music/Music/Style_Com/DetailView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  uuid = "34446971-F15F-4682-946E-55613F021A57 - 3f039ce089ce7241"
+                  uuid = "34446971-F15F-4682-946E-55613F021A57 - 887aee912f503a06"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Music.DetailView.oldIfLove.modify : Swift.Bool with unmangled suffix &quot;.resume.0&quot;"
+                  symbolName = "Music.DetailView.ifLove.modify : Swift.Bool with unmangled suffix &quot;.resume.0&quot;"
                   moduleName = "Music"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sihhd/project/Xcode/sitp(%E9%A3%8E%E6%A0%BC%E8%BF%81%E7%A7%BB)/MobileApplication/Music/Music/Style_Com/DetailView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
                   offsetFromSymbolStart = "32">
                </Location>
                <Location
-                  uuid = "34446971-F15F-4682-946E-55613F021A57 - 2b01b70fde31c734"
+                  uuid = "34446971-F15F-4682-946E-55613F021A57 - b2e6bed1b9e127fe"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Music.DetailView.$oldIfLove.getter : SwiftUI.Binding&lt;Swift.Bool&gt;"
+                  symbolName = "Music.DetailView.$ifLove.getter : SwiftUI.Binding&lt;Swift.Bool&gt;"
                   moduleName = "Music"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/sihhd/project/Xcode/sitp(%E9%A3%8E%E6%A0%BC%E8%BF%81%E7%A7%BB)/MobileApplication/Music/Music/Style_Com/DetailView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
                   offsetFromSymbolStart = "156">
                </Location>
             </Locations>
