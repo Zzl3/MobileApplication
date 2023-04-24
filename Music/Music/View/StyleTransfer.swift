@@ -158,7 +158,7 @@ struct InstruCell:View{
        content
             .padding(.leading)
             .frame(maxWidth:.infinity)
-            .foregroundColor(.black)
+            .foregroundColor(Color.primary)
     }
     
     private var content:some View{
@@ -245,7 +245,7 @@ struct ContentView:View{
                     Text("乐器选择")
                         .font(.system(size:30))
                         .fontWeight(.heavy)
-                        
+                        .foregroundColor(Color.primary)
                         .position(x:80,y:100)
                         .frame(height:110)
                     ScrollView{

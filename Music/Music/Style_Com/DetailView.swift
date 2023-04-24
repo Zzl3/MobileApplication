@@ -230,8 +230,8 @@ struct DetailView:View{
                             //收藏
                             Button(action:{
                                 print("love")
-                                //self.ifLove = !self.ifLove
-                                //lovefunc(transedid: 1)
+                                self.ifLove = !self.ifLove
+                                lovefunc(transedid: 1)
                                 // 收藏不转换
 //                                let params = ["music_id": song.id, "instrument_id": album.id] as [String : Any]
                                
@@ -255,17 +255,17 @@ struct DetailView:View{
                                         .frame(width: 50,height: 50)
                                         .accentColor(Color("LightGreen"))
                                         .shadow(radius: 10)
-//                                    if self.ifLove == false{
-//                                        Image(systemName: "heart")
-//                                            .foregroundColor(Color("DeepGreen"))
-//                                            .font(.system(.title2))
-//                                            .rotationEffect(.degrees(0))
-//                                    }else{
-//                                        Image(systemName: "heart.fill")
-//                                            .foregroundColor(Color("DeepGreen"))
-//                                            .font(.system(.title2))
-//                                            .rotationEffect(.degrees(0))
-//                                    }
+                                    if self.ifLove == false{
+                                        Image(systemName: "heart")
+                                            .foregroundColor(Color("DeepGreen"))
+                                            .font(.system(.title2))
+                                            .rotationEffect(.degrees(0))
+                                    }else{
+                                        Image(systemName: "heart.fill")
+                                            .foregroundColor(Color("DeepGreen"))
+                                            .font(.system(.title2))
+                                            .rotationEffect(.degrees(0))
+                                    }
                                 }
                             }
                             
