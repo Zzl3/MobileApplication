@@ -16,7 +16,7 @@ struct SceneKitView: View {
 struct ARViewContainer: UIViewRepresentable{
     func makeUIView(context: Context) -> some ARView {
         let arView=ARView(frame: .zero)
-        let mymodelAnchor=try! MyScene.loadBox()
+        let mymodelAnchor=try! MyScene.loadBox() // 这里修改
         arView.scene.anchors.append(mymodelAnchor)
         return arView
     }

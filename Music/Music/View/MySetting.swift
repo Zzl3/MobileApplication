@@ -22,8 +22,10 @@ struct MySetting: View {
     @State var showCollection = false
     @State var showFeedback = false
     @State var showAboutUs = false
+    @State var avatar:String="https://musicstyle.oss-cn-shanghai.aliyuncs.com/images/1c9f7979c81c46a186eedfd24cb81e89/image.jpeg"
 //
     @Namespace var namespace
+    
     
     var body: some View {
         NavigationView {
@@ -38,7 +40,7 @@ struct MySetting: View {
                 Button(action: {
                     showingSheet.toggle()
                 }) {
-                    Image("img_head_default")
+                    Image(uiImage: UIImage.fetchImage(from: avatar))
                         .resizable()
                         .scaledToFit()
                         .frame(width: 32, height: 32)
@@ -51,6 +53,15 @@ struct MySetting: View {
             }
         }
         .navigationViewStyle(.stack)
+        .onAppear{fetchData()}
+    }
+    
+    func fetchData(){
+        let userDefault=UserDefaults.standard
+        avatar=userDefault.string(forKey:"avatar")!
+        if(avatar==""){
+            avatar="https://musicstyle.oss-cn-shanghai.aliyuncs.com/images/1c9f7979c81c46a186eedfd24cb81e89/image.jpeg"
+        }
     }
 }
 
