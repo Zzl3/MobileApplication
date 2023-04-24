@@ -14,13 +14,13 @@
             filePath = "Music/Style_Com/DetailView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "06981757-CC98-4B7D-AE40-BBB523B8C44D - 5b56712031652cbe"
+                  uuid = "06981757-CC98-4B7D-AE40-BBB523B8C44D - 5b56712031652c59"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -30,12 +30,12 @@
                   urlString = "file:///Users/sihhd/project/Xcode/sitp(%E9%A3%8E%E6%A0%BC%E8%BF%81%E7%A7%BB)/MobileApplication/Music/Music/Style_Com/DetailView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
                   offsetFromSymbolStart = "244">
                </Location>
                <Location
-                  uuid = "06981757-CC98-4B7D-AE40-BBB523B8C44D - 7e4f033c1cf8ae87"
+                  uuid = "06981757-CC98-4B7D-AE40-BBB523B8C44D - 7e4f033c1cf8aea6"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -45,8 +45,8 @@
                   urlString = "file:///Users/sihhd/project/Xcode/sitp(%E9%A3%8E%E6%A0%BC%E8%BF%81%E7%A7%BB)/MobileApplication/Music/Music/Style_Com/DetailView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
                   offsetFromSymbolStart = "412">
                </Location>
             </Locations>
@@ -62,8 +62,8 @@
             filePath = "Music/Style_Com/DetailView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -110,13 +110,13 @@
             filePath = "Music/Style_Com/DetailView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "DetailView"
             landmarkType = "14">
             <Locations>
                <Location
-                  uuid = "34446971-F15F-4682-946E-55613F021A57 - f83592b1c06b4f4c"
+                  uuid = "34446971-F15F-4682-946E-55613F021A57 - f83592b1c06b4f2f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -126,12 +126,12 @@
                   urlString = "file:///Users/sihhd/project/Xcode/sitp(%E9%A3%8E%E6%A0%BC%E8%BF%81%E7%A7%BB)/MobileApplication/Music/Music/Style_Com/DetailView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
                   offsetFromSymbolStart = "32">
                </Location>
                <Location
-                  uuid = "34446971-F15F-4682-946E-55613F021A57 - d805b85c46e73a32"
+                  uuid = "34446971-F15F-4682-946E-55613F021A57 - d805b85c46e73a51"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -141,12 +141,12 @@
                   urlString = "file:///Users/sihhd/project/Xcode/sitp(%E9%A3%8E%E6%A0%BC%E8%BF%81%E7%A7%BB)/MobileApplication/Music/Music/Style_Com/DetailView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
                   offsetFromSymbolStart = "140">
                </Location>
                <Location
-                  uuid = "34446971-F15F-4682-946E-55613F021A57 - 4dd58208f4fa0206"
+                  uuid = "34446971-F15F-4682-946E-55613F021A57 - 4dd58208f4fa0265"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -156,12 +156,12 @@
                   urlString = "file:///Users/sihhd/project/Xcode/sitp(%E9%A3%8E%E6%A0%BC%E8%BF%81%E7%A7%BB)/MobileApplication/Music/Music/Style_Com/DetailView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
                   offsetFromSymbolStart = "168">
                </Location>
                <Location
-                  uuid = "34446971-F15F-4682-946E-55613F021A57 - 95f3ec60a638f835"
+                  uuid = "34446971-F15F-4682-946E-55613F021A57 - 95f3ec60a638f856"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -171,12 +171,12 @@
                   urlString = "file:///Users/sihhd/project/Xcode/sitp(%E9%A3%8E%E6%A0%BC%E8%BF%81%E7%A7%BB)/MobileApplication/Music/Music/Style_Com/DetailView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  uuid = "34446971-F15F-4682-946E-55613F021A57 - 887aee912f503a06"
+                  uuid = "34446971-F15F-4682-946E-55613F021A57 - 887aee912f503a65"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -186,12 +186,12 @@
                   urlString = "file:///Users/sihhd/project/Xcode/sitp(%E9%A3%8E%E6%A0%BC%E8%BF%81%E7%A7%BB)/MobileApplication/Music/Music/Style_Com/DetailView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
                   offsetFromSymbolStart = "32">
                </Location>
                <Location
-                  uuid = "34446971-F15F-4682-946E-55613F021A57 - b2e6bed1b9e127fe"
+                  uuid = "34446971-F15F-4682-946E-55613F021A57 - b2e6bed1b9e1279d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -201,8 +201,8 @@
                   urlString = "file:///Users/sihhd/project/Xcode/sitp(%E9%A3%8E%E6%A0%BC%E8%BF%81%E7%A7%BB)/MobileApplication/Music/Music/Style_Com/DetailView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
                   offsetFromSymbolStart = "156">
                </Location>
             </Locations>

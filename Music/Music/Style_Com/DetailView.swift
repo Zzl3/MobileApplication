@@ -21,7 +21,8 @@ struct DetailView:View{
     @State var player : AVAudioPlayer!
     @State var playing = false
     @State var width : CGFloat = 0
-    @State var songs = ["musictest","test2"] // 总音频列表
+    @State var songs = ["guzheng","di","xiao"] //总音频列表
+    @State var albums = [Album(id: 0, albumName: "古筝", albumImage: "Instru_guzheng", introduction: "古筝，弹拨弦鸣乐器，又名汉筝、秦筝，是汉民族古老的民族乐器，流行于中国各地。常用于独奏、重奏、器乐合奏和歌舞、戏曲、曲艺的伴奏。"),Album(id: 1, albumName: "箫", albumImage: "Instru_xiao", introduction: "箫，分为洞箫和琴箫，皆为单管、竖吹，是一种非常古老的汉族吹奏乐器。音色圆润轻柔，幽静典雅，适于独奏和重奏。"),Album(id: 2, albumName: "笛子", albumImage: "Instru_di", introduction: "笛子是迄今为止发现的最古老的汉族乐器，也是汉族乐器中最具代表性最有民族特色的吹奏乐器。中国传统音乐中常用的横吹木管乐器之一，中国竹笛，一般分为南方的曲笛、北方的梆笛和介于两者之间的中音笛。音域一般能达到两个八度多两个。 笛子常在中国民间音乐、戏曲、中国民族乐团、西洋交响乐团和现代音乐中运用，是中国音乐的代表乐器之一。在民族乐队中，笛子是举足轻重的吹管乐器，被当做民族吹管乐的代表。")]
     @State var current = 0 // 当前播放的第几首音频
     @State var finish = false // 是否播放完成
     @State var del = AVDelegate() // 播放器的代理
@@ -92,13 +93,13 @@ struct DetailView:View{
                 
                 //原来歌曲的版本：乐器名+波形图+三个按钮（下载，暂停/播放，收藏）+乐器背景图片
                 ZStack{
-                    Image(album.albumImage)
+                    Image(albums[current].albumImage)//album.albumImage
                         .resizable()
                         .frame(width: 300,height: 200)
                         .opacity(0.3)
                     VStack{
                         HStack{
-                        Text(album.albumName)
+                        Text(albums[current].albumName)//albums[current].albumName
                         }
                         .font(.title2)
                         

@@ -58,6 +58,10 @@
 		BC25470629EEC97400496C66 /* ForgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC25470529EEC97400496C66 /* ForgetView.swift */; };
 		BC25470929EFCA8400496C66 /* Verify.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC25470829EFCA8400496C66 /* Verify.swift */; };
 		BC31212329F373EE007BD1F5 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC31212229F373EE007BD1F5 /* Storage.swift */; };
+		BC31212529F6A423007BD1F5 /* CWsZX8DfKUh7uAN.png in Resources */ = {isa = PBXBuildFile; fileRef = BC31212429F6A423007BD1F5 /* CWsZX8DfKUh7uAN.png */; };
+		BC31213029F6B6A3007BD1F5 /* di.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC31212E29F6B6A3007BD1F5 /* di.mp3 */; };
+		BC31213129F6B6A3007BD1F5 /* guzheng.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC31212F29F6B6A3007BD1F5 /* guzheng.mp3 */; };
+		BC31213329F6B6AE007BD1F5 /* xiao.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC31213229F6B6AE007BD1F5 /* xiao.mp3 */; };
 		BC8D657629E194D700966B66 /* test2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC8D657529E194D700966B66 /* test2.mp3 */; };
 		BC8D657B29E3AA1300966B66 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D657A29E3AA1300966B66 /* HistoryView.swift */; };
 		BC8D657E29E3AF0A00966B66 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D657D29E3AF0A00966B66 /* History.swift */; };
@@ -125,6 +129,10 @@
 		BC25470529EEC97400496C66 /* ForgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetView.swift; sourceTree = "<group>"; };
 		BC25470829EFCA8400496C66 /* Verify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verify.swift; sourceTree = "<group>"; };
 		BC31212229F373EE007BD1F5 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		BC31212429F6A423007BD1F5 /* CWsZX8DfKUh7uAN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CWsZX8DfKUh7uAN.png; path = ../../../../../../Downloads/CWsZX8DfKUh7uAN.png; sourceTree = "<group>"; };
+		BC31212E29F6B6A3007BD1F5 /* di.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = di.mp3; path = Music/Sources/di.mp3; sourceTree = "<group>"; };
+		BC31212F29F6B6A3007BD1F5 /* guzheng.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = guzheng.mp3; path = Music/Sources/guzheng.mp3; sourceTree = "<group>"; };
+		BC31213229F6B6AE007BD1F5 /* xiao.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = xiao.mp3; path = Music/Sources/xiao.mp3; sourceTree = "<group>"; };
 		BC8D657529E194D700966B66 /* test2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test2.mp3; sourceTree = "<group>"; };
 		BC8D657A29E3AA1300966B66 /* HistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		BC8D657D29E3AF0A00966B66 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
@@ -238,6 +246,9 @@
 		A0DA23D129C307F90047AFCE = {
 			isa = PBXGroup;
 			children = (
+				BC31213229F6B6AE007BD1F5 /* xiao.mp3 */,
+				BC31212E29F6B6A3007BD1F5 /* di.mp3 */,
+				BC31212F29F6B6A3007BD1F5 /* guzheng.mp3 */,
 				A0AE3F9B29F2E2EB00272050 /* 1.scn */,
 				A0F48BC529ED8DE400C32B4D /* MyModel.scn */,
 				A0DA23DC29C307F90047AFCE /* Music */,
@@ -265,6 +276,7 @@
 				A0680DF229DA8B0600F508E1 /* Style_Com */,
 				A0998B5029C7529200A6561C /* Intro_Com */,
 				A0DA23E129C307FC0047AFCE /* Assets.xcassets */,
+				BC31212429F6A423007BD1F5 /* CWsZX8DfKUh7uAN.png */,
 				A0DA23E329C307FC0047AFCE /* Music.entitlements */,
 				A0DA23DD29C307F90047AFCE /* MusicApp.swift */,
 				A0DA23E429C307FC0047AFCE /* Preview Content */,
@@ -426,8 +438,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC31213329F6B6AE007BD1F5 /* xiao.mp3 in Resources */,
+				BC31213029F6B6A3007BD1F5 /* di.mp3 in Resources */,
+				BC31213129F6B6A3007BD1F5 /* guzheng.mp3 in Resources */,
 				A0AE3F9C29F2E2EB00272050 /* 1.scn in Resources */,
 				BCAFB98729F2101900838CB4 /* Slideqiuhong.ttf in Resources */,
+				BC31212529F6A423007BD1F5 /* CWsZX8DfKUh7uAN.png in Resources */,
 				A0F48BC629ED8DE400C32B4D /* MyModel.scn in Resources */,
 				A0032E8529DC4F490095F847 /* musictest.mp3 in Resources */,
 				BC8D657629E194D700966B66 /* test2.mp3 in Resources */,
