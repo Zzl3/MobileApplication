@@ -3,5 +3,10 @@
     "libraryIdentifier" : "5952bd45a8130bc7932fb607b2452d20",
     "format" : "model",
     "displayName" : "MyModel.usdz"
+  },
+  {
+    "libraryIdentifier" : "9047c631a66a61b4833b4d5d20994b20",
+    "format" : "model",
+    "displayName" : "MyModel2.usdz"
   }
 ]
