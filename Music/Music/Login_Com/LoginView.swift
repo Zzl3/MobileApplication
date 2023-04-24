@@ -122,13 +122,19 @@ struct LoginView: View {
                     msg="邮箱或密码不能为空"
                 }else{
                     let params = ["mail": email,"password": pass]
+                    let userDefault = UserDefaults.standard
+                    userDefault.set(email, forKey: "mail")
+                    userDefault.set(pass, forKey: "password")
                     login(params: params) {userInfo in
                         self.userInfo = userInfo
+                        
                         print(self.userInfo)
                         if(userInfo.code==200){
                             let userDefault = UserDefaults.standard
                             userDefault.set(userInfo.data?.id, forKey: "userid")
                             let userid = userDefault.integer(forKey: "userid")
+                            userDefault.set(userInfo.data?.avatar, forKey: "avatar")
+                            userDefault.set(userInfo.data?.username,forKey: "username")
                             self.showPerson=true
                             print(userid)
                         }else{
@@ -166,7 +172,7 @@ struct LoginView: View {
 //    }
     
     func login(params: [String: Any], completion: @escaping (UserInfo) -> Void) {
-        let url = URL(string: "http://123.60.156.14:5000//login_mail")!
+        let url = URL(string: "http://123.60.156.14:5000/login_mail")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])

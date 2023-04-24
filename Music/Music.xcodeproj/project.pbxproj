@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A000434E29F652FD00DB664A /* FileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000434D29F652FD00DB664A /* FileData.swift */; };
 		A0032E8329DC27E70095F847 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0032E8229DC27E70095F847 /* Song.swift */; };
 		A0032E8529DC4F490095F847 /* musictest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A0032E8429DC4F490095F847 /* musictest.mp3 */; };
 		A0286C6A29E2959800B3EF01 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0286C6929E2959800B3EF01 /* Instrument.swift */; };
@@ -70,6 +71,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A000434D29F652FD00DB664A /* FileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileData.swift; sourceTree = "<group>"; };
 		A0032E8229DC27E70095F847 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		A0032E8429DC4F490095F847 /* musictest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = musictest.mp3; sourceTree = "<group>"; };
 		A0286C6929E2959800B3EF01 /* Instrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
@@ -361,6 +363,7 @@
 				BC14666229E688DB00F0B4F2 /* ThemeData.swift */,
 				BC14666429E688F400F0B4F2 /* ThemeModel.swift */,
 				A0F48BCB29EDB02100C32B4D /* Collection.swift */,
+				A000434D29F652FD00DB664A /* FileData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				BC2546FF29EE1A2100496C66 /* LoginView.swift in Sources */,
 				A0F48BC829ED8E8600C32B4D /* CustomARView.swift in Sources */,
 				A0DA23DE29C307F90047AFCE /* MusicApp.swift in Sources */,
+				A000434E29F652FD00DB664A /* FileData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,7 +622,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Music/Preview Content\"";
-				DEVELOPMENT_TEAM = H7MDV4BRH2;
+				DEVELOPMENT_TEAM = 265677327X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -658,7 +662,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Music/Preview Content\"";
-				DEVELOPMENT_TEAM = H7MDV4BRH2;
+				DEVELOPMENT_TEAM = 265677327X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
