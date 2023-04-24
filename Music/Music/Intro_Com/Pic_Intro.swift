@@ -26,7 +26,7 @@ struct Pic_Intro : View{
             
             Text(instrument.description)
                 .font(.custom("Slideqiuhong",size:20))
-                .foregroundColor(.black)
+                .foregroundColor(Color("DeepGreen"))
             
 //            Image("ShengIntroText")
 //                .scaleEffect(1)
