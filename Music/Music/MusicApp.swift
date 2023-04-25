@@ -13,6 +13,7 @@ struct MusicApp: App {
         WindowGroup {
             BeginView().environmentObject(AppSettings())
             //BeginView()
+            //BaseView().environmentObject(AppSettings())
         }
     }
 }

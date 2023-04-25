@@ -13,59 +13,78 @@ struct Introduction: View {
     @State var selectedCategory: Int = 0 //保存当前索引
     @State var instrumentsByCategory: [String: [Instrument]] = [:] //字典保存值
     @State private var searchText = "" //保存输入框的值
+    @State private var isKeyboardVisible = false
     
     let categories = ["拉弦", "吹管", "打击", "弹拨"]
     
     var body: some View {
-        VStack{
-            // Spacer(minLength: 30)
-            HStack(spacing: 0) {
+        ZStack {
+            VStack{
+                // Spacer(minLength: 30)
                 HStack(spacing: 0) {
-                    Image(systemName: "magnifyingglass")
-                        .foregroundColor(Color(red: 0.388, green: 0.46, blue: 0.373))
-                    
-                    TextField("Search", text: $searchText,onCommit: {
-                        fetchDataType(for: searchText,other: "name")
-                    })
-                    .tint(Color(red: 0.388, green: 0.46, blue: 0.373))
-                    .foregroundColor(.primary)
+                    HStack(spacing: 0) {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(Color(red: 0.388, green: 0.46, blue: 0.373))
+                        
+                        TextField("Search", text: $searchText,onCommit: {
+                            fetchDataType(for: searchText,other: "name")
+                        })
+                        .tint(Color(red: 0.388, green: 0.46, blue: 0.373))
+                        .foregroundColor(.primary)
+                    }
+                    .padding(.vertical, 10)
+                    .padding(.horizontal, 15)
+                    .background {
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .fill(.black)
+                            .opacity(0.15)
+                    }
+                    .padding(.horizontal)
                 }
-                .padding(.vertical, 10)
-                .padding(.horizontal, 15)
-                .background {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .fill(.black)
-                        .opacity(0.15)
+                
+                Picker(selection: $selectedCategory, label: Text("Category")) {
+                    ForEach(0 ..< categories.count) { index in
+                        Text(categories[index]).tag(index)
+                    }
                 }
+                .pickerStyle(SegmentedPickerStyle())
                 .padding(.horizontal)
+                Spacer()
+                CardsScrollView()
+            }
+            .padding(.bottom, 50)
+            .onAppear {fetchData()}
+            .foregroundColor(Color(red: 0.945, green: 0.949, blue: 0.949))
+            .onChange(of: selectedCategory) { newValue in
+                switch newValue {
+                case 0:
+                    fetchDataType(for: "拉弦乐器",other: "category")
+                case 1:
+                    fetchDataType(for: "吹管乐器",other: "category")
+                case 2:
+                    fetchDataType(for: "打击乐器",other: "category")
+                case 3:
+                    fetchDataType(for: "弹拨乐器",other: "category")
+                default:
+                    fetchData()
+                }
+            }
+            .offset(y: isKeyboardVisible ? -200 : 0)
+        }
+        .onAppear {
+            // 监听键盘的出现
+            NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { (notification) in
+                isKeyboardVisible = true
             }
             
-            Picker(selection: $selectedCategory, label: Text("Category")) {
-                ForEach(0 ..< categories.count) { index in
-                    Text(categories[index]).tag(index)
-                }
+            // 监听键盘的消失
+            NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: .main) { (notification) in
+                isKeyboardVisible = false
             }
-            .pickerStyle(SegmentedPickerStyle())
-            .padding(.horizontal)
-            Spacer()
-            CardsScrollView()
         }
-        .padding(.bottom, 50)
-        .onAppear {fetchData()}
-        .foregroundColor(Color(red: 0.945, green: 0.949, blue: 0.949))
-        .onChange(of: selectedCategory) { newValue in
-            switch newValue {
-            case 0:
-                fetchDataType(for: "拉弦乐器",other: "category")
-            case 1:
-                fetchDataType(for: "吹管乐器",other: "category")
-            case 2:
-                fetchDataType(for: "打击乐器",other: "category")
-            case 3:
-                fetchDataType(for: "弹拨乐器",other: "category")
-            default:
-                fetchData()
-            }
+        .onDisappear {
+            // 移除键盘的监听
+            NotificationCenter.default.removeObserver(self)
         }
     }
     

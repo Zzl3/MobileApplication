@@ -58,7 +58,8 @@ struct MySetting: View {
     
     func fetchData(){
         let userDefault=UserDefaults.standard
-        avatar=userDefault.string(forKey:"avatar")!
+        //avatar=userDefault.string(forKey:"avatar")!
+        avatar=""
         if(avatar==""){
             avatar="https://musicstyle.oss-cn-shanghai.aliyuncs.com/images/1c9f7979c81c46a186eedfd24cb81e89/image.jpeg"
         }

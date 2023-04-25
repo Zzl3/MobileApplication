@@ -93,11 +93,12 @@ struct ProfileView: View {
     
     var headPortrait: some View {
         let userDefault=UserDefaults.standard
-        mail=userDefault.string(forKey: "mail")!
-        userid=userDefault.integer(forKey: "userid")
-        password=userDefault.string(forKey: "password")!
-        avatar=userDefault.string(forKey:"avatar")!
-        username=userDefault.string(forKey: "username")!
+//        mail=userDefault.string(forKey: "mail")!
+//        userid=userDefault.integer(forKey: "userid")
+//        password=userDefault.string(forKey: "password")!
+//        avatar=userDefault.string(forKey:"avatar")!
+//        username=userDefault.string(forKey: "username")!
+        mail=""
         if(mail==""){
             mail="2039129107@qq.com"
             password="123456"

@@ -33,7 +33,7 @@ struct SongChoose: View {
             }
         })
         .background(Color("DeepGreen"))
-        .padding(.bottom,40)
+        .padding(.bottom,130)
     }
     
     @ViewBuilder

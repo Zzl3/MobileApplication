@@ -310,7 +310,6 @@ struct DetailView:View{
                 .frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .top)
             }
         }
-        
     }
     
     func gettranid(params: [String: Any], completion: @escaping (String) -> Void) {

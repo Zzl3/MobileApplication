@@ -34,27 +34,27 @@ struct RotateCard: View,Identifiable {
     var instrument:Instrument
     
     var body: some View {
-        VStack {
-            if (flipped) {
-                Pic_Intro(instrument:(instrument))
-                .scaleEffect(0.8)
-                .rotation3DEffect(.degrees(flipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
+            VStack {
+                if (flipped) {
+                    Pic_Intro(instrument:(instrument))
+                    .scaleEffect(0.8)
+                    .rotation3DEffect(.degrees(flipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
+                }
+                else {
+                    Pic_Front(instrument:(instrument))
+                    .scaleEffect(0.8)
+                }
             }
-            else {
-                Pic_Front(instrument:(instrument))
-                .scaleEffect(0.8)
+            .background()
+            .cornerRadius(25)
+            .shadow(color: Color(.displayP3, red: 0, green: 0.0, blue: 0.264, opacity: 0.4), radius: 16, x: 0, y: 16)
+            .modifier(FlipEffect(flipped: $flipped ,angle: trigger ? 180: 0))
+            .onTapGesture  {
+                withAnimation(.spring(response: 0.5, dampingFraction: 0.5, blendDuration: 0.5)) {
+                    self.trigger.toggle()
+                }
             }
         }
-        .background()
-        .cornerRadius(25)
-        .shadow(color: Color(.displayP3, red: 0, green: 0.0, blue: 0.264, opacity: 0.4), radius: 16, x: 0, y: 16)
-        .modifier(FlipEffect(flipped: $flipped ,angle: trigger ? 180: 0))
-        .onTapGesture  {
-            withAnimation(.spring(response: 0.5, dampingFraction: 0.5, blendDuration: 0.5)) {
-                self.trigger.toggle()
-            }
-        }
-    }
 
 }
 
