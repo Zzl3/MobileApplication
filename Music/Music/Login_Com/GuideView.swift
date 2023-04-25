@@ -18,9 +18,10 @@ struct GuideView: View {
             GeometryReader{_ in
                 VStack{
                     
-                    Image("ShengT")
+                    Image("app")
                         .resizable()
-                        .frame(width: 80,height: 80)
+                        .frame(width: 120,height: 120)
+                        .shadow(radius: 10)
                     
                     ZStack{
                         
@@ -36,24 +37,24 @@ struct GuideView: View {
                         
                     }
                     
-    //                ZStack {
-    //                    Image("huawen")
-    //                        .frame(width: 300,height: 300)
-    //
-    //                    HStack(spacing : 15){
-    //                        Rectangle()
-    //                            .fill(Color("LightGreen"))
-    //                            .frame(height: 1)
-    //
-    //                        Text("END")
-    //
-    //                        Rectangle()
-    //                            .fill(Color("LightGreen"))
-    //                            .frame(height: 1)
-    //                    }
-    //                    .padding(.horizontal,20)
-    //                    .padding(.top,50)
-    //                }
+                    ZStack {
+                        Image("huawen")
+                            .frame(width: 300,height: 300)
+    
+                        HStack(spacing : 15){
+                            Rectangle()
+                                .fill(Color("LightGreen"))
+                                .frame(height: 1)
+    
+                            Text("END")
+    
+                            Rectangle()
+                                .fill(Color("LightGreen"))
+                                .frame(height: 1)
+                        }
+                        .padding(.horizontal,20)
+                        .padding(.top,50)
+                    }
                 }
                 .padding(.top,100)
             }
