@@ -32,7 +32,7 @@ struct AppearanceSetView: View {
                 .padding(.vertical)
             }
             
-            Section(header: Text("界面强调色")) {
+            Section(header: Text("界面强调色").foregroundColor(.primary)) {
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 40))], spacing: 10) {
                     ForEach(accentColorData) { item in
                         Button {
@@ -49,7 +49,7 @@ struct AppearanceSetView: View {
                 .padding(.vertical)
             }
             
-            Section(header: Text("应用程序图标")) {
+            Section(header: Text("应用程序图标").foregroundColor(.primary)) {
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 60))], spacing: 24) {
                     ForEach(0..<appIconNames.count, id:\.self) { i in
                         Button {

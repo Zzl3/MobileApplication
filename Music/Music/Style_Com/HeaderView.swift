@@ -75,8 +75,6 @@ struct HeaderView: View {
                     
                 }
                 
-                
-                
                 Button(action:{
                     print("Skip")
                 }){
@@ -93,7 +91,7 @@ struct HeaderView: View {
                 }
             }
         }
-        .frame(maxWidth: .infinity,maxHeight: 200)
+        .frame(maxWidth: .infinity,maxHeight: 250)
     }
 }
 

@@ -46,8 +46,8 @@ struct RotateCard: View,Identifiable {
             }
         }
         .background()
-        .cornerRadius(16)
-        .shadow(color: Color(.displayP3, red: 0, green: 0, blue: 0, opacity: 0.2), radius: 16, x: 0, y: 16)
+        .cornerRadius(25)
+        .shadow(color: Color(.displayP3, red: 0, green: 0.0, blue: 0.264, opacity: 0.4), radius: 16, x: 0, y: 16)
         .modifier(FlipEffect(flipped: $flipped ,angle: trigger ? 180: 0))
         .onTapGesture  {
             withAnimation(.spring(response: 0.5, dampingFraction: 0.5, blendDuration: 0.5)) {

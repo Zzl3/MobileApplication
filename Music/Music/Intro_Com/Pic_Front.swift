@@ -16,21 +16,21 @@ struct Pic_Front: View {
     var body: some View {
         VStack{
             ZStack {
-                Circle()
-                    .frame(width: 250)
-                    .position(x:180,y:200)
+                Image("Circle")
+                    .frame(width: 270)
+                    .position(x:180,y:180)
                     .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.88))
                     .shadow(color: .gray, radius: 4, x: -2, y: 1)
                 Image(uiImage: UIImage.fetchImage(from: instrument.image))
                         .resizable()
                         .scaledToFit()
-                        .frame(height: 200)
-                        .position(x:190,y:165)
+                        .frame(height: 350)
+                        .position(x:190,y:155)
             }
             Image(uiImage: UIImage.fetchImage(from: instrument.nameImage))
                 .resizable()
                 .scaledToFit()
-                .frame(height: 150)
+                .frame(height: 220)
                 .position(x:190,y:250)
             Button(action: {
                 self.isPlaying.toggle()
@@ -46,12 +46,13 @@ struct Pic_Front: View {
                 } else {
                     self.player.pause()
                 }
-            }) {
+            })
+            {
                 Image(systemName: isPlaying ? "pause.circle" : "play.circle")
             }
-            .foregroundColor(/*@START_MENU_TOKEN@*/Color(hue: 1.0, saturation: 0.034, brightness: 0.782)/*@END_MENU_TOKEN@*/)
+            .foregroundColor(Color(red: 0.898, green: 0.898, blue: 0.898))
             .scaleEffect(4)
-            .position(x:195,y:180)
+            .position(x:187,y:180)
         }
     }
 }

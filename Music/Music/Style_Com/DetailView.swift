@@ -42,7 +42,6 @@ struct DetailView:View{
                 .resizable()
                 //.frame(width: 200,height: 100)
                 .opacity(0.05)
-            
             VStack{
                 //返回键（右上角）
                 ZStack(alignment: .topTrailing) {
@@ -59,7 +58,7 @@ struct DetailView:View{
                     }
                     .buttonStyle(CustomButtonStyle())
                     .frame(width: 300, height: 1)
-                    .offset(x: 120, y: 55)
+                    .position(x:300,y:30)
                 }
                 .padding()
                 //歌曲信息：图片，歌名，
@@ -90,7 +89,6 @@ struct DetailView:View{
                         .font(.system(.headline))
                 }
                 .padding(.top,100)
-                
                 //原来歌曲的版本：乐器名+波形图+三个按钮（下载，暂停/播放，收藏）+乐器背景图片
                 ZStack{
                     Image(albums[current].albumImage)//album.albumImage

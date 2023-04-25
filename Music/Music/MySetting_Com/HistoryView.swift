@@ -50,9 +50,11 @@ struct HistoryView: View {
                                     HStack{
                                         Text(history.song.name)
                                             .font(.system(size: 20, weight: .bold))
+                                            .foregroundColor(.primary)
                                         
                                         Text(history.song.artist)
                                             .font(.system(size: 20, weight: .bold))
+                                            .foregroundColor(.primary)
                                     }
                                     
                                     HStack{

@@ -13,6 +13,7 @@ struct FeedBack: View {
     @State private var selectedFeedbackType = "页面错误" //反馈类型
     @State private var feedbackContent = "" //反馈内容
     @State private var response = "" //回应
+    @State private var showingAlert = false
     
     var body: some View {
         
@@ -34,28 +35,35 @@ struct FeedBack: View {
                             .cornerRadius(10)
                             .padding(.horizontal)
                             .background(Color(UIColor.secondarySystemBackground))
+                            .foregroundColor(.primary)
                     }
                 }
-                Button(action: {
-                    let userDefault = UserDefaults.standard
-                    let userid = userDefault.integer(forKey: "userid")
-                    print(userid)
-                    let params = ["user_id": userid, "type": feedbackTypes, "content": feedbackContent] as [String : Any]
-                    submitFeedback(params: params) { response in
-                        self.response = response
-                        print(self.response)
+                VStack {
+                    // 输入框和选择器等视图
+                    Button(action: {
+                        let userDefault = UserDefaults.standard
+                        let userid = userDefault.integer(forKey: "userid")
+                        let params = ["user_id": userid, "type": feedbackTypes, "content": feedbackContent] as [String : Any]
+                        
+                        // 提交反馈请求
+                        submitFeedback(params: params) { response in
+                            self.response = response
+                            self.showingAlert = true
+                        }
+                    }) {
+                        Text("提交反馈")
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.blue)
+                            .cornerRadius(10)
+                            .padding(.horizontal)
                     }
-                }) {
-                    Text("提交反馈")
-                        .font(.title)
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.blue)
-                        .cornerRadius(10)
-                        .padding(.horizontal)
+                    .padding(.bottom, 40)
                 }
-                .padding(.bottom, 40)
+                .alert(isPresented: $showingAlert) {
+                    Alert(title: Text("提交成功"), message: Text("感谢您的反馈！"), dismissButton: .default(Text("好的")))
+                }
             }
             .accentColor(.blue)
         }

@@ -25,6 +25,7 @@ struct BaseView: View {
                 StyleTransfer()
                     .tag("music.note.house")
                 MySetting()
+                    .environmentObject(AppSettings())
                     .tag("person.circle")
             }
             .clipShape(

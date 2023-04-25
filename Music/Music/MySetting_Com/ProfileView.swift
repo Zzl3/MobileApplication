@@ -10,8 +10,8 @@ import Combine
 
 struct ProfileView: View {
     
-    @Environment(\.presentationMode)    var presentationMode
-    @EnvironmentObject                  var appSettings: AppSettings
+    @Environment(\.presentationMode)  var presentationMode
+    @EnvironmentObject var appSettings: AppSettings
     @State var showingImagePicker: Bool = false
     @State var inputImage: UIImage?
     //@State var profileImage: String?

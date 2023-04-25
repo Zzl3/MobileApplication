@@ -18,13 +18,13 @@ struct SongChoose: View {
     var body: some View {
         VStack{
             HeaderView(song: song) //示例，传给他一首曲子
-                .padding(.top,80)
+                .position(x:200,y:70)
             
             GeometryReader{proxy in
                 let size = proxy.size
                 CarouselView(size: size)
             }
-            .padding(.top,0)
+            .padding(.top,-60)
         }
         .frame(maxWidth: .infinity,maxHeight: .infinity)
         .overlay(content:{
@@ -33,14 +33,13 @@ struct SongChoose: View {
             }
         })
         .background(Color("DeepGreen"))
-        .padding(.bottom,130)
-        .ignoresSafeArea()
+        .padding(.bottom,40)
     }
     
     @ViewBuilder
     func CarouselView(size:CGSize)->some View{
         VStack(spacing:-40){
-            CustomCarousel(index:$currentIndex, items: sampleAlbums,spacing: 30,cardPadding: size.width / 3 ,id: \.id){
+            CustomCarousel(index:$currentIndex, items: sampleAlbums,spacing: 10,cardPadding: size.width / 2 ,id: \.id){
                 sampleAlbums,size in
                 VStack(spacing:10){
                     ZStack{
@@ -60,7 +59,7 @@ struct SongChoose: View {
                     .background{
                         RoundedRectangle(cornerRadius: size.height / 10 ,style: .continuous)
                             .fill(Color("LightGreen"))
-                            }
+                        }
                         
                     Text(sampleAlbums.albumName)
                         .fontWeight(.semibold)
@@ -68,6 +67,7 @@ struct SongChoose: View {
                         .padding(.top,8)
                         .bold()
                         .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
+                        .foregroundColor(.primary)
                 }
                 .contentShape(Rectangle())
                 .onTapGesture {
@@ -90,8 +90,7 @@ struct SongChoose: View {
                     TabMenu()
                         .opacity(showDetail ? 0 : 1)
                 })
-                .padding(.top,20)
-                .ignoresSafeArea()
+                .padding(.top,10)
         }
     }
     

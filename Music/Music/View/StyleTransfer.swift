@@ -5,11 +5,9 @@
 //  Created by 周紫蕾 on 2023/3/16.
 //
 
-
-
 //推荐轮播图
+//轮播图Model
 import SwiftUI
-    //轮播图Model
 
 struct CarouselCard: Identifiable,Codable{
     var id:     Int
@@ -20,21 +18,19 @@ struct CarouselCard: Identifiable,Codable{
         self.id = id
     }
 }
-
-    //轮播图ViewModel
+//轮播图ViewModel
 class CarouselViewModel: ObservableObject{
-        //轮播内容
+    //轮播内容
     var items = [CarouselCard]()
-    
     private func addItems(named name: String){
         let item = CarouselCard(name: name, id: items.count)
         items.insert(item, at: item.id)
     }
     init() {
         if items.isEmpty {
-            for item in (0...5) {
-                addItems(named: "第(item)个")
-            }
+            addItems(named: "testpic")
+            addItems(named: "testpic2")
+            addItems(named: "testpic3")
         }
     }
 }
@@ -43,6 +39,7 @@ struct Carousel: View {
     @StateObject var carousels = CarouselViewModel()
     @State var screenDrag:CGFloat = 1 //拖放时偏移
     @State var activeCard = 0 //当前展示项
+    //@State var picarray=["testpic1","testpic2","testpic3"]
     var numberOfItems:CGFloat{ CGFloat(carousels.items.count) } //轮播项总数
     var cardWidth:CGFloat{ UIScreen.main.bounds.width - (CarouselConstants.widthOfHiddenCards * 2) - (CarouselConstants.spacing * 2 ) }
     
@@ -60,7 +57,7 @@ struct Carousel: View {
         
         return HStack(spacing: CarouselConstants.spacing) {
             ForEach(carousels.items) { item in
-                Image("testpic")    //推荐图片
+                Image(item.name)    //推荐图片
                     .frame(width: UIScreen.main.bounds.width - (CarouselConstants.widthOfHiddenCards * 2) - (CarouselConstants.spacing * 2),
                            height: (item.id == activeCard) ? CarouselConstants.cardHeight : CarouselConstants.cardHeight - 30)                    .foregroundColor(.white)
                     .background(.black)
@@ -109,11 +106,6 @@ struct Carousel: View {
     }
 }
 
-
-
-
-
-
 struct SongGroup:Identifiable{  //歌曲按乐器分类
     var id=UUID().uuidString
     var instru:String
@@ -138,11 +130,11 @@ struct SongCell:View{
                     .frame(width: 50,height:50)
                 VStack{
                     Text(instru.name)
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                     
                     Text(instru.artist)
                         .font(.footnote)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.primary)
                 }
             }
         }.padding()
@@ -221,23 +213,14 @@ struct ContentView:View{
     // viewmodel中的instrus的每个songGroup.songList是【songlist】
     
     var body:some View{
-        
-        
-           
-                
         NavigationView{
-            
             ZStack{
                 Color.clear
                     .background(Image("huawen2")
                         .position(x:100,y:1600)
                         .scaleEffect(0.1)
                         .padding())
-                    
-                
-                
                 VStack(alignment:.leading){
-                    
                     Carousel()
                         .frame(height:200)
                         .position(x:195,y:150)

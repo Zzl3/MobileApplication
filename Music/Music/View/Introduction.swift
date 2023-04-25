@@ -27,7 +27,8 @@ struct Introduction: View {
                     TextField("Search", text: $searchText,onCommit: {
                         fetchDataType(for: searchText,other: "name")
                     })
-                        .tint(Color(red: 0.388, green: 0.46, blue: 0.373))
+                    .tint(Color(red: 0.388, green: 0.46, blue: 0.373))
+                    .foregroundColor(.primary)
                 }
                 .padding(.vertical, 10)
                 .padding(.horizontal, 15)
@@ -49,8 +50,8 @@ struct Introduction: View {
             Spacer()
             CardsScrollView()
         }
-        .padding(.bottom, 90)
-        //.onAppear {fetchData()}
+        .padding(.bottom, 50)
+        .onAppear {fetchData()}
         .foregroundColor(Color(red: 0.945, green: 0.949, blue: 0.949))
         .onChange(of: selectedCategory) { newValue in
             switch newValue {
@@ -123,27 +124,31 @@ struct Introduction: View {
     func CardsScrollView()->some View{
         ScrollView(.horizontal,showsIndicators: false){
             HStack(spacing:15){
-//                if let instrumentList = sampleInstrument {
-//                    ForEach(instrumentList, id: \.id){ instrument in
-//                        VStack{
-//                            RotateCard(instrument: instrument)
-//                            .frame(width: 350, height: 550)
-//                        }
-//                    }
-//                    .foregroundColor(Color(red: 0.949, green: 0.949, blue: 0.949))
-//                    .padding(.leading,20)
-//                } else {
-//                    Text("Loading...")
-//                }
-                
-                ForEach(sampleInstrument, id: \.id){ instrument in
-                    VStack{
-                        RotateCard(instrument: instrument)
-                        .frame(width: 350, height: 550)
+                //动态数据
+                if let instrumentList = instrumentList {
+                    ForEach(instrumentList.data, id: \.id){ instrument in
+                        VStack{
+                            RotateCard(instrument: instrument)
+                            .frame(width: 350, height: 550)
+                        }
                     }
+                    .foregroundColor(Color(red: 0.949, green: 0.949, blue: 0.949))
+                    .padding(.leading,20)
+                    .padding(.bottom,50)
+                } else {
+                    LoadingView()
+                        .position(x:195,y:180)
                 }
-                .foregroundColor(Color(red: 0.949, green: 0.949, blue: 0.949))
-                .padding(.leading,20)
+                
+                //静态数据
+//                ForEach(sampleInstrument, id: \.id){ instrument in
+//                    VStack{
+//                        RotateCard(instrument: instrument)
+//                        .frame(width: 350, height: 550)
+//                    }
+//                }
+//                .foregroundColor(Color(red: 0.949, green: 0.949, blue: 0.949))
+//                .padding(.leading,20)
             }
         }
     }

@@ -11,8 +11,8 @@ import SwiftUI
 struct MusicApp: App {
     var body: some Scene {
         WindowGroup {
-            //BeginView().environmentObject(AppSettings())
-            BeginView()
+            BeginView().environmentObject(AppSettings())
+            //BeginView()
         }
     }
 }
