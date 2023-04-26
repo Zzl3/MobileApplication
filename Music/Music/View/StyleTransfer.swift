@@ -225,12 +225,23 @@ struct ContentView:View{
                         .frame(height:200)
                         .position(x:195,y:150)
                         .scaleEffect(0.9)
+                    NavigationLink(destination: UploadFile(song:sampleSong[0])) {
+                        Text("上传歌曲")
+                           .fontWeight(.bold)
+                           .foregroundColor(.primary)
+                           .padding()
+                           .background(Color("DeepGreen"))
+                           .cornerRadius(10)
+                           .padding(.horizontal,140)
+
+                    }
                     Text("乐器选择")
                         .font(.system(size:30))
                         .fontWeight(.heavy)
                         .foregroundColor(Color.primary)
                         .position(x:80,y:100)
                         .frame(height:110)
+                        .padding(.top,-40)
                     ScrollView{
                         ForEach(viewmodel.instrus){instru in
                             //instru是songGroup类型

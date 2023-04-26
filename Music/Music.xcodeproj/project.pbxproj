@@ -15,6 +15,9 @@
 		A0286C7729E320BB00B3EF01 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0286C7629E320BB00B3EF01 /* Tools.swift */; };
 		A031964529E4628A00050B98 /* FeedBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A031964429E4628A00050B98 /* FeedBack.swift */; };
 		A033E2BD29DB32F3006FD53D /* SongChoose.swift in Sources */ = {isa = PBXBuildFile; fileRef = A033E2BC29DB32F3006FD53D /* SongChoose.swift */; };
+		A065B0BE29F8F27700FB9A80 /* UploadFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A065B0BD29F8F27700FB9A80 /* UploadFile.swift */; };
+		A065B0C029F8FEED00FB9A80 /* TempLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A065B0BF29F8FEED00FB9A80 /* TempLoading.swift */; };
+		A065B0C229F909DA00FB9A80 /* Playing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A065B0C129F909DA00FB9A80 /* Playing.swift */; };
 		A066730F29E3E7DC009DCE75 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A066730E29E3E7DC009DCE75 /* CustomButtonStyle.swift */; };
 		A0680DF829DA996E00F508E1 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0680DF729DA996D00F508E1 /* Album.swift */; };
 		A0680DFA29DAAFA300F508E1 /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0680DF929DAAFA300F508E1 /* CustomCorners.swift */; };
@@ -83,6 +86,9 @@
 		A0286C7629E320BB00B3EF01 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		A031964429E4628A00050B98 /* FeedBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBack.swift; sourceTree = "<group>"; };
 		A033E2BC29DB32F3006FD53D /* SongChoose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongChoose.swift; sourceTree = "<group>"; };
+		A065B0BD29F8F27700FB9A80 /* UploadFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadFile.swift; sourceTree = "<group>"; };
+		A065B0BF29F8FEED00FB9A80 /* TempLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempLoading.swift; sourceTree = "<group>"; };
+		A065B0C129F909DA00FB9A80 /* Playing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playing.swift; sourceTree = "<group>"; };
 		A066730E29E3E7DC009DCE75 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
 		A0680DF729DA996D00F508E1 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		A0680DF929DAAFA300F508E1 /* CustomCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
@@ -228,6 +234,9 @@
 				A088AAA329DB353400447088 /* InstruTab.swift */,
 				A088AAA929DC10D500447088 /* HeaderView.swift */,
 				A088AAAB29DC139900447088 /* DetailView.swift */,
+				A065B0BD29F8F27700FB9A80 /* UploadFile.swift */,
+				A065B0BF29F8FEED00FB9A80 /* TempLoading.swift */,
+				A065B0C129F909DA00FB9A80 /* Playing.swift */,
 			);
 			path = Style_Com;
 			sourceTree = "<group>";
@@ -462,6 +471,7 @@
 				BC14666C29E68CF600F0B4F2 /* ProfileView.swift in Sources */,
 				A0DA23ED29C308F30047AFCE /* StyleTransfer.swift in Sources */,
 				BC14666829E68A7F00F0B4F2 /* Styles.swift in Sources */,
+				A065B0C229F909DA00FB9A80 /* Playing.swift in Sources */,
 				BC14665F29E6886300F0B4F2 /* AppearanceSetView.swift in Sources */,
 				A0C7342829F79CC400F6A385 /* LoadingView.swift in Sources */,
 				BC8D657B29E3AA1300966B66 /* HistoryView.swift in Sources */,
@@ -509,6 +519,8 @@
 				A0680DF829DA996E00F508E1 /* Album.swift in Sources */,
 				A0DA23EF29C3092D0047AFCE /* MySetting.swift in Sources */,
 				BC25470129EE1A3200496C66 /* RegisterView.swift in Sources */,
+				A065B0BE29F8F27700FB9A80 /* UploadFile.swift in Sources */,
+				A065B0C029F8FEED00FB9A80 /* TempLoading.swift in Sources */,
 				BC25470429EE461D00496C66 /* LoginAndRegis.swift in Sources */,
 				BC2546FF29EE1A2100496C66 /* LoginView.swift in Sources */,
 				A0F48BC829ED8E8600C32B4D /* CustomARView.swift in Sources */,
