@@ -27,12 +27,12 @@ class DBConfig:
     PORT = 3306
     DATABASE = 'db_music_trans'
     USER = 'music_trans_usr'
-    PASSWORD = '***' #设计到账户密码问题，如需相关信息，请联系我们
+    PASSWORD = '***' #涉及到账户密码问题，如需相关信息，请联系我们
 
 
 # OSS云存储配置
 class OSS:
-    AccessKeyId = '***' #设计到账户密码问题，如需相关信息，请联系我们
-    AccessKeySecret = '***' #设计到账户密码问题，如需相关信息，请联系我们
+    AccessKeyId = '***' #涉及到账户密码问题，如需相关信息，请联系我们
+    AccessKeySecret = '***' #涉及到账户密码问题，如需相关信息，请联系我们
     Endpoint = 'oss-cn-shanghai.aliyuncs.com'
-    Bucket = '***' #设计到账户密码问题，如需相关信息，请联系我们
+    Bucket = '***' #涉及到账户密码问题，如需相关信息，请联系我们
