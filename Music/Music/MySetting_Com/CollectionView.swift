@@ -56,9 +56,9 @@ struct CollectionView: View {
             ),
             instrument: Instrument(
                 id: 6,
-                name: "唢呐",
+                name: "笛子",
                 nameImage: "https://s2.loli.net/2023/04/09/ZLrBwuXSPHYoi2j.png",
-                image: "https://musicstyle.oss-cn-shanghai.aliyuncs.com/files/c275530253e44babbc866c76cace4e23/image.png",
+                image: "https://musicstyle.oss-cn-shanghai.aliyuncs.com/files/9759f6d1f08a4d23bfe6ee99267d1007/成品效果图无背景.png",
                 audio:  "https://musicstyle.oss-cn-shanghai.aliyuncs.com/files/777bcd949c9b412e8731e2b5836ee314/百鸟朝凤片段.MP3",
                 model:  "https://musicstyle.oss-cn-shanghai.aliyuncs.com/files/f6ce164b03a74b1f8978654713269f91/model.obj",
                 description: "唢呐，中国传统双簧木管乐器。早在公元3世纪，唢呐随丝绸之路的开辟，从东欧、西亚一带传入我国，是世界双簧管乐器家族中的一员，经过几千年的发展，使唢呐拥有其独特的气质与音色，已是我国具有代表性的民族管乐器。",

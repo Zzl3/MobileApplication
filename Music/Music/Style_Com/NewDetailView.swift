@@ -65,6 +65,7 @@ struct NewDetailView:View{
                     
                     Text(album.albumName)
                         .font(Font.system(.title).bold())
+                        .foregroundColor(Color.black)
                 }
                 .padding(.top,100)
                 //原来歌曲的版本：乐器名+波形图+三个按钮（下载，暂停/播放，收藏）+乐器背景图片

@@ -104,6 +104,7 @@ struct UploadFile: View {
                  VStack {
                      if audioURL != nil {
                          Text("Loaded: \(audioURL!.lastPathComponent)")
+                             .foregroundColor(Color.black)
                      }
                      HStack{
                          Button(action: {
