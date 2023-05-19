@@ -235,7 +235,7 @@ struct ContentView:View{
                            .padding(.horizontal,140)
 
                     }
-                    Text("乐器选择")
+                    Text("曲子选择")
                         .font(.system(size:30))
                         .fontWeight(.heavy)
                         .foregroundColor(Color.primary)
