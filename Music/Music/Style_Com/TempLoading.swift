@@ -24,7 +24,7 @@ struct TempLoading: View {
         }
         .onAppear {
             // Simulate loading delay
-            DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
                 // Set isLoading to false after 2 seconds
                 self.isLoading = false
             }

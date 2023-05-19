@@ -144,7 +144,6 @@ struct NewDetailView:View{
                     }
                     .padding(.top,40)
                     .onAppear{
-                        
                         let url = Bundle.main.path(forResource: self.songs[self.current], ofType: "mp3")
                         self.player = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: url!))
                         self.player.prepareToPlay()

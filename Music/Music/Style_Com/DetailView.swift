@@ -101,9 +101,6 @@ struct DetailView:View{
                         }
                         .font(.title2)
                         
-//                        Slider(value: $oldSliderValue, in: 0...5, step: 0.1)
-//                        .frame(width: 300)
-                        
                         ZStack(alignment: .leading) {
                             Capsule().fill(Color.black.opacity(0.08)).frame(height:8)
                             // 蓝色进度等于播放进度
