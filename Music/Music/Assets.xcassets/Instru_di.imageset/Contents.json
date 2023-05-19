@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "成品效果图无背景.png",
+      "filename" : "笛.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "笛@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "笛@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

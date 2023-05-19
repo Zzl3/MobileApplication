@@ -19,7 +19,6 @@ struct SongChoose: View {
         VStack{
             HeaderView(song: song) //示例，传给他一首曲子
                 .position(x:200,y:70)
-            
             GeometryReader{proxy in
                 let size = proxy.size
                 CarouselView(size: size)

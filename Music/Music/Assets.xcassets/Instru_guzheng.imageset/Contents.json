@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Rectangle 16@1x.png",
+      "filename" : "图片.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Rectangle 16@2x.png",
+      "filename" : "图片@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Rectangle 16@3x.png",
+      "filename" : "图片@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
