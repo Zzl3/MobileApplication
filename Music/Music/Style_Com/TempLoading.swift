@@ -19,7 +19,7 @@ struct TempLoading: View {
                 Text("正在为您转换中...") // 显示加载文本
                     .position(x:200,y:160)
             } else {
-                UploadFile(song:sampleSong[0])
+                NewDetailView()
             }
         }
         .onAppear {

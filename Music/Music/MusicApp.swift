@@ -12,8 +12,8 @@ struct MusicApp: App {
     var body: some Scene {
         WindowGroup {
             //BaseView().environmentObject(AppSettings())
-            BeginView()
-            //BaseView().environmentObject(AppSettings())
+//            BeginView()
+            BaseView().environmentObject(AppSettings())
         }
     }
 }
