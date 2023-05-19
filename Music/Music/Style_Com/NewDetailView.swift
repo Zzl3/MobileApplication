@@ -54,7 +54,7 @@ struct NewDetailView:View{
                             .frame(width: 225,height:  225)
                             .shadow(radius: 10)
                         
-                        Image(uiImage: UIImage.fetchImage(from: song.image))
+                        Image(album.albumImage)
                             .resizable()
                             .scaledToFit()
                             .scaleEffect(2.5)
