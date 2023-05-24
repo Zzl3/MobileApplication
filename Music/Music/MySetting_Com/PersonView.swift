@@ -12,9 +12,8 @@ import SceneKit
 struct PersonView: View {
     //这个就是触发跳转的布尔值
     @State private var isShowingDetailView = false
-    
-    @Environment(\.presentationMode)   var presentationMode
-    @EnvironmentObject  var appSettings: AppSettings
+//    @Environment(\.presentationMode) var presentationMode
+//    @EnvironmentObject  var appSettings: AppSettings
     @State var scene: SCNScene? = .init(named:"1.scn")
     @GestureState var offset:CGFloat = 0
     var body: some View {
@@ -106,11 +105,10 @@ struct PersonView: View {
 }
 
 
-
-
 struct PersonView_Previews: PreviewProvider {
     static var previews: some View {
         //MySetting()
-        PersonView().environmentObject(AppSettings())
+//        PersonView().environmentObject(AppSettings())
+        PersonView()
     }
 }

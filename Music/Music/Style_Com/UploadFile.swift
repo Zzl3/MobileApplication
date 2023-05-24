@@ -110,14 +110,24 @@ struct UploadFile: View {
                          Button(action: {
                              showFileChooser = true
                          }) {
-                             Text("上传音频文件")
+                             Text("上传文件")
                                  .padding()
                                  .background(Color("DeepGreen"))
                                  .foregroundColor(.primary)
                                  .cornerRadius(8)
                          }
                          
-                         Button("开始转换音频") {
+                         Button(action: {
+//                             showFileChooser = true
+                         }) {
+                             Text("自己录制")
+                                 .padding()
+                                 .background(Color("DeepGreen"))
+                                 .foregroundColor(.primary)
+                                 .cornerRadius(8)
+                         }
+                         
+                         Button("开始转换") {
                              showLoading = true
                          }
                          .padding()
@@ -141,7 +151,7 @@ struct UploadFile: View {
                          Slider(value: $audioPlayer.currentTime, in: 0.0...(audioPlayer.player?.duration ?? 0.0), onEditingChanged: { _ in
                              audioPlayer.seek(to: audioPlayer.currentTime)
                          })
-                         .frame(width: 300)
+                         .frame(width: 350)
                      }
                      .padding()
                      HStack {
