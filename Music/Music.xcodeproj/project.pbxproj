@@ -79,6 +79,11 @@
 		BCE412E429E5614D000C94B9 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE412E329E5614D000C94B9 /* TestView.swift */; };
 		BCE412E629E5675D000C94B9 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE412E529E5675C000C94B9 /* CollectionView.swift */; };
 		BCE412E829E567BE000C94B9 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE412E729E567BE000C94B9 /* AboutUsView.swift */; };
+		E2712B832A1DFA1B008F73BE /* 21.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E2712B822A1DFA1B008F73BE /* 21.usdz */; };
+		E2712B852A1DFA21008F73BE /* 28.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E2712B842A1DFA21008F73BE /* 28.usdz */; };
+		E2712B872A1DFA24008F73BE /* 34.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E2712B862A1DFA24008F73BE /* 34.usdz */; };
+		E2712B892A1DFA29008F73BE /* 35.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E2712B882A1DFA29008F73BE /* 35.usdz */; };
+		E2712B8B2A1DFAEB008F73BE /* 2.scn in Resources */ = {isa = PBXBuildFile; fileRef = E2712B8A2A1DFAEB008F73BE /* 2.scn */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -156,6 +161,11 @@
 		BCE412E329E5614D000C94B9 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		BCE412E529E5675C000C94B9 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		BCE412E729E567BE000C94B9 /* AboutUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
+		E2712B822A1DFA1B008F73BE /* 21.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 21.usdz; sourceTree = "<group>"; };
+		E2712B842A1DFA21008F73BE /* 28.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 28.usdz; sourceTree = "<group>"; };
+		E2712B862A1DFA24008F73BE /* 34.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 34.usdz; sourceTree = "<group>"; };
+		E2712B882A1DFA29008F73BE /* 35.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = 35.usdz; sourceTree = "<group>"; };
+		E2712B8A2A1DFAEB008F73BE /* 2.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = 2.scn; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,14 +182,19 @@
 		A0032E7E29DC263A0095F847 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				BC31213229F6B6AE007BD1F5 /* xiao.mp3 */,
 				BC31212E29F6B6A3007BD1F5 /* di.mp3 */,
 				BC31212F29F6B6A3007BD1F5 /* guzheng.mp3 */,
+				A0032E8429DC4F490095F847 /* musictest.mp3 */,
+				BC8D657529E194D700966B66 /* test2.mp3 */,
+				BC31213229F6B6AE007BD1F5 /* xiao.mp3 */,
 				A0AE3F9B29F2E2EB00272050 /* 1.scn */,
+				E2712B8A2A1DFAEB008F73BE /* 2.scn */,
 				A0F48BC529ED8DE400C32B4D /* MyModel.scn */,
 				A0FE3ABF29ED2E3C00D740C4 /* Slideqiuhong.ttf */,
-				BC8D657529E194D700966B66 /* test2.mp3 */,
-				A0032E8429DC4F490095F847 /* musictest.mp3 */,
+				E2712B822A1DFA1B008F73BE /* 21.usdz */,
+				E2712B842A1DFA21008F73BE /* 28.usdz */,
+				E2712B862A1DFA24008F73BE /* 34.usdz */,
+				E2712B882A1DFA29008F73BE /* 35.usdz */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -462,11 +477,16 @@
 				BC31213329F6B6AE007BD1F5 /* xiao.mp3 in Resources */,
 				BC31213029F6B6A3007BD1F5 /* di.mp3 in Resources */,
 				BC31213129F6B6A3007BD1F5 /* guzheng.mp3 in Resources */,
+				E2712B8B2A1DFAEB008F73BE /* 2.scn in Resources */,
+				E2712B832A1DFA1B008F73BE /* 21.usdz in Resources */,
+				E2712B872A1DFA24008F73BE /* 34.usdz in Resources */,
 				A0AE3F9C29F2E2EB00272050 /* 1.scn in Resources */,
 				BCAFB98729F2101900838CB4 /* Slideqiuhong.ttf in Resources */,
+				E2712B892A1DFA29008F73BE /* 35.usdz in Resources */,
 				A0F48BC629ED8DE400C32B4D /* MyModel.scn in Resources */,
 				A0032E8529DC4F490095F847 /* musictest.mp3 in Resources */,
 				BC8D657629E194D700966B66 /* test2.mp3 in Resources */,
+				E2712B852A1DFA21008F73BE /* 28.usdz in Resources */,
 				A0DA23E629C307FC0047AFCE /* Preview Assets.xcassets in Resources */,
 				A0DA23E229C307FC0047AFCE /* Assets.xcassets in Resources */,
 			);

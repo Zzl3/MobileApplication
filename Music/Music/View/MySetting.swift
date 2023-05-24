@@ -31,7 +31,7 @@ struct MySetting: View {
         NavigationView {
             ScrollView(.vertical) {
                 VStack {
-                    PersonView()
+                    PersonAllView()
                         .frame(width: .infinity,height: 700)
                 }
             }

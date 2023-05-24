@@ -9,7 +9,7 @@ import SwiftUI
 import SceneKit
 
 struct CustomARView: UIViewRepresentable {
-    @Binding var scene: SCNScene?
+    var scene: SCNScene?
     func makeUIView(context: Context) -> SCNView {
         let view = SCNView()
         view.allowsCameraControl = false

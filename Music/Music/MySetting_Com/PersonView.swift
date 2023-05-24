@@ -19,26 +19,25 @@ struct PersonView: View {
     var body: some View {
         NavigationView {
             ZStack{
-                Image("Background")
-                    .opacity(0.3)
+//                Image("Background")
+//                    .opacity(0.3)
                 VStack {
-                    NavigationLink(destination:  SceneKitView(), isActive: $isShowingDetailView) { EmptyView()}
+//                    NavigationLink(destination:  SceneKitView(), isActive: $isShowingDetailView) { EmptyView()}
                     
-                    CustomARView(scene: $scene)
-                        .frame(height: 400)
-                        .padding(.bottom,30)
-                    
+                    CustomARView(scene: scene)
+//                        .frame(height: 400)
+                        .padding(.bottom,3)
                     CustomSeeker()
                     
-                    Button(action: {
-                        isShowingDetailView = true
-                    }, label: {
-                        Text("VR现实")
-                    })
-                    .padding()
-                    .background(Color("DeepGreen"))
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
+//                    Button(action: {
+//                        isShowingDetailView = true
+//                    }, label: {
+//                        Text("VR现实")
+//                    })
+//                    .padding()
+//                    .background(Color("DeepGreen"))
+//                    .foregroundColor(.white)
+//                    .cornerRadius(10)
 
                 }
             }

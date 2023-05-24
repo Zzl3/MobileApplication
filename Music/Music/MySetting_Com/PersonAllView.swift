@@ -11,8 +11,8 @@ import SceneKit
 struct PersonAllView: View {
     // current index
     @State var currentIndex: Int = 0
-//    @State var scene: SCNScene? = .init(named:"1.scn")
-//    @GestureState var offset:CGFloat = 0
+    @State var scene: SCNScene? = .init(named:"1.scn")
+    @GestureState var offset:CGFloat = 0
     
     var body: some View {
         ZStack {
@@ -54,91 +54,100 @@ struct PersonAllView: View {
     
     @ViewBuilder
     func CardView(post: Post) -> some View {
-        VStack(spacing: 10) {
+        VStack(spacing: 2) {
             GeometryReader { proxy in
-                Image(post.postImg)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: proxy.size.width, height: proxy.size.height)
-                    .cornerRadius(25)
-//                CustomARView(scene: $scene)
+//                Image(post.postImg)
+//                    .resizable()
+//                    .aspectRatio(contentMode: .fill)
+//                    .frame(width: proxy.size.width, height: proxy.size.height)
+//                    .cornerRadius(25)
+                PersonView()
+                    .scaleEffect(0.7)
+//                scene=SCNScene(named: post.scene)
+//                let scenetemp: SCNScene? = .init(named:post.scene)
+//                CustomARView(scene: scenetemp)
 //                    .frame(height: 400)
 //                    .padding(.bottom,30)
 //                CustomSeeker()
             }
-            .padding(15)
+            .padding(2)
             .background(Color.white)
             .cornerRadius(25)
-            .frame(height: getRect().height / 2.5)
-            .padding(.bottom, 15)
+            .frame(width: getRect().width/2,height: getRect().height/2.6)
+            
             Text(post.titile)
+                .font(.custom("Slideqiuhong",size:20))
                 .font(.title2.bold())
-            .font(.caption)
+                .font(.caption)
+                .foregroundColor(.primary)
+                
             Text(post.description)
+                .font(.custom("Slideqiuhong",size:20))
                 .font(.callout)
                 .lineLimit(3)
                 .multilineTextAlignment(.center)
                 .padding(.top , 8)
                 .padding(.horizontal)
+                .foregroundColor(.primary)
         }
     }
     
-//    @ViewBuilder
-//    func CustomSeeker()->some View{
-//        GeometryReader{_ in
-//            Rectangle()
-//                .trim(from: 0,to:0.474)
-//                .stroke(.linearGradient(colors:[
-//                    .clear,
-//                    .clear,
-//                    .green.opacity(0.2),
-//                    .green.opacity(0.6),
-//                    .green,
-//                    .green.opacity(0.6),
-//                    .green.opacity(0.2),
-//                    .clear,
-//                    .clear
-//                ], startPoint: .leading, endPoint: .trailing),style: StrokeStyle(lineWidth: 2,lineCap: .round,lineJoin: .round,miterLimit: 1,dash: [3],dashPhase: 1))
-//                .offset(x:offset)
-//                .overlay{
-//                    HStack(spacing:3){
-//                        Image(systemName: "arrowtriangle.left.fill")
-//                            .font(.caption)
-//                            .foregroundColor(.white)
-//                        Image(systemName: "arrowtriangle.right.fill")
-//                            .font(.caption)
-//                            .foregroundColor(.white)
-//                    }
-//                    .foregroundColor(.black)
-//                    .padding(.horizontal,7)
-//                    .padding(.vertical,10)
-//                    .background{
-//                        RoundedRectangle(cornerRadius: 10, style: .continuous)
-//                            .fill(Color("DeepGreen"))
-//                    }
-//                    .offset(y:-13)
-//                    .offset(x:offset)
-//                    .gesture(
-//                        DragGesture()
-//                            .updating($offset, body: {value,out, _ in
-//                                out = value.location.x - 20
-//
-//                            }))
-//                }
-//
-//        }
-//        .frame(height: 20)
-//        .onChange(of: offset, perform: {newValue in
-//            rotateObject()
-//        })
-//        .animation(.easeInOut(duration: 0.4), value: offset == .zero)
-//    }
-//
-//    //MARK: Rotating 3D Object
-//    func rotateObject(){
-//        let newAngle = Float((offset * .pi) / 100)
-//        scene?.rootNode.eulerAngles.y=newAngle
-//    }
+    @ViewBuilder
+    func CustomSeeker()->some View{
+        GeometryReader{_ in
+            Rectangle()
+                .trim(from: 0,to:0.474)
+                .stroke(.linearGradient(colors:[
+                    .clear,
+                    .clear,
+                    .green.opacity(0.2),
+                    .green.opacity(0.6),
+                    .green,
+                    .green.opacity(0.6),
+                    .green.opacity(0.2),
+                    .clear,
+                    .clear
+                ], startPoint: .leading, endPoint: .trailing),style: StrokeStyle(lineWidth: 2,lineCap: .round,lineJoin: .round,miterLimit: 1,dash: [3],dashPhase: 1))
+                .offset(x:offset)
+                .overlay{
+                    HStack(spacing:3){
+                        Image(systemName: "arrowtriangle.left.fill")
+                            .font(.caption)
+                            .foregroundColor(.white)
+                        Image(systemName: "arrowtriangle.right.fill")
+                            .font(.caption)
+                            .foregroundColor(.white)
+                    }
+                    .foregroundColor(.black)
+                    .padding(.horizontal,7)
+                    .padding(.vertical,10)
+                    .background{
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .fill(Color("DeepGreen"))
+                    }
+                    .offset(y:-13)
+                    .offset(x:offset)
+                    .gesture(
+                        DragGesture()
+                            .updating($offset, body: {value,out, _ in
+                                out = value.location.x - 20
+
+                            }))
+                }
+
+        }
+        .frame(height: 20)
+        .onChange(of: offset, perform: {newValue in
+            rotateObject()
+        })
+        .animation(.easeInOut(duration: 0.4), value: offset == .zero)
+    }
+
+    //MARK: Rotating 3D Object
+    func rotateObject(){
+        let newAngle = Float((offset * .pi) / 100)
+        scene?.rootNode.eulerAngles.y=newAngle
+    }
 }
 
 struct PersonAllView_Previews: PreviewProvider {
